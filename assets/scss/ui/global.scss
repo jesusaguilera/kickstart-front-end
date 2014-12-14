@@ -1,0 +1,14 @@
+/************************************************************
+ * GLOBAL
+ ************************************************************/
+
+* 
+*:focus
+*:active{
+  outline: 0;
+}
+
+body{
+  background-color: $brand-secondary;
+  color:$brand-primary;
+}

@@ -1,0 +1,40 @@
+/************************************************************
+ * COLOR
+ ************************************************************/
+$brand-primary   : #fff;
+$brand-secondary : #000;
+
+
+
+
+
+/************************************************************
+ * TEXTS
+ ************************************************************/
+$giga-size       : 96px;
+$mega-size       : 72px;
+$kilo-size       : 48px;
+
+$font-size-h1    : 36px; // .alpha
+$font-size-h2    : 30px; // .beta
+$font-size-h3    : 24px; // .gamma
+$font-size-h4    : 20px; // .delta
+$font-size-h5    : 18px; // .epsilon
+$font-size-h6    : 16px; // .zeta
+
+$font-size-milli : 12px;
+$font-size-micro : 10px;
+
+$font-size-large : $font-size-h4;
+$font-size-small : $font-size-milli;
+
+
+
+
+
+/************************************************************
+ * SPACING
+ ************************************************************/
+//$spacing        : $line-height-computed;
+//$spacing--small : round($spacing / 2);
+//$spacing--large : round($spacing * 2);
