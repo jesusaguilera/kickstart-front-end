@@ -45,7 +45,7 @@ var js_build_dir      = 'build/js',
 
 var js_files           = 'assets/js/**/*.js',
     scss_files         = 'assets/scss/**/*.scss',
-    images_files       = 'assets/images/**/*',
+    images_files       = 'assets/images/*',
     images_build_files = 'build/images/**/*';
 
 
@@ -105,11 +105,12 @@ gulp.task( 'images', function() {
 
 // File include
 gulp.task('fileinclude', function() {
-  gulp.src([ './*.html' ])
-  .pipe(file_include({
-    prefix: '@@',
-    basepath: '@file'
 
+  gulp.src([ './*.html' ])
+  .pipe( file_include ({
+
+    prefix: '@@',
+    basepath: '@file',
   }))
   .pipe(gulp.dest('build'));
 
