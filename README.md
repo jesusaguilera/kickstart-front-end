@@ -10,15 +10,15 @@ Using gulpjs you can take advantage of the nodejs syntax and nodejs streams, dev
  * DEPENDENCIES
  ************************************************************/
 
-var gulp         = require( 'gulp'  ),
-    watch        = require( 'gulp-watch'  ),
-    concat       = require( 'gulp-concat'  ),
-    connect      = require( 'gulp-connect'  ),
-    uglify       = require( 'gulp-uglify'  ),
-    file_include = require( 'gulp-file-include'  ),
-    del          = require( 'del'  ),
-    ncp          = require( 'ncp'  ).ncp,
-    compass      = require( 'gulp-compass'  );
+var gulp         = require( 'gulp' ),
+    watch        = require( 'gulp-watch' ),
+    concat       = require( 'gulp-concat' ),
+    connect      = require( 'gulp-connect' ),
+    uglify       = require( 'gulp-uglify' ),
+    file_include = require( 'gulp-file-include' ),
+    del          = require( 'del' ),
+    ncp          = require( 'ncp' ).ncp,
+    compass      = require( 'gulp-compass' );
 
 
 
