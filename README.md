@@ -71,18 +71,18 @@ gulp.task( 'connect', function() {
       root       : 'build',
       port       : 3000,
       livereload : true
-    }  );
+    } );
 
-}  );
+} );
 
 
 // Scripts
 gulp.task( 'scripts', function() {
 
-    gulp.src( js_files  )
-    .pipe( concat( 'main.js'  )  )
+    gulp.src( js_files )
+    .pipe( concat( 'main.js' ) )
     .pipe( uglify()  )
-    .pipe( gulp.dest( js_build_dir  )  );
+    .pipe( gulp.dest( js_build_dir ) );
 
 }  );
 
@@ -90,47 +90,47 @@ gulp.task( 'scripts', function() {
 // Compass
 gulp.task ( 'compass', function() {
 
-    gulp.src( 'assets/scss/application.scss'  )
+    gulp.src( 'assets/scss/application.scss' )
     .pipe( compass ( { 
     config_file : './config.rb',
     css         : css_build_dir,
     sass        : scss_dir
-    } )  )
-    .pipe( gulp.dest( css_build_dir  )  );
+    } ) )
+    .pipe( gulp.dest( css_build_dir ) );
 
-}  );
+} );
 
 
-// Images ( To copy from assets folder to build folder destination  )
+// Images ( To copy from assets folder to build folder destination )
 gulp.task( 'images', function() { 
 
     del( images_build_dir, function() {
-      ncp( images_dir, images_build_dir  );
-      }  );
+      ncp( images_dir, images_build_dir );
+      } );
 
-}  );
+} );
 
 
 // File include
 gulp.task('fileinclude', function() {
 
-    gulp.src([ './*.html'  ])
-    .pipe( file_include ({
+    gulp.src( [ './*.html' ] )
+    .pipe( file_include ( {
       prefix: '@@',
       basepath: '@file',
     }) )
-    .pipe(gulp.dest('build'));
+    .pipe( gulp.dest( 'build' ) );
 
 } );
 
 
 // Default
-gulp.task( 'default', [ 'connect'  ], function() {
+gulp.task( 'default', [ 'connect' ], function() {
 
-    gulp.watch( js_files, [ 'scripts'  ]  );
-    gulp.watch( scss_files, [ 'compass'  ]  );
-    gulp.watch( images_files, [ 'images'  ]  );
-    gulp.watch( './*.html', [ 'fileinclude'  ]  );
+    gulp.watch( js_files, [ 'scripts' ] );
+    gulp.watch( scss_files, [ 'compass' ] );
+    gulp.watch( images_files, [ 'images' ] );
+    gulp.watch( './*.html', [ 'fileinclude' ] );
 
-}  );
+} );
 ```
