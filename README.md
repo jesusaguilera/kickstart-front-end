@@ -118,7 +118,6 @@ gulp.task('fileinclude', function() {
     .pipe( file_include ({
       prefix: '@@',
       basepath: '@file',
-
     }) )
     .pipe(gulp.dest('build'));
 
