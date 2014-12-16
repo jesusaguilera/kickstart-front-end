@@ -81,7 +81,7 @@ gulp.task( 'scripts', function() {
 
     gulp.src( js_files )
     .pipe( concat( 'main.js' ) )
-    .pipe( uglify()  )
+    .pipe( uglify() )
     .pipe( gulp.dest( js_build_dir ) );
 
 }  );
