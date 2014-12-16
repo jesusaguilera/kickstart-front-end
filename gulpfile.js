@@ -106,13 +106,13 @@ gulp.task( 'images', function() {
 // File include
 gulp.task('fileinclude', function() {
 
-  gulp.src([ './*.html' ])
-  .pipe( file_include ({
+  gulp.src( [ './*.html' ] )
+  .pipe( file_include ( {
 
     prefix: '@@',
     basepath: '@file',
   }))
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest( 'build' ) );
 
 });
 
