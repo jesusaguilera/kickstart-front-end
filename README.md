@@ -36,7 +36,7 @@ var partials_dir  = 'partials';
 
 // Assets
 var images_dir   = 'assets/images',
-    scss_dir = 'assets/scss';
+    scss_dir     = 'assets/scss';
 
 // Build
 var js_build_dir      = 'build/js',
