@@ -123,6 +123,6 @@ gulp.task( 'default', [ 'connect' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
   gulp.watch( scss_files, [ 'compass' ] );
   gulp.watch( images_files, [ 'images' ] );
-  gulp.watch( './*.html', [ 'fileinclude' ] );
+  gulp.watch( [ './*.html', './partials/*.html' ], [ 'fileinclude' ] );
   
 } );
