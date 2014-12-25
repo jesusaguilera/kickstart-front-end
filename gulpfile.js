@@ -71,7 +71,7 @@ gulp.task( 'connect', function() {
 // Scripts
 gulp.task( 'scripts', function() {
 
-  gulp.src( js_files )
+  return gulp.src( js_files )
   .pipe( concat( 'main.js' ) )
   .pipe( uglify() )
   .pipe( gulp.dest( js_build_dir ) );
