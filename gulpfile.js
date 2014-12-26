@@ -46,8 +46,8 @@ var js_build_dir      = 'build/js',
 var js_files           = 'assets/js/**/*.js',
     scss_files         = 'assets/scss/**/*.scss',
     images_files       = 'assets/images/*',
-    images_build_files = 'build/images/**/*';
-
+    images_build_files = 'build/images/**/*',
+    html_files         = [ './*.html', './partials/*.html' ];
 
 
 
@@ -123,6 +123,6 @@ gulp.task( 'default', [ 'connect' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
   gulp.watch( scss_files, [ 'compass' ] );
   gulp.watch( images_files, [ 'images' ] );
-  gulp.watch( [ './*.html', './partials/*.html' ], [ 'fileinclude' ] );
+  gulp.watch( html_files, [ 'fileinclude' ] );
   
 } );
