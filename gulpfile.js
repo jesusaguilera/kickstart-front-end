@@ -93,7 +93,7 @@ gulp.task ( 'compass', function() {
 } );
 
 
-// Images ( To copy from assets folder to build folder destination )
+// Images 
 gulp.task( 'images', function() { 
 
   del( images_build_dir, function() {
