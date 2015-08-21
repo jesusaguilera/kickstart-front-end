@@ -9,7 +9,18 @@
 }
 
 body{
-  background-color: $brand-secondary;
-  color: $brand-primary;
-  text-align: center;
+  background: transparent image-url( 'bg.jpg' ) 0 0 no-repeat;
+  background-size: 100%;
+  color: $brown;
+  font-family: 'lato-light';
+}
+
+.logo {
+  width: 275px;
+  height: 106px;
+  margin: 40px auto 0;
+  img {
+    width: inherit;
+    height: inherit;
+  }
 }

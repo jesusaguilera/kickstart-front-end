@@ -5,6 +5,7 @@
 @import 'compass/css3';
 @import 'compass/reset';
 @import 'config';
+@import 'fonts';
 
 
 
@@ -15,6 +16,7 @@
 
 //@import 'libs/mixins';
 @import 'libs/bootstrap/bootstrap';
+@import 'libs/slick-circular/jquery.classycountdown.min';
 
 
 
@@ -24,6 +26,8 @@
  * COMPONENTS 
  ************************************************************/
 @import 'ui/global';
+@import 'ui/texts';
+@import 'ui/content';
 
 
 

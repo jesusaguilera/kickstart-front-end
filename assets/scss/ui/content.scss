@@ -1,0 +1,30 @@
+/* Countdown */
+
+.ClassyCountdown-wrapper {
+  font-size: 0;
+  height: 315px;
+  overflow: hidden;
+  .ClassyCountdown-days ,
+  .ClassyCountdown-hours ,
+  .ClassyCountdown-minutes ,
+  .ClassyCountdown-seconds {
+    background-color: $transparent-brown;
+    font-size: 24px;
+    padding: 20px;
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+    .ClassyCountdown-value {
+      span {
+        display: block;
+        margin-top: 80px;
+        font-size: 24px;
+      }
+      position: absolute;
+      top: 140px;
+      text-align: center;
+      color: white;
+    }
+  }
+}

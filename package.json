@@ -13,22 +13,22 @@
     "app",
     "build"
   ],
-  "repository" :
-  { "type" : "git"
-    , "url" : "https://github.com/jesusaguilera/kickstart-front-end"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesusaguilera/kickstart-front-end"
   },
   "author": "jaguilera",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-concat": "^2.4.2",
-    "gulp-uglify": "^1.0.2",
-    "gulp-connect": "^2.2.0",
-    "gulp-watch": "^3.0.0",
-    "gulp-file-include": "^0.7.1",
-    "gulp-compass": "^2.0.3",
-    "ncp": "^1.0.1",
+    "del": "^1.1.0",
+    "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
-    "del": "^1.1.0"
+    "gulp-compass": "^2.0.3",
+    "gulp-concat": "^2.4.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-file-include": "^0.7.1",
+    "gulp-uglify": "^1.0.2",
+    "gulp-watch": "^3.0.0",
+    "ncp": "^1.0.1"
   }
 }

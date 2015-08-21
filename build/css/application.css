@@ -67,6 +67,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************
  * SPACING
  ************************************************************/
+/* Fonts */
+@font-face {
+  font-family: 'lato-light';
+  src: url("fonts/Lato-Light.eot");
+  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /************************************************************
  * LIBS
  ************************************************************/
@@ -1235,11 +1243,11 @@ textarea {
 }
 
 a {
-  color: #fff;
+  color: #e86b01;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #d9d9d9;
+  color: #9c4801;
   text-decoration: underline;
 }
 a:focus {
@@ -1461,11 +1469,11 @@ mark,
 }
 
 .text-primary {
-  color: #fff;
+  color: #e86b01;
 }
 
 a.text-primary:hover {
-  color: #e6e6e6;
+  color: #b55401;
 }
 
 .text-success {
@@ -1505,11 +1513,11 @@ a.text-danger:hover {
 }
 
 .bg-primary {
-  background-color: #fff;
+  background-color: #e86b01;
 }
 
 a.bg-primary:hover {
-  background-color: #e6e6e6;
+  background-color: #b55401;
 }
 
 .bg-success {
@@ -3467,23 +3475,23 @@ select[multiple].input-lg,
 
 .btn-primary {
   color: #fff;
-  background-color: #fff;
-  border-color: #f2f2f2;
+  background-color: #e86b01;
+  border-color: #cf5f01;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #e6e6e6;
-  border-color: #d4d4d4;
+  background-color: #b55401;
+  border-color: #924301;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #fff;
-  border-color: #f2f2f2;
+  background-color: #e86b01;
+  border-color: #cf5f01;
 }
 .btn-primary .badge {
-  color: #fff;
+  color: #e86b01;
   background-color: #fff;
 }
 
@@ -3576,7 +3584,7 @@ select[multiple].input-lg,
 }
 
 .btn-link {
-  color: #fff;
+  color: #e86b01;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3589,7 +3597,7 @@ select[multiple].input-lg,
   border-color: transparent;
 }
 .btn-link:hover, .btn-link:focus {
-  color: #d9d9d9;
+  color: #9c4801;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3743,7 +3751,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #fff;
+  background-color: #e86b01;
 }
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
@@ -4178,7 +4186,7 @@ tbody.collapse.in {
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #fff;
+  border-color: #e86b01;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4225,7 +4233,7 @@ tbody.collapse.in {
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #fff;
+  background-color: #e86b01;
 }
 
 .nav-stacked > li {
@@ -4862,7 +4870,7 @@ tbody.collapse.in {
   padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #fff;
+  color: #e86b01;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4881,7 +4889,7 @@ tbody.collapse.in {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #d9d9d9;
+  color: #9c4801;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -4891,8 +4899,8 @@ tbody.collapse.in {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #fff;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #e86b01;
+  border-color: #e86b01;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -5019,10 +5027,10 @@ a.label:hover, a.label:focus {
 }
 
 .label-primary {
-  background-color: #fff;
+  background-color: #e86b01;
 }
 .label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #e6e6e6;
+  background-color: #b55401;
 }
 
 .label-success {
@@ -5079,7 +5087,7 @@ a.label:hover, a.label:focus {
   padding: 1px 5px;
 }
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
-  color: #fff;
+  color: #e86b01;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -5164,7 +5172,7 @@ a.badge:hover, a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #fff;
+  border-color: #e86b01;
 }
 
 .alert {
@@ -5282,7 +5290,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #fff;
   text-align: center;
-  background-color: #fff;
+  background-color: #e86b01;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5432,8 +5440,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #e86b01;
+  border-color: #e86b01;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active .list-group-item-heading > small,
@@ -5445,7 +5453,7 @@ a.list-group-item:hover, a.list-group-item:focus {
   color: inherit;
 }
 .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-  color: white;
+  color: #ffd8b6;
 }
 
 .list-group-item-success {
@@ -5806,22 +5814,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 .panel-primary {
-  border-color: #fff;
+  border-color: #e86b01;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #e86b01;
+  border-color: #e86b01;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #fff;
+  border-top-color: #e86b01;
 }
 .panel-primary > .panel-heading .badge {
-  color: #fff;
+  color: #e86b01;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #fff;
+  border-bottom-color: #e86b01;
 }
 
 .panel-success {
@@ -6864,6 +6872,32 @@ button.close {
     display: none !important;
   }
 }
+/*!
+ * jQuery ClassyCountdown
+ * www.class.pm
+ *
+ * Written by Marius Stanciu - Sergiu <marius@class.pm>
+ * Licensed under the MIT license www.class.pm/LICENSE-MIT
+ * Version 1.0.0
+ *
+ */
+.ClassyCountdown-wrapper > div {
+  display: inline-block;
+  position: relative;
+  width: calc(25% - 20px);
+  margin: 10px;
+}
+
+.ClassyCountdown-wrapper .ClassyCountdown-value {
+  width: 100%;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 0;
+  display: block;
+}
+
 /************************************************************
  * COMPONENTS 
  ************************************************************/
@@ -6877,9 +6911,69 @@ button.close {
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background: transparent url('../images/bg.jpg?1440081327') 0 0 no-repeat;
+  background-size: 100%;
+  color: #7a4930;
+  font-family: 'lato-light';
+}
+
+.logo {
+  width: 275px;
+  height: 106px;
+  margin: 40px auto 0;
+}
+.logo img {
+  width: inherit;
+  height: inherit;
+}
+
+/* Texts */
+.title,
+.subtitle {
   text-align: center;
+}
+
+.title {
+  text-shadow: 0 1px 2px white;
+}
+
+/* Countdown */
+.ClassyCountdown-wrapper {
+  font-size: 0;
+  height: 315px;
+  overflow: hidden;
+}
+.ClassyCountdown-wrapper .ClassyCountdown-days,
+.ClassyCountdown-wrapper .ClassyCountdown-hours,
+.ClassyCountdown-wrapper .ClassyCountdown-minutes,
+.ClassyCountdown-wrapper .ClassyCountdown-seconds {
+  background-color: rgba(110, 87, 71, 0.6);
+  font-size: 24px;
+  padding: 20px;
+}
+.ClassyCountdown-wrapper .ClassyCountdown-days canvas,
+.ClassyCountdown-wrapper .ClassyCountdown-hours canvas,
+.ClassyCountdown-wrapper .ClassyCountdown-minutes canvas,
+.ClassyCountdown-wrapper .ClassyCountdown-seconds canvas {
+  display: block;
+  margin: 0 auto;
+}
+.ClassyCountdown-wrapper .ClassyCountdown-days .ClassyCountdown-value,
+.ClassyCountdown-wrapper .ClassyCountdown-hours .ClassyCountdown-value,
+.ClassyCountdown-wrapper .ClassyCountdown-minutes .ClassyCountdown-value,
+.ClassyCountdown-wrapper .ClassyCountdown-seconds .ClassyCountdown-value {
+  position: absolute;
+  top: 140px;
+  text-align: center;
+  color: white;
+}
+.ClassyCountdown-wrapper .ClassyCountdown-days .ClassyCountdown-value span,
+.ClassyCountdown-wrapper .ClassyCountdown-hours .ClassyCountdown-value span,
+.ClassyCountdown-wrapper .ClassyCountdown-minutes .ClassyCountdown-value span,
+.ClassyCountdown-wrapper .ClassyCountdown-seconds .ClassyCountdown-value span {
+  display: block;
+  margin-top: 80px;
+  font-size: 24px;
 }
 
 /************************************************************

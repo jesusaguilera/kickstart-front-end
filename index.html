@@ -7,12 +7,27 @@
 @@include( './partials/head.html' )
 
 <body class="index">
-  @@include( './partials/header.html' )
-  <section class="wrapper">
-  <h1> my index </h1>
-  <img src="images/front-end.jpeg" alt="example of image">
-  </section>
-  @@include( './partials/footer.html' )
+  <div class="main-content">
+    @@include( './partials/header.html' )
+    <section class="content">
+      <h2 class="title"> WE ARE WORKING ON AWESOME THINGS </h2>
+      <p class="subtitle"> WE ARE CURRENTLY WORKING ON A NEW WEBSITE IN ORDER TO PROVIDE YOU THE BEST OF SERVICES </p>
+      <div class="container">
+        <div class="row">
+          <div class="countdown"></div>
+        </div>
+      </div>
+    </section>
+    @@include( './partials/footer.html' )
+  </div>
+  <script defer='defer' type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
+  <script defer='defer' type="text/javascript" src="js/libs/jquery.knob.js"></script>
+  <script defer='defer' type="text/javascript" src="js/libs/jquery.throttle.js"></script>
+  <script defer='defer' type="text/javascript" src="js/libs/jquery.classycountdown.js"></script>
   <script defer='defer' type="text/javascript" src="js/main.js"></script>
+
+
+
+
 </body>
 </html>

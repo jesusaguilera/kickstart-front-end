@@ -28,11 +28,14 @@ var partials_dir  = 'partials';
 
 // Assets
 var images_dir   = 'assets/images',
-    scss_dir     = 'assets/scss';
+    scss_dir     = 'assets/scss',
+    fonts_dir    = 'assets/fonts',
+    js_dir       = 'assets/js';
 
 // Build
 var js_build_dir      = 'build/js',
     css_build_dir     = 'build/css',
+    fonts_build_dir   = 'build/fonts',
     images_build_dir  = 'build/images';
 
 
@@ -44,9 +47,12 @@ var js_build_dir      = 'build/js',
  ************************************************************/
 
 var js_files           = 'assets/js/**/*.js',
+    js_build_files     = 'build/js/**/*',
     scss_files         = 'assets/scss/**/*.scss',
-    images_files       = 'assets/images/*',
+    images_files       = 'assets/images/**/*',
     images_build_files = 'build/images/**/*',
+    fonts_files        = 'assets/fonts/**/*',
+    fonts_build_files  = 'build/fonts/**/*',
     html_files         = [ './*.html', './partials/*.html' ];
 
 
@@ -64,24 +70,20 @@ gulp.task( 'connect', function() {
     port       : 3000,
     livereload : true
   } );
-
 } );
 
 
 // Scripts
 gulp.task( 'scripts', function() {
-
   return gulp.src( js_files )
   .pipe( concat( 'main.js' ) )
   .pipe( uglify() )
   .pipe( gulp.dest( js_build_dir ) );
-
 } );
 
 
 // Compass
 gulp.task ( 'compass', function() {
-
   gulp.src( 'assets/scss/application.scss' )
   .pipe( compass ( { 
       config_file : './config.rb',
@@ -89,17 +91,20 @@ gulp.task ( 'compass', function() {
       sass        : scss_dir
   }) )
   .pipe( gulp.dest( css_build_dir ) );
-
 } );
 
 
-// Images 
-gulp.task( 'images', function() { 
-
+// Assets folders 
+gulp.task( 'folders', function() { 
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
-
+  del( fonts_build_dir, function() {
+    ncp( fonts_dir, fonts_build_dir );
+  } );
+  del( js_build_dir, function() {
+    ncp( js_dir, js_build_dir );
+  } );
 } );
 
 
@@ -113,16 +118,13 @@ gulp.task('fileinclude', function() {
     basepath: '@file',
   }))
   .pipe(gulp.dest( 'build' ) );
-
 });
 
 
 // Default
-gulp.task( 'default', [ 'connect' ], function() {
-
+gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'compass' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
   gulp.watch( scss_files, [ 'compass' ] );
-  gulp.watch( images_files, [ 'images' ] );
   gulp.watch( html_files, [ 'fileinclude' ] );
-  
+  gulp.watch( [images_files, js_files, html_files],  [ 'folders' ] );
 } );
