@@ -36,11 +36,14 @@ var partials_dir  = 'partials';
 
 // Assets
 var images_dir   = 'assets/images',
-    scss_dir     = 'assets/scss';
+    scss_dir     = 'assets/scss',
+    fonts_dir    = 'assets/fonts',
+    js_dir       = 'assets/js';
 
 // Build
 var js_build_dir      = 'build/js',
     css_build_dir     = 'build/css',
+    fonts_build_dir   = 'build/fonts',
     images_build_dir  = 'build/images';
 
 
@@ -52,9 +55,12 @@ var js_build_dir      = 'build/js',
  ************************************************************/
 
 var js_files           = 'assets/js/**/*.js',
+    js_build_files     = 'build/js/**/*',
     scss_files         = 'assets/scss/**/*.scss',
-    images_files       = 'assets/images/*',
+    images_files       = 'assets/images/**/*',
     images_build_files = 'build/images/**/*',
+    fonts_files        = 'assets/fonts/**/*',
+    fonts_build_files  = 'build/fonts/**/*',
     html_files         = [ './*.html', './partials/*.html' ];
 
 
@@ -72,24 +78,25 @@ gulp.task( 'connect', function() {
     port       : 3000,
     livereload : true
   } );
-
 } );
 
 
 // Scripts
 gulp.task( 'scripts', function() {
-
-  return gulp.src( js_files )
-  .pipe( concat( 'main.js' ) )
-  .pipe( uglify() )
-  .pipe( gulp.dest( js_build_dir ) );
-
+  return gulp.src([
+    // Here we set an order for include our js files in all.js, 
+    // You only need to add here your js files instead of index.html like <script src="your/file/route">
+    "assets/js/libs/jquery.min.js",
+    "assets/js/main.js"
+  ])
+  .pipe(concat('all.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest( js_build_dir));
 } );
 
 
 // Compass
 gulp.task ( 'compass', function() {
-
   gulp.src( 'assets/scss/application.scss' )
   .pipe( compass ( { 
       config_file : './config.rb',
@@ -97,41 +104,36 @@ gulp.task ( 'compass', function() {
       sass        : scss_dir
   }) )
   .pipe( gulp.dest( css_build_dir ) );
-
 } );
 
 
-// Images 
-gulp.task( 'images', function() { 
-
+// Assets folders 
+gulp.task( 'folders', function() { 
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
-
+  del( fonts_build_dir, function() {
+    ncp( fonts_dir, fonts_build_dir );
+  } );
 } );
 
 
 // File include
 gulp.task('fileinclude', function() {
-
   gulp.src( [ './*.html' ] )
   .pipe( file_include ( {
-
     prefix: '@@',
     basepath: '@file',
   }))
   .pipe(gulp.dest( 'build' ) );
-
 });
 
 
 // Default
-gulp.task( 'default', [ 'connect' ], function() {
-
+gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'compass', 'scripts' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
   gulp.watch( scss_files, [ 'compass' ] );
-  gulp.watch( images_files, [ 'images' ] );
   gulp.watch( html_files, [ 'fileinclude' ] );
-  
+  gulp.watch( [js_files, images_files, html_files],  [ 'folders' ] );
 } );
 ```
