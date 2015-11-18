@@ -33,5 +33,52 @@ $font-size-small : $font-size-milli;
 
 
 /************************************************************
- * SPACING
+ * MEDIA QUERIES BREAKPOINTS
  ************************************************************/
+// Extra small screen / phone
+$screen-xs-min:              480px;
+$screen-xs-max:              767px;
+
+// Small screen / tablet
+$screen-sm-min:              768px;
+$screen-sm-max:              991px;
+
+// Medium screen / desktop
+$screen-md-min:              992px;
+$screen-md-max:              1199px;
+
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+$screen-lg-max:              1500px;
+
+
+
+
+
+/************************************************************
+ * RESET PULL LEFT/RIGHT
+ ************************************************************/
+.pull-left,
+.pull-left-xs { float: left !important; }
+
+.pull-right,
+.pull-right-xs { float: right !important; }
+
+.pull-reset,
+.pull-reset-xs { float: none !important; }
+
+@media (min-width: $screen-sm-min) {
+  .pull-left-sm  { float: left !important; } 
+  .pull-right-sm { float: right !important; }
+  .pull-reset-sm { float: none !important; }
+}
+@media (min-width: $screen-md-min) {
+  .pull-left-md  { float: left !important; }
+  .pull-right-md { float: right !important; }
+  .pull-reset-md { float: none !important; }
+}
+@media (min-width: $screen-lg-min) {
+  .pull-left-lg  { float: left !important; }
+  .pull-right-lg { float: right !important; }
+  .pull-reset-lg { float: none !important; }
+}
