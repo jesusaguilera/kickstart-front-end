@@ -4,6 +4,24 @@ KickStart for optimising your front-end development and building quickly static 
 
 Using gulpjs you can take advantage of the nodejs syntax and nodejs streams, developing your front-end more quickly and easily than using another task runner like [**gruntjs**](http://gruntjs.com/), in addition you won't need to use any back-end language, so you will only use front-end languages like html, sass and javascript ;)
 
+Install nodejs from [**nodejs**](https://nodejs.org)
+
+Now you should Install gulp from [**gulpjs**](http://gulpjs.com/)
+```javascript
+  sudo npm install -g gulp
+```
+
+```javascript
+  sudo npm --save-dev gulp
+```
+
+Install all dependences of your project 
+```javascript
+  $ sudo npm install
+```
+
+
+
 ### Gulpfile.js
 ```javascript
 /************************************************************
