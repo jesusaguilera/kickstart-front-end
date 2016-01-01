@@ -10,25 +10,21 @@
 
   @@include( './partials/header.html' )
 
-  <section ng-app="myNews">
-    <article class="Name" ng-click="addArticle()">
-      <h1 class="article__title"> my index </h1>
-      <img src="images/front-end.jpeg" alt="example of image" class="article__image">
-    </article>
-
-    <article class="Name" ng-controller="myArticles">
-      <div class="article__content" ng-repeat="article in articles">
-        <h1 class="article__title"> {{article.title}} </h1>
-        <img src="{{article.src}}" alt="example of image" class="article__image">
+  <section ng-app="myNews" class="container">
+    <article class="article__container row" ng-controller="myArticles">
+      <h1> Mis artículos </h1>
+      <div ng-repeat="article in articles" class="articles__content col-sm-3">
+        <h3 class="article__title"> {{article.title}} </h3>
+        <img src="{{article.image}}" alt="example of image" class="article__image" ng-click="addArticle()">
+        <p class="article__text"> {{article.text}} </p>
       </div>
     </article>
   </section>
 
   @@include( './partials/footer.html' )
 
-  <script defer='defer' type="text/javascript" src="js/libs/jquery.min.js"></script>
-  <script defer='defer' type="text/javascript" src="js/libs/angular.min.js"></script>
-  <script defer='defer' type="text/javascript" src="js/main.js"></script>
+  <script src="js/depsJs.js" type="text/javascript"></script>
+  <script src="js/appJs.js" type="text/javascript"></script>
 
 </body>
 </html>

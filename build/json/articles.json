@@ -1,0 +1,14 @@
+{
+  "articles": [
+  {
+    "title" : "La poética de Aristóteles",
+    "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/245px-Aristotle_Altemps_Inv8575.jpg",
+    "text" : "La Poética1 o Sobre la poética (Περὶ Ποιητικῆς) es una obra de Aristóteles escrita en el siglo IV a. C., entre la fundación de su escuela en Atenas, en el 335 a. C., y su partida definitiva de la ciudad, en el 323 a. C. Su tema principal es la reflexión estética a través de la caracterización y descripción de la tragedia."
+  },
+  {
+    "title" : "Berglunds snabbköp",
+    "image" : "http://lorempixel.com/400/200/food/",
+    "text" : "Sweden"
+ }
+]}
+
