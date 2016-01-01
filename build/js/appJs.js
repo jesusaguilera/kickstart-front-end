@@ -1,11 +1,11 @@
-angular.module('myNews', []) 
+var app = angular.module('myNews', []);
 
-.controller ('myArticles', ['$scope', '$http', function($scope, $http) { 
+app.controller ('articlesCtrl', articlesCtrl);
 
+function articlesCtrl($scope, $http){
   // carga alumnos
   $http.get('json/articles.json').then(function(res){
     $scope.articles = res.data.articles;                
-    console.log(res.data.articles);
   });
 
   // añade alumno 
@@ -18,7 +18,8 @@ angular.module('myNews', [])
   };
 
   $scope.addArticle = function (){
-    alert("hola");
+    console.log("adding article...");
   };
+  
+}
 
-}]);
