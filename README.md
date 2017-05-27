@@ -1,6 +1,6 @@
 # KickStart for Front-end development
 
-KickStart for optimising your front-end development and building quickly static web pages through [**gulpjs**](http://gulpjs.com/) and [**bootstrap-sass**](https://github.com/twbs/bootstrap-sass).
+KickStart for optimising your front-end development and building quickly static web pages through [**gulpjs**](http://gulpjs.com/) and [**Bootstrap-sass**](https://github.com/twbs/bootstrap-sass) or [**Materialize**](http://materializecss.com/).
 
 Using gulpjs you can take advantage of the nodejs syntax and nodejs streams, developing your front-end more quickly and easily than using another task runner like [**gruntjs**](http://gruntjs.com/), in addition you won't need to use any back-end language, so you will only use front-end languages like html, sass and javascript ;)
 
@@ -87,6 +87,7 @@ gulp.task( 'scripts', function() {
     // Here we set an order for include our js files in all.js, 
     // You only need to add here your js files instead of index.html like <script src="your/file/route">
     "assets/js/libs/jquery.min.js",
+    "assets/js/libs/materialize.min.js",
     "assets/js/main.js"
   ])
   .pipe(concat('all.js'))
