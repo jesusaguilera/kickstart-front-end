@@ -10,7 +10,7 @@ var gulp         = require( 'gulp' ),
     file_include = require( 'gulp-file-include' ),
     del          = require( 'del' ),
     ncp          = require( 'ncp' ).ncp,
-    compass      = require( 'gulp-compass' );
+    sass         = require( 'gulp-sass' );
 
 
 
@@ -89,14 +89,11 @@ gulp.task( 'scripts', function() {
 } );
 
 
-// Compass
-gulp.task ( 'compass', function() {
-  gulp.src( 'assets/scss/application.scss' )
-  .pipe( compass ( { 
-      config_file : './config.rb',
-      css         : css_build_dir,
-      sass        : scss_dir
-  }) )
+// Sass
+gulp.task ( 'styles', function() {
+  gulp
+  .src('assets/scss/application.scss')
+  .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
   .pipe( gulp.dest( css_build_dir ) );
 } );
 
@@ -126,9 +123,9 @@ gulp.task('fileinclude', function() {
 
 
 // Default
-gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'compass', 'scripts' ], function() {
+gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
-  gulp.watch( scss_files, [ 'compass' ] );
+  gulp.watch( scss_files, [ 'styles' ] );
   gulp.watch( html_files, [ 'fileinclude' ] );
   gulp.watch( [js_files, images_files, html_files],  [ 'folders' ] );
 } );

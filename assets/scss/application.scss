@@ -1,14 +1,4 @@
 /************************************************************
- * APPLICATION 
- ************************************************************/
-@import 'compass/css3';
-@import 'compass/reset';
-
-
-
-
-
-/************************************************************
  * LIBS
  ************************************************************/
 @import 'libs/materialize/icons';
@@ -31,10 +21,10 @@
 /************************************************************
  * COMPONENTS 
  ************************************************************/
-@import 'ui/global';
-@import 'ui/header';
-@import 'ui/footer';
-@import 'ui/dropdown';
+@import 'components/global';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/dropdown';
 
 
 
