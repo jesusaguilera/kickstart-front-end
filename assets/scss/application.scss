@@ -1,11 +1,9 @@
 /************************************************************
  * APPLICATION 
  ************************************************************/
-
 @import 'compass/css3';
 @import 'compass/reset';
-@import 'config';
-@import 'functions';
+
 
 
 
@@ -13,9 +11,18 @@
 /************************************************************
  * LIBS
  ************************************************************/
+@import 'libs/materialize/icons';
+@import 'libs/materialize/materialize';
 
-//@import 'libs/mixins';
-@import 'libs/bootstrap/bootstrap';
+
+
+
+
+/************************************************************
+ * APPLICATION 
+ ************************************************************/
+@import 'config';
+@import 'functions';
 
 
 
@@ -27,6 +34,7 @@
 @import 'ui/global';
 @import 'ui/header';
 @import 'ui/footer';
+@import 'ui/dropdown';
 
 
 

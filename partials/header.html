@@ -1,19 +1,14 @@
 <header class="page-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10">
-        <h1> Strawberry </h1>
-      </div>
-      <div class="col-xs-2">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-            Navigation
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="peach.html">Peach</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="dropdown-container">
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="peach.html">Peach</a></li>
+    </ul>
   </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Strawberrry</a>
+      <li><a class="dropdown-button right" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </div>
+  </nav>
 </header>

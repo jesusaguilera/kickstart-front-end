@@ -4,10 +4,16 @@
 
 .page-header {
   margin: 0;
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  padding-right: rem-calc(20);
+  padding-left: rem-calc(20);
 
-  h1 {
-    margin: 0;
+  nav {
+    @include box-shadow(none);
+    background-color: transparent;
+    
+    a ,
+    .brand-logo {
+      color: $primary-color;
+    }
   }
 }
