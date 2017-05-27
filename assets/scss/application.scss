@@ -5,6 +5,7 @@
 @import 'compass/css3';
 @import 'compass/reset';
 @import 'config';
+@import 'functions';
 
 
 
@@ -24,6 +25,8 @@
  * COMPONENTS 
  ************************************************************/
 @import 'ui/global';
+@import 'ui/header';
+@import 'ui/footer';
 
 
 
@@ -33,3 +36,5 @@
 /************************************************************
  * PAGES 
  ************************************************************/
+@import 'pages/home';
+@import 'pages/about';
