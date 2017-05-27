@@ -3,14 +3,18 @@
  ************************************************************/
 
 var gulp         = require( 'gulp' ),
-    watch        = require( 'gulp-watch' ),
-    concat       = require( 'gulp-concat' ),
     connect      = require( 'gulp-connect' ),
+    sass         = require( 'gulp-sass' ),
+    babel        = require( 'babelify' ),
+    browserify   = require( 'browserify' ),
+    streamify    = require( 'gulp-streamify' ),
+    source       = require( 'vinyl-source-stream' ),
+    concat       = require( 'gulp-concat' ),
     uglify       = require( 'gulp-uglify' ),
-    file_include = require( 'gulp-file-include' ),
     del          = require( 'del' ),
     ncp          = require( 'ncp' ).ncp,
-    sass         = require( 'gulp-sass' );
+    file_include = require( 'gulp-file-include' ),
+    watch        = require( 'gulp-watch' );
 
 
 
@@ -65,7 +69,6 @@ var js_files           = 'assets/js/**/*.js',
 
 // Webserver 
 gulp.task( 'connect', function() {
-
   connect.server( {
     root       : 'build',
     port       : 3000,
@@ -73,41 +76,43 @@ gulp.task( 'connect', function() {
   } );
 } );
 
-
 // Scripts
 gulp.task( 'scripts', function() {
-  return gulp.src([
-    // Here we set an order for include our js files in all.js, 
-    // You only need to add here your js files instead of index.html like <script src="your/file/route">
+  gulp.src([
     "assets/js/libs/jquery.min.js",
     "assets/js/libs/materialize.min.js",
-    "assets/js/main.js"
   ])
-  .pipe(concat('all.js'))
   .pipe(uglify())
+  .pipe(concat('all-libs.js'))
+  .pipe(gulp.dest( js_build_dir));
+
+  browserify("assets/js/main.js")
+  .transform(babel)
+  .bundle()
+  .pipe(source('main.js'))
+  .pipe(streamify(uglify()))
   .pipe(gulp.dest( js_build_dir));
 } );
 
-
 // Sass
-gulp.task ( 'styles', function() {
+gulp.task ('styles', function() {
   gulp
   .src('assets/scss/application.scss')
   .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
-  .pipe( gulp.dest( css_build_dir ) );
+  .pipe(gulp.dest( css_build_dir));
 } );
-
 
 // Assets folders 
 gulp.task( 'folders', function() { 
+  // Image folder
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
-  del( fonts_build_dir, function() {
-    ncp( fonts_dir, fonts_build_dir );
-  } );
+  // Fonts folder
+  // del( fonts_build_dir, function() {
+  //   ncp( fonts_dir, fonts_build_dir );
+  // } );
 } );
-
 
 // File include
 gulp.task('fileinclude', function() {
@@ -120,7 +125,6 @@ gulp.task('fileinclude', function() {
   }))
   .pipe(gulp.dest( 'build' ) );
 });
-
 
 // Default
 gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts' ], function() {
