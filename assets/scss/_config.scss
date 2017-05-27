@@ -1,7 +1,22 @@
+// ==========================================================================
+// WEBSITE VARIABLES
+// ==========================================================================
+
+// Table of Contents:
+//
+//  1. #COLORS
+//  2. #FONTS
+//  3. #TEXTS
+//  4. #RESET PULL LEFT/RIGHT
+
+
+
+
+
 /************************************************************
- * #COLOR
+ * 1. #COLOR
  ************************************************************/
-$brand-primary   : #525252;
+$primary-color   : #525252;
 $brand-secondary : white;
 
 
@@ -9,7 +24,7 @@ $brand-secondary : white;
 
 
 /************************************************************
- * #TEXTS
+ * 2. #FONTS
  ************************************************************/
 
 $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -19,7 +34,7 @@ $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "
 
 
 /************************************************************
- * #TEXTS
+ * 3. #TEXTS
  ************************************************************/
 
 $giga-size         : 96px;
@@ -45,52 +60,26 @@ $font-default-size : 16; // Used to calc rem-cacl on functions.scss
 
 
 /************************************************************
- * #MEDIA QUERIES BREAKPOINTS
- ************************************************************/
-// Extra small screen / phone
-$screen-xs-min:              480px;
-$screen-xs-max:              767px;
-
-// Small screen / tablet
-$screen-sm-min:              768px;
-$screen-sm-max:              991px;
-
-// Medium screen / desktop
-$screen-md-min:              992px;
-$screen-md-max:              1199px;
-
-// Large screen / wide desktop
-$screen-lg-min:              1200px;
-$screen-lg-max:              1500px;
-
-
-
-
-
-/************************************************************
- * #RESET PULL LEFT/RIGHT
+ * 4. #RESET PULL LEFT/RIGHT
  ************************************************************/
 .pull-left,
-.pull-left-xs { float: left !important; }
+.pull-left-s { float: left !important; }
 
 .pull-right,
-.pull-right-xs { float: right !important; }
+.pull-right-s { float: right !important; }
 
 .pull-reset,
-.pull-reset-xs { float: none !important; }
+.pull-reset-s { float: none !important; }
 
-@media (min-width: $screen-sm-min) {
-  .pull-left-sm  { float: left !important; } 
-  .pull-right-sm { float: right !important; }
-  .pull-reset-sm { float: none !important; }
+
+@media #{$medium-and-up} {
+  .pull-left-m  { float: left !important; }
+  .pull-right-m { float: right !important; }
+  .pull-reset-m { float: none !important; }
 }
-@media (min-width: $screen-md-min) {
-  .pull-left-md  { float: left !important; }
-  .pull-right-md { float: right !important; }
-  .pull-reset-md { float: none !important; }
-}
-@media (min-width: $screen-lg-min) {
-  .pull-left-lg  { float: left !important; }
-  .pull-right-lg { float: right !important; }
-  .pull-reset-lg { float: none !important; }
+
+@media #{$large-and-up} {
+  .pull-left-l  { float: left !important; }
+  .pull-right-l { float: right !important; }
+  .pull-reset-l { float: none !important; }
 }

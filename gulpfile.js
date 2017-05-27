@@ -80,7 +80,7 @@ gulp.task( 'scripts', function() {
     // Here we set an order for include our js files in all.js, 
     // You only need to add here your js files instead of index.html like <script src="your/file/route">
     "assets/js/libs/jquery.min.js",
-    "assets/js/libs/bootstrap.min.js",
+    "assets/js/libs/materialize.min.js",
     "assets/js/main.js"
   ])
   .pipe(concat('all.js'))

@@ -20,30 +20,25 @@
   <body class="about">
 
     <header class="page-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10">
-        <h1> Peach </h1>
-      </div>
-      <div class="col-xs-2">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-            Navigation
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="index.html">Strawberry</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="dropdown-container">
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="index.html">Strawberrry</a></li>
+    </ul>
   </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Peach</a>
+      <a class="dropdown-button right" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+    </div>
+  </nav>
 </header>
 
 
     <section class="page-content">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col s12">
             <img src="images/peach.png" alt="peach">
           </div>
         </div>
@@ -53,7 +48,7 @@
     <footer class="page-footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col s12">
         <p> This is your footer </p>
       </div>
     </div>
