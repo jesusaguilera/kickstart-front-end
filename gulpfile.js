@@ -50,7 +50,8 @@ var js_build_dir      = 'build/js',
  * FILES
  ************************************************************/
 
-var js_files           = 'assets/js/**/*.js',
+var js_files           = 'assets/js/*.js',
+    js_libs_files     = 'assets/js/libs//*.js',
     js_build_files     = 'build/js/**/*',
     scss_files         = 'assets/scss/**/*.scss',
     images_files       = 'assets/images/**/*',
@@ -74,10 +75,10 @@ gulp.task( 'connect', function() {
     port       : 3000,
     livereload : true
   } );
-} );
+});
 
-// Scripts
-gulp.task( 'scripts', function() {
+// Scripts font-end libs
+gulp.task( 'scripts-libs', function() {
   gulp.src([
     "assets/js/libs/jquery.min.js",
     "assets/js/libs/materialize.min.js",
@@ -85,14 +86,17 @@ gulp.task( 'scripts', function() {
   .pipe(uglify())
   .pipe(concat('all-libs.js'))
   .pipe(gulp.dest( js_build_dir));
+});
 
+// Scripts front-end
+gulp.task( 'scripts-front', function() {
   browserify("assets/js/main.js")
   .transform(babel)
   .bundle()
   .pipe(source('main.js'))
-  .pipe(streamify(uglify()))
+  // .pipe(streamify(uglify()))
   .pipe(gulp.dest( js_build_dir));
-} );
+});
 
 // Sass
 gulp.task ('styles', function() {
@@ -100,7 +104,7 @@ gulp.task ('styles', function() {
   .src('assets/scss/application.scss')
   .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
   .pipe(gulp.dest( css_build_dir));
-} );
+});
 
 // Assets folders 
 gulp.task( 'folders', function() { 
@@ -112,7 +116,7 @@ gulp.task( 'folders', function() {
   // del( fonts_build_dir, function() {
   //   ncp( fonts_dir, fonts_build_dir );
   // } );
-} );
+});
 
 // File include
 gulp.task('fileinclude', function() {
@@ -127,9 +131,10 @@ gulp.task('fileinclude', function() {
 });
 
 // Default
-gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts' ], function() {
-  gulp.watch( js_files, [ 'scripts' ] );
+gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts-libs', 'scripts-front' ], function() {
+  gulp.watch( js_libs_files, [ 'scripts-libs' ] );
+  gulp.watch( js_files, [ 'scripts-front' ] );
   gulp.watch( scss_files, [ 'styles' ] );
   gulp.watch( html_files, [ 'fileinclude' ] );
   gulp.watch( [js_files, images_files, html_files],  [ 'folders' ] );
-} );
+});
