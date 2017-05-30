@@ -7,12 +7,14 @@ const empty = require('empty-element');
 
 const pageContent = document.getElementsByClassName('page-content')[0];
 
+const element = React.createElement("div", null, React.createElement("h1", null, "Hello, world!"), React.createElement("h2", null, "It is ", new Date().toLocaleTimeString(), "."));
+
 // Index
 page('/', function (ctx, next) {
 
   class MyComponent extends React.Component {
     render() {
-      return React.createElement("div", null, "Hello World Strawberry");
+      return element;
     }
   }
   ReactDOM.render(React.createElement(MyComponent, null), pageContent);

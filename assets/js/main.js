@@ -6,12 +6,19 @@ const empty = require('empty-element');
 
 const pageContent = document.getElementsByClassName('page-content')[0];
 
+ const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+
 // Index
 page('/', function(ctx, next) {
 
 class MyComponent extends React.Component {
   render() {
-    return <div>Hello World Strawberry</div>;
+    return element; 
   }
 }
 ReactDOM.render(<MyComponent />, pageContent);
