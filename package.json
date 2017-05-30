@@ -37,12 +37,15 @@
     "gulp-uglify": "^1.0.2",
     "gulp-watch": "^3.0.0",
     "ncp": "^1.0.1",
+    "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "empty": "^0.10.1",
     "empty-element": "^1.0.0",
     "page": "^1.7.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "yo-yo": "^1.4.1"
   }
 }

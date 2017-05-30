@@ -7,6 +7,7 @@ var gulp         = require( 'gulp' ),
     sass         = require( 'gulp-sass' ),
     babel        = require( 'babelify' ),
     browserify   = require( 'browserify' ),
+    reactify     = require( 'reactify' ),
     streamify    = require( 'gulp-streamify' ),
     source       = require( 'vinyl-source-stream' ),
     concat       = require( 'gulp-concat' ),
@@ -91,6 +92,7 @@ gulp.task( 'scripts-libs', function() {
 // Scripts front-end
 gulp.task( 'scripts-front', function() {
   browserify("assets/js/main.js")
+  .transform(reactify)
   .transform(babel)
   .bundle()
   .pipe(source('main.js'))
