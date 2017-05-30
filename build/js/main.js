@@ -5,27 +5,28 @@ const ReactDOM = require('react-dom');
 
 const pageContent = document.getElementsByClassName('page-content')[0];
 
-const elementStrawberry = React.createElement("div", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("div", { className: "col s6" }, React.createElement("img", { src: "images/strawberry.jpg", alt: "strawberry" })), React.createElement("div", { className: "col s6" }, React.createElement("p", null, "Morbi ac arcu sit amet justo auctor gravida ac ut eros. Ut nunc est, iaculis et sapien id, vulputate auctor ex. Cras vitae tincidunt erat. Curabitur sed mi pulvinar, congue urna ut, condimentum justo. Nulla viverra, sapien vel consectetur sagittis, lacus velit euismod erat, at commodo sapien mauris condimentum est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ligula nibh, ultrices id ullamcorper at, volutpat vel quam. Proin malesuada sed nisi eu feugiat. In varius blandit porttitor. Ut molestie rhoncus ante, vitae ultricies diam molestie sed."))));
-const elementPeach = React.createElement("div", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("div", { className: "col s6" }, React.createElement("img", { src: "images/peach.png", alt: "peach" })), React.createElement("div", { className: "col s6" }, React.createElement("p", null, "Morbi ac arcu sit amet justo auctor gravida ac ut eros. Ut nunc est, iaculis et sapien id, vulputate auctor ex. Cras vitae tincidunt erat. Curabitur sed mi pulvinar, congue urna ut, condimentum justo. Nulla viverra, sapien vel consectetur sagittis, lacus velit euismod erat, at commodo sapien mauris condimentum est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ligula nibh, ultrices id ullamcorper at, volutpat vel quam. Proin malesuada sed nisi eu feugiat. In varius blandit porttitor. Ut molestie rhoncus ante, vitae ultricies diam molestie sed."))));
+const Container = props => {
+  return React.createElement("div", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("div", { className: "col s6" }, React.createElement("img", { src: props.img, alt: props.name })), React.createElement("div", { className: "col s6" }, React.createElement("p", null, props.text))));
+};
+
+var miProps = [{
+  imgSrc: "images/strawberry.jpg",
+  altName: "Strawberry",
+  text: "Nulla viverra, sapien vel consectetur sagittis, lacus velit euismod erat, at commodo sapien mauris condimentum est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ligula nibh, ultrices id ullamcorper at, volutpat vel quam. Proin malesuada sed nisi eu feugiat. In varius blandit porttitor. Ut molestie rhoncus ante, vitae ultricies diam molestie sed."
+}, {
+  imgSrc: "images/peach.png",
+  altName: "Peach",
+  text: "Morbi ac arcu sit amet justo auctor gravida ac ut eros. Ut nunc est, iaculis et sapien id, vulputate auctor ex. Cras vitae tincidunt erat. Curabitur sed mi pulvinar, congue urna ut, condimentum justo. Nulla viverra, sapien vel consectetur sagittis, lacus velit euismod erat, at commodo sapien mauris condimentum est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ligula nibh, ultrices id ullamcorper at, volutpat vel quam. Proin malesuada sed nisi eu feugiat. In varius blandit porttitor. Ut molestie rhoncus ante, vitae ultricies diam molestie sed."
+}];
 
 // Index
 page('/', function (ctx, next) {
-
-  class MyComponent extends React.Component {
-    render() {
-      return elementStrawberry;
-    }
-  }
-  ReactDOM.render(React.createElement(MyComponent, null), pageContent);
+  ReactDOM.render(React.createElement(Container, { img: miProps[0].imgSrc, name: miProps[0].altName, text: miProps[0].text }), pageContent);
 });
 
+// About
 page('/peach.html', function (ctx, next) {
-  class MyComponent extends React.Component {
-    render() {
-      return elementPeach;
-    }
-  }
-  ReactDOM.render(React.createElement(MyComponent, null), pageContent);
+  ReactDOM.render(React.createElement(Container, { img: miProps[1].imgSrc, name: miProps[1].altName, text: miProps[1].text }), pageContent);
 });
 
 page();
