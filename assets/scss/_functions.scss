@@ -7,6 +7,9 @@
    were got from Foundation ZURB framework 
    http://foundation.zurb.com/sites/docs/v/5.5.3/components/sass.html
  */
+
+$font-default-size : 16; // Set a font default size 
+
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -29,3 +32,14 @@
   @return $remValues;
 }
 // End of Foundation ZURB functions block */
+
+
+
+
+// From px to vw
+$width-default: 375; // Set a device default width
+
+@function vw-calc($target) {   
+  $vw-context: ($width-default * 0.01) * 1px;   
+  @return ($target/$vw-context) * 1vw;
+}
