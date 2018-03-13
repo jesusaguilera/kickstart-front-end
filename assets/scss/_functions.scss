@@ -37,9 +37,9 @@ $font-default-size : 16; // Set a font default size
 
 
 // From px to vw
-$width-default: 375; // Set a device default width
+$set-width-default: 375; // Set a device default width
 
-@function vw-calc($target) {   
+@function vw-calc($target, $width-default: $set-width-default) {   
   $vw-context: ($width-default * 0.01) * 1px;   
   @return ($target/$vw-context) * 1vw;
 }
