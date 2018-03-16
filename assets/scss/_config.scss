@@ -7,7 +7,8 @@
 //  1. #COLORS
 //  2. #FONTS
 //  3. #TEXTS
-//  4. #RESET PULL LEFT/RIGHT
+//  4. #MEDIAQUERIES
+//  5. #Z-INDEX
 
 
 
@@ -16,8 +17,51 @@
 /************************************************************
  * 1. #COLOR
  ************************************************************/
-$primary-color   : #525252;
-$brand-secondary : white;
+
+$primary-color   : blue;
+$secondary-color : yellow;
+
+
+// Texts
+$text-darker : #393939;
+$text        : #525252;
+$text-medium : #A8A8A8;
+
+
+// Error
+$error      : #DF4A63;
+$warning    : #FE845E;
+
+
+// Organizational profiles colors 
+// Yellow
+$bg-yellow        : #FFF8E3;
+// $buttonYellow : Same as $sHome
+
+// Orange
+$bg-orange        : #FCEDD9;
+$button-orange    : #E98300;
+
+// Rose
+$bg-rose          : #FBEEF1;
+$button-rose      : '#E18A9E';
+
+// Green
+$bg-green         : '#EBF1E6';
+// $buttonGreen  : Same as Control 
+
+
+// Turquoise
+$bg-turquoise     : '#D9F2F1';
+$button-turquoise : '#03A89E';
+
+// Blue
+$bg-blue          : '#E5EBF3';
+$button-blue      : '#4D78AD';
+
+// Purple
+$bg-purple        : '#F1EBF3';
+$button-purple    : '#A17AAA';
 
 
 
@@ -37,49 +81,57 @@ $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "
  * 3. #TEXTS
  ************************************************************/
 
-$giga-size         : 96px;
-$mega-size         : 72px;
-$kilo-size         : 48px;
+$giga-size         : rem-calc(96px); 
+$mega-size         : rem-calc(72px); 
+$kilo-size         : rem-calc(48px); 
 
-$font-size-h1      : 36px; // .alpha
-$font-size-h2      : 30px; // .beta
-$font-size-h3      : 24px; // .gamma
-$font-size-h4      : 20px; // .delta
-$font-size-h5      : 18px; // .epsilon
-$font-size-h6      : 16px; // .zeta
+$font-size-h1      : rem-calc(32px); //.alpha
+$font-size-h2      : rem-calc(23px); //.beta
+$font-size-h3      : rem-calc(20px); //.gamma
+$font-size-h4      : rem-calc(18px); //.delta
+$font-size-h5      : rem-calc(16px); //.epsilon
+$font-size-h6      : rem-calc(15px); //.zeta
 
-$font-size-milli   : 12px;
-$font-size-micro   : 10px;
+$font-size-milli   : rem-calc(13px); 
+$font-size-micro   : rem-calc(12px);
 
 $font-size-large   : $font-size-h4;
 $font-size-small   : $font-size-milli;
-$font-default-size : 16; // Used to calc rem-cacl on functions.scss
 
 
 
 
 
 /************************************************************
- * 4. #RESET PULL LEFT/RIGHT
+ * 4. #MEDIAQUERIES
  ************************************************************/
-.pull-left,
-.pull-left-s { float: left !important; }
+$xs : rem-calc(375);  // tablet 7"
+$sm : rem-calc(600);  // iPad
+$md : rem-calc(768);  // iPad landscape
+$lg : rem-calc(1024); // desktops
+$xl : rem-calc(1440); // desktops extra larges
 
-.pull-right,
-.pull-right-s { float: right !important; }
+$xs-and-up : "only screen and (min-width : #{$xs})" !default;
+$sm-and-up : "only screen and (min-width : #{$sm})" !default;
+$md-and-up : "only screen and (min-width : #{$md})" !default;
+$lg-and-up : "only screen and (min-width : #{$lg})" !default;
+$xl-and-up : "only screen and (min-width : #{$xl})" !default;
 
-.pull-reset,
-.pull-reset-s { float: none !important; }
+$sm-and-down : "only screen and (max-width : #{$sm})" !default;
+$md-and-down : "only screen and (max-width : #{$md})" !default;
+$md-only     : "only screen and (min-width : #{$sm}) and (max-width : #{$md})" !default;
 
 
-@media #{$medium-and-up} {
-  .pull-left-m  { float: left !important; }
-  .pull-right-m { float: right !important; }
-  .pull-reset-m { float: none !important; }
-}
 
-@media #{$large-and-up} {
-  .pull-left-l  { float: left !important; }
-  .pull-right-l { float: right !important; }
-  .pull-reset-l { float: none !important; }
-}
+
+
+/************************************************************
+ * 5. #Z-INDEX
+ ************************************************************/
+$zindex-dropdown       : 1000 !default;
+$zindex-sticky         : 1020 !default;
+$zindex-fixed          : 1030 !default;
+$zindex-modal-backdrop : 1040 !default;
+$zindex-modal          : 1050 !default;
+$zindex-popover        : 1060 !default;
+$zindex-tooltip        : 1070 !default;
