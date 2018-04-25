@@ -81,19 +81,19 @@ $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "
  * 3. #TEXTS
  ************************************************************/
 
-$giga-size         : rem-calc(96px); 
-$mega-size         : rem-calc(72px); 
-$kilo-size         : rem-calc(48px); 
+$giga-size         : rem-calc(96); 
+$mega-size         : rem-calc(72); 
+$kilo-size         : rem-calc(48); 
 
-$font-size-h1      : rem-calc(32px); //.alpha
-$font-size-h2      : rem-calc(23px); //.beta
-$font-size-h3      : rem-calc(20px); //.gamma
-$font-size-h4      : rem-calc(18px); //.delta
-$font-size-h5      : rem-calc(16px); //.epsilon
-$font-size-h6      : rem-calc(15px); //.zeta
+$font-size-h1      : rem-calc(32); //.alpha
+$font-size-h2      : rem-calc(23); //.beta
+$font-size-h3      : rem-calc(20); //.gamma
+$font-size-h4      : rem-calc(18); //.delta
+$font-size-h5      : rem-calc(16); //.epsilon
+$font-size-h6      : rem-calc(15); //.zeta
 
-$font-size-milli   : rem-calc(13px); 
-$font-size-micro   : rem-calc(12px);
+$font-size-milli   : rem-calc(13); 
+$font-size-micro   : rem-calc(12);
 
 $font-size-large   : $font-size-h4;
 $font-size-small   : $font-size-milli;
