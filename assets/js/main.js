@@ -1,8 +1,8 @@
 const vars = require('./vars');
 
-var varOne = vars;
+var varOne = vars.numOne;
 
 $(document).on('ready',function(){
-  console.log(varOne.numOne + " This number is imported from another js file");
+  console.log(`${varOne} This number is imported from another js file`);
   console.log("main.js running :)");
 });

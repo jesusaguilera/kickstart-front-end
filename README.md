@@ -1,6 +1,6 @@
 # KickStart for Front-end development
 
-KickStart for optimising your front-end development and building quickly static web pages through [**gulpjs**](http://gulpjs.com/) and [**Bootstrap-sass**](https://github.com/twbs/bootstrap-sass) or [**Materialize**](http://materializecss.com/).
+KickStart for optimising your front-end development and building quickly static web pages through [**gulpjs**](http://gulpjs.com/).
 
 Using gulpjs you can take advantage of the nodejs syntax and nodejs streams, developing your front-end quickly and easily, in addition you won't need to use any back-end language, so you will only use front-end languages like html, sass and javascript. 
 
@@ -11,14 +11,18 @@ Using gulpjs you can take advantage of the nodejs syntax and nodejs streams, dev
  ************************************************************/
 
 var gulp         = require( 'gulp' ),
-    watch        = require( 'gulp-watch' ),
-    concat       = require( 'gulp-concat' ),
     connect      = require( 'gulp-connect' ),
+    sass         = require( 'gulp-sass' ),
+    babel        = require( 'babelify' ),
+    browserify   = require( 'browserify' ),
+    streamify    = require( 'gulp-streamify' ),
+    source       = require( 'vinyl-source-stream' ),
+    concat       = require( 'gulp-concat' ),
     uglify       = require( 'gulp-uglify' ),
-    file_include = require( 'gulp-file-include' ),
     del          = require( 'del' ),
     ncp          = require( 'ncp' ).ncp,
-    compass      = require( 'gulp-compass' );
+    file_include = require( 'gulp-file-include' ),
+    watch        = require( 'gulp-watch' );
 
 
 
@@ -66,13 +70,13 @@ var js_files           = 'assets/js/**/*.js',
 
 
 
+
 /************************************************************
  * TASKS
  ************************************************************/
 
 // Webserver 
 gulp.task( 'connect', function() {
-
   connect.server( {
     root       : 'build',
     port       : 3000,
@@ -80,61 +84,64 @@ gulp.task( 'connect', function() {
   } );
 } );
 
-
 // Scripts
 gulp.task( 'scripts', function() {
-  return gulp.src([
-    // Here we set an order for include our js files in all.js, 
-    // You only need to add here your js files instead of index.html like <script src="your/file/route">
+  gulp.src([
     "assets/js/libs/jquery.min.js",
     "assets/js/libs/materialize.min.js",
-    "assets/js/main.js"
   ])
-  .pipe(concat('all.js'))
   .pipe(uglify())
+  .pipe(concat('all-libs.js'))
+  .pipe(gulp.dest( js_build_dir));
+
+  browserify("assets/js/main.js")
+  .transform(babel)
+  .bundle()
+  .pipe(source('main.js'))
+  .pipe(streamify(uglify()))
   .pipe(gulp.dest( js_build_dir));
 } );
 
-
-// Compass
-gulp.task ( 'compass', function() {
-  gulp.src( 'assets/scss/application.scss' )
-  .pipe( compass ( { 
-      config_file : './config.rb',
-      css         : css_build_dir,
-      sass        : scss_dir
-  }) )
-  .pipe( gulp.dest( css_build_dir ) );
+// Sass
+gulp.task ('styles', function() {
+  gulp
+  .src('assets/scss/application.scss')
+  .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+  .pipe(gulp.dest( css_build_dir));
 } );
-
 
 // Assets folders 
 gulp.task( 'folders', function() { 
+  // Image folder
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
+
+  // Fonts folder
   del( fonts_build_dir, function() {
     ncp( fonts_dir, fonts_build_dir );
   } );
 } );
 
-
 // File include
 gulp.task('fileinclude', function() {
+
   gulp.src( [ './*.html' ] )
   .pipe( file_include ( {
+
     prefix: '@@',
     basepath: '@file',
   }))
   .pipe(gulp.dest( 'build' ) );
 });
 
-
 // Default
-gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'compass', 'scripts' ], function() {
+gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts' ], function() {
   gulp.watch( js_files, [ 'scripts' ] );
-  gulp.watch( scss_files, [ 'compass' ] );
+  gulp.watch( scss_files, [ 'styles' ] );
   gulp.watch( html_files, [ 'fileinclude' ] );
   gulp.watch( [js_files, images_files, html_files],  [ 'folders' ] );
 } );
 ```
+
+Maybe you can get a node-sass error only type in your terminal "npm rebuild node-sass" to fix it.

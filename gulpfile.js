@@ -80,7 +80,7 @@ gulp.task( 'connect', function() {
 gulp.task( 'scripts', function() {
   gulp.src([
     "assets/js/libs/jquery.min.js",
-    "assets/js/libs/materialize.min.js",
+    // more libraries
   ])
   .pipe(uglify())
   .pipe(concat('all-libs.js'))
@@ -108,10 +108,11 @@ gulp.task( 'folders', function() {
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
+
   // Fonts folder
-  // del( fonts_build_dir, function() {
-  //   ncp( fonts_dir, fonts_build_dir );
-  // } );
+  del( fonts_build_dir, function() {
+    ncp( fonts_dir, fonts_build_dir );
+  } );
 } );
 
 // File include
