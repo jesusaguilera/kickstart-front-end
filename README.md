@@ -88,7 +88,7 @@ gulp.task( 'connect', function() {
 gulp.task( 'scripts', function() {
   gulp.src([
     "assets/js/libs/jquery.min.js",
-    "assets/js/libs/materialize.min.js",
+    // more libraries
   ])
   .pipe(uglify())
   .pipe(concat('all-libs.js'))
@@ -98,7 +98,7 @@ gulp.task( 'scripts', function() {
   .transform(babel)
   .bundle()
   .pipe(source('main.js'))
-  .pipe(streamify(uglify()))
+  .pipe(streamify(uglify({ mangle: false })))
   .pipe(gulp.dest( js_build_dir));
 } );
 
