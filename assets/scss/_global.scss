@@ -1,0 +1,19 @@
+/************************************************************
+ * #GLOBAL
+ ************************************************************/
+
+* {
+  box-sizing: border-box;
+
+  &:focus,
+  &:active {
+    outline: 0 !important;
+  }
+}
+
+
+body{
+  background-color: white;
+  font-family: $font-family-default;
+  color: $primary-color;
+}

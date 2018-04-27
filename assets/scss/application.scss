@@ -4,7 +4,7 @@
 @import 'functions';
 @import 'config';
 @import 'fonts';
-
+@import 'global';
 
 
 
@@ -12,10 +12,8 @@
 /************************************************************
  * COMPONENTS 
  ************************************************************/
-@import 'components/global';
 @import 'components/header';
 @import 'components/footer';
-@import 'components/dropdown';
 
 
 

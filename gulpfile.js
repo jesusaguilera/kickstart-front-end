@@ -90,7 +90,7 @@ gulp.task( 'scripts', function() {
   .transform(babel)
   .bundle()
   .pipe(source('main.js'))
-  .pipe(streamify(uglify()))
+  .pipe(streamify(uglify({ mangle: false })))
   .pipe(gulp.dest( js_build_dir));
 } );
 
