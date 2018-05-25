@@ -85,18 +85,15 @@ $giga-size         : rem-calc(96);
 $mega-size         : rem-calc(72); 
 $kilo-size         : rem-calc(48); 
 
-$font-size-h1      : rem-calc(32); //.alpha
-$font-size-h2      : rem-calc(23); //.beta
-$font-size-h3      : rem-calc(20); //.gamma
-$font-size-h4      : rem-calc(18); //.delta
-$font-size-h5      : rem-calc(16); //.epsilon
-$font-size-h6      : rem-calc(15); //.zeta
+$font-size-h1      : rem-calc(36); //.alpha
+$font-size-h2      : rem-calc(24); //.beta
+$font-size-h3      : rem-calc(18); //.gamma
+$font-size-h4      : rem-calc(16); //.delta
+$font-size-h5      : rem-calc(14); //.epsilon
+$font-size-h6      : rem-calc(12); //.zeta
 
-$font-size-milli   : rem-calc(13); 
-$font-size-micro   : rem-calc(12);
-
-$font-size-large   : $font-size-h4;
-$font-size-small   : $font-size-milli;
+$font-size-milli   : rem-calc(11); 
+$font-size-micro   : rem-calc(10);
 
 
 
@@ -119,7 +116,11 @@ $xl-and-up : "only screen and (min-width : #{$xl})" !default;
 
 $sm-and-down : "only screen and (max-width : #{$sm})" !default;
 $md-and-down : "only screen and (max-width : #{$md})" !default;
-$md-only     : "only screen and (min-width : #{$sm}) and (max-width : #{$md})" !default;
+$lg-and-down : "only screen and (max-width : #{$lg})" !default;
+
+$sm-only     : "only screen and (min-width : #{$sm}) and (max-width : #{$md})" !default;
+$md-only     : "only screen and (min-width : #{$md}) and (max-width : #{$lg})" !default;
+$lg-only     : "only screen and (min-width : #{$lg}) and (max-width : #{$xl})" !default;
 
 
 

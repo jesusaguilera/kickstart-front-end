@@ -5,6 +5,7 @@
 var gulp         = require( 'gulp' ),
     connect      = require( 'gulp-connect' ),
     sass         = require( 'gulp-sass' ),
+    prefix       = require('gulp-autoprefixer'),
     babel        = require( 'babelify' ),
     browserify   = require( 'browserify' ),
     streamify    = require( 'gulp-streamify' ),
@@ -97,9 +98,13 @@ gulp.task( 'scripts', function() {
 // Sass
 gulp.task ('styles', function() {
   gulp
-  .src('assets/scss/application.scss')
-  .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
-  .pipe(gulp.dest( css_build_dir));
+    .src('assets/scss/application.scss')
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(prefix({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest( css_build_dir));
 } );
 
 // Assets folders 
