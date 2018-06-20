@@ -1,1 +1,87 @@
-!function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){return o(e[i][1][r]||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}({1:[function(require,module,exports){var varOne=require("./vars").numOne;$(document).on("ready",function(){console.log(varOne+" This number is imported from another js file"),console.log("main.js running :)")})},{"./vars":2}],2:[function(require,module,exports){exports.numOne=10,exports.numTwo=20},{}]},{},[1]);
+// Check scrolling direction
+function scrollingDirection(lastScrollTop) {
+  var headerHeight = $('.header').outerHeight();
+  $(window).scroll(function(event){
+    var currentScrollTop = $(this).scrollTop();
+    if (currentScrollTop > lastScrollTop && lastScrollTop > headerHeight){
+      // downscroll code
+      $('body').addClass('scrolling-down');
+      $('.header').addClass('hide');
+      $('.post-header').addClass('fixed');
+    } else {
+      // upscroll code
+      $('body').removeClass('scrolling-down');
+      $('.header').removeClass('hide');
+      $('.post-header').removeClass('fixed');
+    }
+    lastScrollTop = currentScrollTop;
+  });
+}
+// @Check scrolling direction
+
+
+// From src to bg images
+function from_src_to_bg(wrapper, imageWrapper, image) {
+  const cardImageLength = $(wrapper).find('.card-image').length;
+  const $cardImageWrapper = $(wrapper).find(imageWrapper);
+  const $cardImage = $(wrapper).find(image);
+  var cardImageSrc,
+      i = 0;
+  while (  i < cardImageLength ) {
+    cardImageSrc = $cardImage[i].src;
+    $cardImageWrapper.css( 'background-image', `url('${cardImageSrc}')` );
+    i ++;
+  }
+}
+// @From src to bg images
+
+
+// Dropdowns 
+function dropdowns() {
+  $('.dropdown-button').on('click', (event)=> {
+    var isActive = $(event.target).hasClass('active');
+    var $parent = $(event.target).parent();
+    var $dropdownList = $($parent).find('.dropdown-list');
+    if(isActive === true) {
+      $(event.target).removeClass('active');    
+      $($dropdownList).slideUp({duration: 300, easeing:'easeOutQuart'});
+    }else {
+      $(event.target).addClass('active');
+      $($dropdownList).slideDown({duration: 300, easeing:'easeOutQuart'});
+    }
+  });
+}
+// @Dropdowns 
+
+
+// Modal
+function modals() {
+  $('.modal-trigger').on('click', (event)=>{
+    var $buttonTrigger = $(event.target);
+    var modalData = $(event.target).data('modal');
+    var isActive = $(`.modal.${modalData}`).hasClass('active');
+
+    if(isActive === true) {
+      $('body').removeClass('modal');
+      $(`.modal-wrapper.${modalData}`).removeClass('active');
+    }else {
+      $('body').addClass('modal');
+      $(`.modal-wrapper.${modalData}`).addClass('active');
+    }
+
+    $('.modal-close').on('click', (event)=> {
+      var $parent = $(event.target).closest('.modal-wrapper');
+      $($buttonTrigger).removeClass('active');
+      $($parent).removeClass('active');
+    });
+  });
+
+}
+// @Modal
+;
+
+$(document).on('ready',function(){
+  scrollingDirection();
+  console.log(varOne + " This number is imported from another js file");
+  console.log("main.js running :)");
+});

@@ -2,16 +2,37 @@
  * #GLOBAL
  ************************************************************/
 
+// General
 * {
   box-sizing: border-box;
-
-  &:focus,
-  &:active {
-    outline: 0 !important;
-  }
 }
 
+*
+*:focus
+*:active{
+  outline: none !important;
+}
+// @General
 
+
+// Remove focus behavior
+button ,
+input {
+  box-shadow: none;
+  outline: none !important;
+}
+// @Remove focus behavior
+
+
+// Links
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+// @Links
+
+
+// Body
 body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,4 +40,58 @@ body{
   background-color: white;
   font-family: $font-family-default;
   color: $primary-color;
+
+  &.modal {
+    overflow: hidden;
+  }
+
 }
+// @Body
+
+
+// Hide
+.hide-lg-and-up {
+  @media #{$lg-and-up} {
+    display: none !important;
+  }
+}
+
+.hide-lg-and-down {
+  @media #{$lg-and-down} {
+    display: none !important;
+  }
+}
+.hide-md-and-down {
+  @media #{$md-and-down} {
+    display: none !important;
+  }
+}
+.hide-sm-and-down {
+  @media #{$sm-and-down} {
+    display: none !important;
+  }
+}
+// @Hide
+
+
+// Highlight
+.highlight {
+  color: $tertiary-color;
+  font-family: $font-family-medium;
+}
+// @Highlight
+
+
+// Icons
+.wrapper-icon {
+  width: rem-calc(24);
+  height: rem-calc(24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: rem-calc(8);
+  @media #{$lg-and-up} {
+    margin-right: rem-calc(20);
+  }
+}
+// @Icons
