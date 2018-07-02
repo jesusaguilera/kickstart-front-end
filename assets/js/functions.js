@@ -71,11 +71,6 @@ function modals() {
     var modalData = $(event.target).data('modal');
     var isActive = $(`.modal.${modalData}`).hasClass('active');
 
-    console.log($buttonTrigger);
-    console.log(modalData);
-    console.log(isActive);
-
-
     if(isActive === true) {
       $('body').removeClass('modal');
       $(`.modal-wrapper.${modalData}`).removeClass('active');
@@ -89,9 +84,6 @@ function modals() {
     $('.modal-wrapper').on('click', (event)=> {
       var clickOutsideModalContainer = $(event.target).closest(".modal-container").length;
       var $parent = $(event.target);
-
-      console.log($parent)
-      console.log(clickOutsideModalContainer)
 
       if ( clickOutsideModalContainer === 0) {
         $("body").removeClass("modal");
@@ -110,8 +102,14 @@ function modals() {
       $($buttonTrigger).removeClass('active');
       $($parent).removeClass('active');
       $('.modal-backdrop').remove();
-      $('body').removeClass('modal');
       isActive = false;
+      var isActiveModal = $('body').find(".modal-wrapper.active").length;
+      var isActiveMenu = $('body').find(".wrapper-menu.active").length;
+      if(isActiveModal === 0 && isActiveMenu === 0 ) {
+        $('body').removeClass('modal');
+      }else {
+        console.log('some modal active')
+      }
     });
     // @Close modal
   });
