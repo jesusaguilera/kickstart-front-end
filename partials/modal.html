@@ -1,0 +1,52 @@
+<!-- Modal register -->
+      <div class="modal-wrapper modal-sign-in">
+        <div class="modal-container modal-buy-container">
+          <button type="button" class="modal-close"></button>
+          <div class="modal-content">
+            <div class='signin-wrapper'>
+              <p class='title'>Inicia con tu Facebook o Google</p>
+            <p class='subtitle'>Ya me he resgistrado anteriormente en esta web o en la app de bclubber</p>
+              <div class='wrapper-buttons full'>
+                <a href='#' class='btn with-icon facebook'> 
+                  <img src='/entradas/assets/icons/facebook.svg' class='btn-icon'/>  
+                  Facebook 
+                </a>
+                <a href='#' class='btn with-icon grey-lighter bordered google'>
+                  <img src='/entradas/assets/icons/google.svg' class='btn-icon'/>  
+                  Google</a>
+              </div>
+
+              <div class='email-wrapper'>
+                <p class='title extra-small'>O con tu e-mail</p>
+                <form class='form form-row email-content'>
+                  <div class='form-col'>
+                    <label>Email</label>
+                    <input type="email" value='' class='bclubber' />
+                    <span class="error">{this.state.email_error}</span>
+                  </div>
+
+                  <div class='form-col password'>
+                    <label>Contraseña</label>
+                    <input type="password" value='' class='bclubber' />
+                    <button type='button' class="wrapper-icon">
+                      <img src='/entradas/assets/icons/eye-open.svg' class='eye-open active'/>
+                      <img src='/entradas/assets/icons/eye-close.svg' class='eye-close'/>
+                    </button>
+                    <span class="error">{this.state.password_error}</span>
+                  </div>
+                </form>
+
+                <input type='submit' class='input btn tertiary' value='INICIA SESIÓN'/>
+                <a href='#' class='link'>Recuperar Contraseña</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <p class="title">Iniciar sesión<p>
+            <p class='subtitle'>Ya me he resgistrado anteriormente en esta web o en la app de bclubber</p>
+          </div>
+
+        </div>
+      </div>    
+<!-- @Modal register -->
