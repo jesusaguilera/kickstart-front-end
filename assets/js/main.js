@@ -85,3 +85,10 @@ $(document).on('ready',function(){
   console.log(varOne + " This number is imported from another js file");
   console.log("main.js running :)");
 });
+
+
+
+// Sticky element
+// params: initFixContainer, rightPostParent, finishFixContainer, elementFixed, initMargin, finishMargin
+fixingElem('.wrapper.main-section', '.wrapper.info .container', '.wrapper.info', '.wrapper-float-content', '24px', '104px');
+// @Sticky element

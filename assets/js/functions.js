@@ -153,3 +153,37 @@ function datepickerSpanish() {
   });
 }
 // @Datepicker spanish
+
+
+// Sticky element 
+function fixingElem(initFixContainer, rightPostParent, finishFixContainer, elemFixed, initMargin, finishMargin) {
+
+  setTimeout(()=>{
+    var initFixPoint = $(initFixContainer).outerHeight(),
+      rightPos = $(rightPostParent).offset().left,
+      paddingBottom = finishFixContainer ? parseFloat($(finishFixContainer).css('paddingBottom')) : 0,
+      finishFixPoint =  $(finishFixContainer).offset().top + ($(finishFixContainer).outerHeight() - $(finishFixContainer).offset().top - paddingBottom),
+      initScrollPos = $(window).scrollTop();
+
+    fixit(initScrollPos, initFixPoint, finishFixPoint, rightPos, elemFixed, initMargin, finishMargin)
+
+    $(window).on('scroll', ()=>{
+      var scrollPos = $(window).scrollTop();
+      fixit(scrollPos, initFixPoint, finishFixPoint, rightPos, elemFixed, initMargin, finishMargin)
+    })
+  }, 600);
+
+  var fixit = (scrollPos, initFixPoint, finishFixPoint, rightPos, elemFixed, initMargin, finishMargin) => {
+    if (scrollPos < initFixPoint + initMargin) {
+      $(elemFixed).css({position: 'absolute', top: initMargin, bottom: 'initial', right: 0});
+    }
+    else if (scrollPos > finishFixPoint) {
+      $(elemFixed).css({position: 'absolute', top: 'initial', bottom: 0, right: 0});
+    }
+    else {
+      $(elemFixed).css({position: 'fixed', top: finishMargin, bottom: 'initial', right: rightPos});
+    }
+  }
+
+}
+// @Sticky element 
