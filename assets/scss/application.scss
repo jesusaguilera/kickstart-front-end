@@ -4,7 +4,15 @@
 @import 'functions';
 @import 'config';
 @import 'fonts';
+
+
+
+
+/************************************************************
+ * GLOBAL
+ ************************************************************/
 @import 'global';
+
 
 
 
@@ -13,7 +21,8 @@
  * COMPONENTS 
  ************************************************************/
 @import 'components/header';
-@import 'components/footer';
+@import 'components/grid';
+@import 'components/images';
 
 
 
@@ -24,4 +33,3 @@
  * PAGES 
  ************************************************************/
 @import 'pages/home';
-@import 'pages/about';

@@ -5,7 +5,7 @@
 var gulp         = require( 'gulp' ),
     connect      = require( 'gulp-connect' ),
     sass         = require( 'gulp-sass' ),
-    prefix       = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer'),
     babel        = require( 'babelify' ),
     browserify   = require( 'browserify' ),
     streamify    = require( 'gulp-streamify' ),
@@ -81,7 +81,7 @@ gulp.task( 'connect', function() {
 gulp.task( 'scripts', function() {
   gulp.src([
     "assets/js/libs/jquery.min.js",
-    // more libraries
+    // "assets/js/libs/materialize.min.js",
   ])
   .pipe(uglify())
   .pipe(concat('all-libs.js'))
@@ -91,21 +91,25 @@ gulp.task( 'scripts', function() {
   .transform(babel)
   .bundle()
   .pipe(source('main.js'))
-  .pipe(streamify(uglify({ mangle: false })))
+  .pipe(streamify(uglify()))
   .pipe(gulp.dest( js_build_dir));
 } );
 
 // Sass
 gulp.task ('styles', function() {
   gulp
-    .src('assets/scss/application.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(prefix({
-      browsers: ['last 2 versions'],
-      grid: true,
-      cascade: false
+  .src('assets/scss/application.scss')
+  .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(autoprefixer({
+      browsers: [
+        'last 2 version', 
+        'safari 5', 
+        'ie 9', 
+      ],
+      cascade: false,
+      grid: true
     }))
-    .pipe(gulp.dest( css_build_dir));
+  .pipe(gulp.dest( css_build_dir));
 } );
 
 // Assets folders 
@@ -114,7 +118,6 @@ gulp.task( 'folders', function() {
   del( images_build_dir, function() {
     ncp( images_dir, images_build_dir );
   } );
-
   // Fonts folder
   del( fonts_build_dir, function() {
     ncp( fonts_dir, fonts_build_dir );

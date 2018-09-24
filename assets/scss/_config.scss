@@ -18,50 +18,9 @@
  * 1. #COLOR
  ************************************************************/
 
-$primary-color   : pink;
-$secondary-color : yellow;
-
-
-// Texts
-$text-darker : #393939;
-$text        : #525252;
-$text-medium : #A8A8A8;
-
-
-// Error
-$error      : #DF4A63;
-$warning    : #FE845E;
-
-
-// Organizational profiles colors 
-// Yellow
-$bg-yellow        : #FFF8E3;
-// $buttonYellow : Same as $sHome
-
-// Orange
-$bg-orange        : #FCEDD9;
-$button-orange    : #E98300;
-
-// Rose
-$bg-rose          : #FBEEF1;
-$button-rose      : '#E18A9E';
-
-// Green
-$bg-green         : '#EBF1E6';
-// $buttonGreen  : Same as Control 
-
-
-// Turquoise
-$bg-turquoise     : '#D9F2F1';
-$button-turquoise : '#03A89E';
-
-// Blue
-$bg-blue          : '#E5EBF3';
-$button-blue      : '#4D78AD';
-
-// Purple
-$bg-purple        : '#F1EBF3';
-$button-purple    : '#A17AAA';
+$primary-color   : #0C2C5D;
+$secondary-color : #6B869F;
+$tertiary-color  : #1661FF;
 
 
 
@@ -85,15 +44,18 @@ $giga-size         : rem-calc(96);
 $mega-size         : rem-calc(72); 
 $kilo-size         : rem-calc(48); 
 
-$font-size-h1      : rem-calc(36); //.alpha
-$font-size-h2      : rem-calc(24); //.beta
-$font-size-h3      : rem-calc(18); //.gamma
-$font-size-h4      : rem-calc(16); //.delta
-$font-size-h5      : rem-calc(14); //.epsilon
-$font-size-h6      : rem-calc(12); //.zeta
+$font-size-h1      : rem-calc(32); //.alpha
+$font-size-h2      : rem-calc(23); //.beta
+$font-size-h3      : rem-calc(20); //.gamma
+$font-size-h4      : rem-calc(18); //.delta
+$font-size-h5      : rem-calc(16); //.epsilon
+$font-size-h6      : rem-calc(15); //.zeta
 
-$font-size-milli   : rem-calc(11); 
-$font-size-micro   : rem-calc(10);
+$font-size-milli   : rem-calc(13); 
+$font-size-micro   : rem-calc(12);
+
+$font-size-large   : $font-size-h4;
+$font-size-small   : $font-size-milli;
 
 
 
@@ -122,11 +84,6 @@ $sm-and-down  : "only screen and (max-width : #{$sm})" !default;
 $md-and-down  : "only screen and (max-width : #{$md})" !default;
 $lg-and-down  : "only screen and (max-width : #{$lg})" !default;
 
-$xs-only     : "only screen and (min-width : #{$xs}) and (max-width : #{$sm})" !default;
-$sm-only     : "only screen and (min-width : #{$sm}) and (max-width : #{$md})" !default;
-$md-only     : "only screen and (min-width : #{$md}) and (max-width : #{$lg})" !default;
-$lg-only     : "only screen and (min-width : #{$lg}) and (max-width : #{$xl})" !default;
-
 
 
 
@@ -141,3 +98,12 @@ $zindex-modal-backdrop : 1040 !default;
 $zindex-modal          : 1050 !default;
 $zindex-popover        : 1060 !default;
 $zindex-tooltip        : 1070 !default;
+
+
+
+
+
+/************************************************************
+ * 6. #SIZES
+ ************************************************************/
+$container-width : rem-calc(1280);
