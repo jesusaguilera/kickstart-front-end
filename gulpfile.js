@@ -102,6 +102,7 @@ gulp.task ('styles', function() {
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(prefix({
       browsers: ['last 2 versions'],
+      grid: true,
       cascade: false
     }))
     .pipe(gulp.dest( css_build_dir));
