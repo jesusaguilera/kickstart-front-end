@@ -2,21 +2,20 @@
  * DEPENDENCIES
  ************************************************************/
 
-var gulp         = require( 'gulp' ),
-    connect      = require( 'gulp-connect' ),
-    sass         = require( 'gulp-sass' ),
-    autoprefixer = require('gulp-autoprefixer'),
-    babel        = require( 'babelify' ),
-    browserify   = require( 'browserify' ),
-    streamify    = require( 'gulp-streamify' ),
-    source       = require( 'vinyl-source-stream' ),
-    concat       = require( 'gulp-concat' ),
-    uglify       = require( 'gulp-uglify' ),
-    del          = require( 'del' ),
-    ncp          = require( 'ncp' ).ncp,
-    file_include = require( 'gulp-file-include' ),
-    watch        = require( 'gulp-watch' );
-
+import  gulp         from 'gulp';
+import  connect      from 'gulp-connect';
+import  sass         from 'gulp-sass';
+import  autoprefixer from'gulp-autoprefixer';
+import  babel        from 'babelify';
+import  browserify   from 'browserify';
+import  streamify    from 'gulp-streamify';
+import  source       from 'vinyl-source-stream';
+import  concat       from 'gulp-concat';
+import  uglify       from 'gulp-uglify';
+import  del          from 'del';
+import  ncp          from 'ncp';
+import  file_include from 'gulp-file-include';
+import  watch        from 'gulp-watch';
 
 
 
@@ -103,7 +102,6 @@ gulp.task ('styles', function() {
     .pipe(autoprefixer({
       browsers: [
         'last 2 version', 
-        'safari 5', 
         'ie 9', 
       ],
       cascade: false,

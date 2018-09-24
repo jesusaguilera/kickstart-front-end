@@ -4,8 +4,15 @@
 
 .col-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: rem-calc(24);
+
+  @media #{$md-and-up} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media #{$lg-and-up} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   .col {
     background-color: peru;
