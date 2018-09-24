@@ -29,5 +29,5 @@ $ gulp
 
 #### 5. Open your browser
 ```
-http://localhost:3000
+localhost:3000
 ```
