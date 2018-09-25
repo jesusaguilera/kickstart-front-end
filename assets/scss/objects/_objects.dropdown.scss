@@ -1,0 +1,283 @@
+/* ==========================================================================
+   #DROPDOWN
+   ========================================================================== */
+
+.wrapper-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .dropdown {
+    position: relative;
+    margin-left: $size-xs;
+
+
+    // Pos right
+    &.right {
+      .dropdown-content {
+        left: initial;
+        right: 0;
+      }
+    }
+
+
+    // Item bordered
+    &.item-bordered {
+      .dropdown-content {
+        .dropdown-content-item {
+          border-bottom: rem-calc(1) solid $grey-light;
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+
+    // Arrows
+    &.arrow-up-left ,
+    &.arrow-up-right {
+      .dropdown-content {
+        margin-top: rem-calc(18);
+
+        &.active {
+          overflow: visible;
+
+          &:before {
+            transition: all 700ms ease-out;
+            opacity: 1;
+          }
+          &:after {
+            transition: all 700ms ease-out;
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          background-color: white;
+          border: rem-calc(1) solid $grey-light;
+          content: '';
+          display: block;
+          width: $font-size-micro;
+          height: $font-size-micro;
+          position: absolute;
+          top: rem-calc(-7);
+          right: rem-calc(22);
+          transform: rotate(45deg);
+          opacity: 0;
+        }
+        &:after {
+          background-color: white;
+          content: '';
+          display: block;
+          width: rem-calc(22);
+          height: rem-calc(10);
+          position: absolute;
+          top: 0;
+          right: rem-calc(18);
+          opacity: 0;
+        }
+
+      }
+    }
+
+    &.arrow-up-left {
+      .dropdown-content {
+        &:before {
+          left: rem-calc(22);
+          right: initial;
+        }
+        &:after {
+          left: rem-calc(18);
+          right: initial;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+// Button
+.wrapper-dropdown {
+  .dropdown {
+
+    .dropdown-button {
+      background-color: white;
+      border: 1px solid $grey-light;
+      border-radius: rem-calc(4);
+      cursor: pointer;
+      font-size: $font-size-h6;
+      line-height: $font-size-h6;
+      text-align: left;
+      white-space: nowrap;
+      height: rem-calc(32);
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      padding-top: rem-calc(2);
+      padding-right: rem-calc(8);
+      padding-left: rem-calc(8);
+
+      @media #{$md-and-up} {
+        height: rem-calc(40);
+        padding-left: rem-calc(24) ;
+        padding-right: rem-calc(24) ;
+      }
+
+      @media #{$lg-and-up} {
+        padding-top: rem-calc(3);
+        padding-right: rem-calc(56);
+      }
+
+      &.active {
+        &:before {
+          transform: rotate(90deg);
+        }
+      }
+
+      &.rounded {
+        border-radius: rem-calc(20);
+      }
+
+      &.conversor {
+        width: 100%;
+        padding-top: 0;
+        padding-right: rem-calc(3);
+        padding-left: rem-calc(42);
+
+       &:before {
+         background-image: asset-url('icons/arrow-double.svg');
+         background-repeat: no-repeat;
+         background-size: rem-calc(10) rem-calc(15);
+         width: rem-calc(10);
+         height: rem-calc(15);
+         left: $font-size-h4;
+         right: $font-size-h6;
+         transform: rotate(0);
+        }
+      }
+
+      &.user {
+        padding-top: 0;
+        padding-right: rem-calc(3);
+        padding-left: rem-calc(42);
+       &:before {
+          left: $font-size-h4;
+          right: initial;
+        }
+
+        .wrapper-avatar {
+          margin-left: $font-size-micro;
+        }
+      }
+
+      &:before {
+        content: '';
+        background-image: asset-url('icons/arrow-left.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: rem-calc(8) rem-calc(13);
+        display: none;
+        width: rem-calc(8);
+        height: rem-calc(13);
+        position: absolute;
+        right: $font-size-micro;
+        transition: all 300ms ease-out;
+        transform: rotate(-90deg);
+
+        @media #{$lg-and-up} {
+          display: block;
+        }
+      }
+
+      .dropdown-button-icon {
+        margin-right: $font-size-micro;
+      }
+    }
+  }
+}
+
+
+// Content
+.wrapper-dropdown {
+  .dropdown {
+    .dropdown-content {
+      transition: all 300ms ease-out;
+      background-color: white;
+      list-style: none;
+      width: 100%;
+      display: block;
+      overflow-y: auto;
+      position: fixed;
+      top: 100%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: $zindex-dropdown;
+      padding: 0;
+      margin: 0;
+
+      &.active {
+        top: 0;
+      }
+
+      @media #{$lg-and-up} {
+        transition: all 300ms ease-out;
+        border: 1px solid transparent;
+        background-color: transparent;
+        border-radius: rem-calc(4);
+        min-width: rem-calc(200);
+        height: 0;
+        position: absolute;
+        top: rem-calc(40);
+        bottom: initial;
+        left: 0;
+        margin: rem-calc(8) 0 rem-calc(24); 
+        overflow: hidden;
+        opacity: 0;
+        padding: 0;
+
+        &.active {
+          background-color: white;
+          box-shadow: 0 rem-calc(2) $font-size-micro rgba(0, 0, 0, .12);
+          border-color: $grey-light;
+          height: auto;
+          top: rem-calc(40);
+          opacity: 1;
+        }
+      }
+
+      .dropdown-content-header {
+        background-color: $grey-light;
+        border-bottom: 1px solid $grey-light;
+        display: flex;
+        align-items: center;
+        height: $mega-size;
+        padding: 0 rem-calc(20);
+        margin-bottom: rem-calc(36);
+
+        @media #{$lg-and-up} {
+          display: none;
+        }
+      }
+
+      .dropdown-content-item {
+
+        .dropdown-content-item-link {
+          cursor: pointer;
+          font-size: $font-size-h6;
+          display: block;
+          padding: $font-size-h6 rem-calc(24);
+
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

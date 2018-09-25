@@ -10,6 +10,7 @@
 // Lg
 .hide-lg-and-up {
   @media #{$lg-and-up} {
+    background-color: red;
     display: none !important;
   }
 }

@@ -97,7 +97,7 @@ gulp.task( 'scripts', function() {
 // Sass
 gulp.task ('styles', function() {
   gulp
-  .src('assets/scss/application.scss')
+  .src('assets/scss/main.scss')
   .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: [
