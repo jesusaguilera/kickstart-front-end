@@ -127,7 +127,6 @@ gulp.task('fileinclude', function() {
 
   gulp.src( [ './*.html' ] )
   .pipe( file_include ( {
-
     prefix: '@@',
     basepath: '@file',
   }))

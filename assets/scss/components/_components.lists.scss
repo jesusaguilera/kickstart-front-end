@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #LISTS
+   ========================================================================== */
+
+ul {
+  list-style: none;
+
+}
+
+
+// List inline
+.list-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  li {
+    margin-left: $size-l;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,2 +1,9 @@
 <header class="header-main"> 
+  @@if (context.page === 'index') {
+  <p>Index</p>
+  }
+  @@if (context.page != 'index') {
+  <p>No Index</p>
+  }
+
 </header>
