@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #HIDE
+   ========================================================================== */
+
+// Hide
+.hide {
+    display: none !important;
+}
+
+// Lg
+.hide-lg-and-up {
+  @media #{$lg-and-up} {
+    display: none !important;
+  }
+}
+.hide-lg-and-down {
+  @media #{$lg-and-down} {
+    display: none !important;
+  }
+}
+
+
+// Md
+.hide-md-and-up {
+  @media #{$md-and-up} {
+    display: none !important;
+  }
+}
+.hide-md-and-down {
+  @media #{$md-and-down} {
+    display: none !important;
+  }
+}
+
+// Sm
+.hide-sm-and-up {
+  @media #{$sm-and-up} {
+    display: none !important;
+  }
+}
+.hide-sm-and-down {
+  @media #{$sm-and-down} {
+    display: none !important;
+  }
+}
+// @Hide
+

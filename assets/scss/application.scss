@@ -1,17 +1,46 @@
 /************************************************************
- * APPLICATION 
+ * TOOLS
  ************************************************************/
-@import 'functions';
-@import 'config';
-@import 'fonts';
+@import 'tools/tools.rem-calc';
+
+
 
 
 
 
 /************************************************************
- * GLOBAL
+ * FONTS
  ************************************************************/
-@import 'global';
+@import 'fonts/fonts.avenir';
+
+
+
+
+
+/************************************************************
+ * SETTINGS
+ ************************************************************/
+@import 'settings/settings.core';
+
+
+
+
+
+/************************************************************
+ * UTILITIES 
+ * ************************************************************/
+@import 'utilities/utilities.hide';
+
+
+
+
+
+/************************************************************
+ * GENERIC  
+ ************************************************************/
+@import 'generic/generic.normalize';
+@import 'generic/generic.reset';
+@import 'generic/generic.global';
 
 
 
@@ -20,9 +49,22 @@
 /************************************************************
  * COMPONENTS 
  ************************************************************/
-@import 'components/header';
-@import 'components/grid';
-@import 'components/images';
+@import 'components/components.buttons';
+@import 'components/components.images';
+
+
+
+
+
+
+/************************************************************
+ * OBJECTS 
+ ************************************************************/
+@import 'objects/objects.body';
+@import 'objects/objects.header';
+@import 'objects/objects.footer';
+@import 'objects/objects.wrapper';
+@import 'objects/objects.grid';
 
 
 
@@ -32,4 +74,4 @@
 /************************************************************
  * PAGES 
  ************************************************************/
-@import 'pages/home';
+@import 'pages/pages.home';

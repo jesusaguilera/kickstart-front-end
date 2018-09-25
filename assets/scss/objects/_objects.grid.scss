@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+.col-wrapper {
+  display: grid;
+  grid-gap: rem-calc(24);
+
+  @media #{$md-and-up} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media #{$lg-and-up} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .col {
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
