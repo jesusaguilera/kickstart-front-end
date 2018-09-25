@@ -12,6 +12,7 @@
  * FONTS
  ************************************************************/
 @import 'fonts/fonts.avenir';
+@import 'https://afeld.github.io/emoji-css/emoji.css';
 
 
 
@@ -49,6 +50,9 @@
 /************************************************************
  * COMPONENTS 
  ************************************************************/
+@import 'components/components.headings';
+@import 'components/components.links';
+@import 'components/components.texts';
 @import 'components/components.buttons';
 @import 'components/components.images';
 
