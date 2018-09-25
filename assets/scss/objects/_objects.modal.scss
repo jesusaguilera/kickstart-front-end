@@ -1,0 +1,113 @@
+/* ==========================================================================
+   #MODAL
+   ========================================================================== */
+
+.wrapper-modal {
+    transition: top 300ms ease-out;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    display: flex;
+    height: 100%;
+    opacity: 0;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: $zindex-modal;
+
+    @media #{$lg-and-up} {
+      transition: all 0ms ease-out;
+      top: 0;
+      height: 0;
+    }
+
+    &.active {
+      opacity: 1;
+      top: 0;
+      @media #{$lg-and-up} {
+        height: 100%;
+        padding-top: rem-calc(42);
+        padding-bottom: rem-calc(42);
+      }
+    }
+
+  // Modal container
+  .modal-container {
+    background-color: white;
+    border: 1px solid $grey-light;
+    border-radius: rem-calc(4);
+    max-width: rem-calc(768);
+    min-height: rem-calc(350);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // Close
+    .modal-close {
+      background-image: asset-url('icons/close.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: rem-calc(15) $font-size-h6;
+      width: rem-calc(48);
+      height: rem-calc(48);
+      position: absolute;
+      top: rem-calc(8);
+      right: 0;
+
+      @media #{$lg-and-up} {
+        right: rem-calc(24);
+      }
+    }
+    // @Close
+
+    // Modal header & footer
+    .modal-header ,
+    .modal-footer {
+      background-color: white;
+      height: rem-calc(72);
+      display: flex;
+      align-items: center;
+      padding: 0 rem-calc(16);
+
+      @media #{$lg-and-up} {
+        padding: 0 rem-calc(24);
+      }
+    }
+    // @Modal header & footer
+
+    // Modal header
+    .modal-header {
+      border-bottom: rem-calc(1) solid $grey-light;
+
+      .title {
+        font-size: $font-size-h5;
+        line-height: $font-size-h5;
+        margin: 0;
+
+        @media #{$md-and-up} {
+          font-size: rem-calc(20);
+        }
+      }
+    }
+    // @Modal header
+
+    // Modal footer
+    .modal-footer {
+      border-top: rem-calc(1) solid $grey-light;
+      justify-content: center;
+      align-items: center;
+    }
+    // @Modal footer
+    
+    .modal-content {
+      flex: 1;
+    }
+  }
+  // @Modal container
+}
