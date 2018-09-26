@@ -57,7 +57,7 @@ var js_files           = 'assets/js/**/*.js',
     images_build_files = 'build/images/**/*',
     fonts_files        = 'assets/fonts/**/*',
     fonts_build_files  = 'build/fonts/**/*',
-    html_files         = [ './*.html', './partials/*.html' ];
+    html_files         = [ './*.html', './partials/*.html', './layouts/*.html' ];
 
 
 
@@ -68,16 +68,17 @@ var js_files           = 'assets/js/**/*.js',
  ************************************************************/
 
 // Webserver 
-gulp.task( 'connect', function() {
+gulp.task('connect', function() {
   connect.server( {
     root       : 'build',
     port       : 3000,
     livereload : true
-  } );
-} );
+  });
+});
+
 
 // Scripts
-gulp.task( 'scripts', function() {
+gulp.task('scripts', function() {
   gulp.src([
     "assets/js/libs/jquery.min.js",
     // "assets/js/libs/materialize.min.js",
@@ -92,7 +93,8 @@ gulp.task( 'scripts', function() {
   .pipe(source('main.js'))
   .pipe(streamify(uglify()))
   .pipe(gulp.dest( js_build_dir));
-} );
+});
+
 
 // Sass
 gulp.task ('styles', function() {
@@ -108,35 +110,37 @@ gulp.task ('styles', function() {
       grid: true
     }))
   .pipe(gulp.dest( css_build_dir));
-} );
+});
+
 
 // Assets folders 
-gulp.task( 'folders', function() { 
+gulp.task('folders', function() { 
   // Image folder
-  del( images_build_dir, function() {
-    ncp( images_dir, images_build_dir );
-  } );
+  del(images_build_dir, function() {
+    ncp(images_dir, images_build_dir);
+  });
   // Fonts folder
-  del( fonts_build_dir, function() {
-    ncp( fonts_dir, fonts_build_dir );
-  } );
-} );
+  del(fonts_build_dir, function() {
+    ncp(fonts_dir, fonts_build_dir);
+  });
+});
+
 
 // File include
 gulp.task('fileinclude', function() {
-
-  gulp.src( [ './*.html' ] )
-  .pipe( file_include ( {
+  gulp.src(['./*.html'])
+  .pipe( file_include ({
     prefix: '@@',
     basepath: '@file',
   }))
-  .pipe(gulp.dest( 'build' ) );
+  .pipe(gulp.dest('build'));
 });
 
+
 // Default
-gulp.task( 'default', [ 'connect', 'fileinclude', 'folders', 'styles', 'scripts' ], function() {
-  gulp.watch( js_files, [ 'scripts' ] );
-  gulp.watch( scss_files, [ 'styles' ] );
-  gulp.watch( html_files, [ 'fileinclude' ] );
-  gulp.watch( [js_files, images_files, html_files],  [ 'folders' ] );
-} );
+gulp.task('default', ['connect', 'fileinclude', 'folders', 'styles', 'scripts'], function() {
+  gulp.watch(js_files, ['scripts']);
+  gulp.watch(scss_files, ['styles']);
+  gulp.watch(html_files, ['fileinclude']);
+  gulp.watch([js_files, images_files, html_files],  ['folders']);
+});
