@@ -2,7 +2,7 @@
    #DROPDOWN
    ========================================================================== */
 
-const modal =  () => {
+const modal = () => {
 
   $('.modal-trigger').on('click', (event)=>{
 
@@ -55,18 +55,4 @@ const modal =  () => {
   });
 }
 
-exports.modal = modal();
-
-
-/* Template
-<button class="modal-trigger" data-modal="modal-buy">Open modal</button>
-
-<div class="wrapper-modal modal-buy">
-  <div class="modal-container modal-buy-container">
-    <button type="button" class="modal-close"></button>
-    <div class="modal-header">Modal header</div>
-    <div class="modal-content">Modal content</div>
-    <div class="modal-footer">Modal footer</div>
-  </div>
-</div>
- @Template */
+export default modal;

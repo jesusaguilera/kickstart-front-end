@@ -34,22 +34,4 @@ const dropdown = () => {
   // @Listing with links
 }
 
-exports.dropdown = dropdown();
-
-
-
-/* Template
-
-<div className="wrapper-dropdown">
- <div className="dropdown">
-  <button type="button" className="dropdown-button">Selecciona una cantidad</button>
-  <ul className="dropdown-content">
-    <li className='dropdown-content-item hide-lg-and-up'><p className='title medium dropdown-content-item-link'>Selecciona una cantidad</p></li>
-    <li className="dropdown-content-item"><a className="dropdown-content-item-link">0</a></li>   
-    <li className="dropdown-content-item"><a className="dropdown-content-item-link">1</a></li>   
-    <li className="dropdown-content-item"><a className="dropdown-content-item-link">2</a></li>   
-  </ul>
- </div>
-</div>
-
-@Template */
+export default dropdown;
