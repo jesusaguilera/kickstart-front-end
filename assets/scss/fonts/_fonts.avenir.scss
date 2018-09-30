@@ -13,3 +13,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// Avernir Medium
+@font-face {
+  font-family: 'avenir-medium';
+  src: url('../fonts/Avenir-Medium-webfont.eot');
+  src: url('../fonts/Avenir-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Avenir-Medium-webfont.woff') format('woff'),
+  url('../fonts/Avenir-Medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Avernir Black
+@font-face {
+  font-family: 'avenir-black';
+  src: url('../fonts/AvenirLTPro-Black.eot');
+  src: url('../fonts/AvenirLTPro-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvenirLTPro-Black.woff') format('woff'),
+  url('../fonts/AvenirLTPro-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

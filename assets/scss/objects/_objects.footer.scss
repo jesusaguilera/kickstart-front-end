@@ -2,3 +2,49 @@
    #FOOTER
    ========================================================================== */
 
+.footer {
+  width: 100%;
+
+
+  .wrapper--footer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-right: $font-size-h3;
+    padding-left: $font-size-h3;
+    padding-bottom: $font-size-h3;
+
+    @media #{$sm-and-up} {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: $size-xl;
+    }
+
+    @media #{$lg-and-up} {
+      padding-right: $size-xxl;
+      padding-left: $size-xxl;
+    }
+  }
+
+  .footer__links ,
+  .footer__info {
+    width: 100%;
+    @media #{$sm-and-up} {
+      width: auto;
+    }
+  }
+
+  .footer__info {
+    margin-top: $font-size-h3;
+    @media #{$lg-and-up} {
+      margin-top: 0;
+    }
+
+    h2 {
+      color: $texts;
+    }
+  }
+
+}

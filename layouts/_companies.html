@@ -1,0 +1,59 @@
+<main class="wrapper"> 
+    <h2 class="title">We. para empresas</h2>
+    <div class="wrapper--content">
+        <div class="content content--left">
+            <h2 class="title">Conversaciones en grupo para crear experiencias de marca</h2>
+            <p>
+                Las empresas pueden incorporar los módulos adicionales de We, pensados para enriquecer las relaciones con los clientes y equipos internos.
+                <br/>
+                <br/>
+
+                Incorporación de contenidos, participación de líderes de opinión y analítica son algunos de estos módulos que, combinados con las mensajería en grupo, permiten llegar donde antes no era posible.
+                <br/>
+                <br/>
+
+                · We para tu estrategia de marketing digital.
+                · We para tus equipos internos.
+                · We para la gestión de grupos de clientes.
+            </p>
+        </div>
+        <div class="content content--right">
+            <h2 class="title">Déjanos tus datos y recibe más información de We para empresas</h2>
+            <form action="" method="get" accept-charset="utf-8" class="wrapper--form">
+                @@loop("../components/_input.html", [
+                    {
+                        "type": "input", 
+                        "label": "Nombre", 
+                        "error": "Debe escribir un nombre", 
+                        "id": "username"
+                    },
+                    {
+                        "type": "input", 
+                        "label": "Cargo", 
+                        "error": "Debe escribir un cargo", 
+                        "id": "position" 
+                    },
+                    {
+                        "type": "input", 
+                        "label": "Empresa", 
+                        "error": "Debe escribir un nombre de empresa", 
+                        "id": "company"
+                    },
+                    {
+                        "type": "input", 
+                        "label": "Email", 
+                        "error": "Debe escribir un email correcto", 
+                        "id": "email"
+                    },
+                    {
+                        "type": "checkbox", 
+                        "label": "Deseo recibir información de We y acepto la <a href='conditions.html' class='underlined'>Política de Privacidad</a>.", 
+                        "error": "Debe aceptar la política de privacidad" ,
+                        "id": "checkbox"
+                    }
+                ])
+                <input type="submit" value="Enviar" class="btn disabled" id="submit">
+            </form>
+        </div>
+    </div>
+</main>

@@ -38,7 +38,7 @@
   // Modal container
   .modal-container {
     background-color: white;
-    border: 1px solid $grey-light;
+    border: 1px solid $border-color;
     border-radius: rem-calc(4);
     max-width: rem-calc(768);
     min-height: rem-calc(350);
@@ -83,7 +83,7 @@
 
     // Modal header
     .modal-header {
-      border-bottom: rem-calc(1) solid $grey-light;
+      border-bottom: rem-calc(1) solid $border-color;
 
       .title {
         font-size: $font-size-h5;
@@ -99,7 +99,7 @@
 
     // Modal footer
     .modal-footer {
-      border-top: rem-calc(1) solid $grey-light;
+      border-top: rem-calc(1) solid $border-color;
       justify-content: center;
       align-items: center;
     }

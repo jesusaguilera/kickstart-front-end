@@ -1,0 +1,44 @@
+<footer class='footer'> 
+  <div class="wrapper--footer">
+    <div class="footer__info">
+      <h2>We.</h2>
+      <p>Una iniciativa de We Places y String Projects</p>
+      <p class='mute'>©2018 We Places</p>
+    </div>
+    <div class='footer__links'>
+      @@if (context.page === "home") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "features.html", "text": "Características" },
+          { "link": "companies.html", "text": "Empresas" },
+          { "link": "conditions.html", "text": "Condiciones" }
+        ])
+      </ul>
+      }
+      @@if (context.page === "features") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "companies.html", "text": "We corporate" },
+          { "link": "conditions.html", "text": "Condiciones legales" }
+        ])
+      </ul>
+      }
+      @@if (context.page === "conditions") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "features.html", "text": "Características" },
+          { "link": "companies.html", "text": "Empresas" }
+        ])
+      </ul>
+      }
+      @@if (context.page === "companies") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "features.html", "text": "Características" },
+          { "link": "conditions.html", "text": "Condiciones legales" }
+        ])
+      </ul>
+      }
+    </div>
+  </div>
+</footer>

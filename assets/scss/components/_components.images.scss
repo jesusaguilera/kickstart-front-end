@@ -6,3 +6,14 @@
 .image-responsive {
   max-width: 100%;
 }
+
+// Logo
+.logo {
+  width: rem-calc(112);
+  height: rem-calc(112);
+
+  svg {
+    max-width: 100%;
+  }
+
+}

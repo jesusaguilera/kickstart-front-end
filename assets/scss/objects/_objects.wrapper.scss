@@ -2,7 +2,38 @@
    #WRAPPER
    ========================================================================== */
 
-.wrapper-main {
+// Main
+.wrapper {
+  width: 100%;
   max-width: $container-width;
+  text-align: center;
+  padding-top: rem-calc(36);
+  padding-bottom: rem-calc(36);
+  padding-right: $font-size-h3;
+  padding-left: $font-size-h3;
   margin: 0 auto;
+
+  @media #{$lg-and-up} {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem-calc(36);
+    padding-bottom: rem-calc(36);
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

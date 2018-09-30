@@ -1,0 +1,46 @@
+<div class='wrapper--header'> 
+  
+  <a href="index.html" class="wrapper--header__logo">
+    <div class="logo logo--header">
+      @@include("../components/svg/_logo.html")
+    </div>
+  </a>
+
+  <nav class="wrapper--header__nav">
+
+    <div class="wrapper--header__nav__links">
+      @@if (context.page === "features") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "index.html", "text": "Inicio" },
+          { "link": "companies.html", "text": "Empresas" }
+        ])
+      </ul>
+      }
+      @@if (context.page === "conditions") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "features.html", "text": "Características" },
+          { "link": "companies.html", "text": "We.Corporate" }
+        ])
+      </ul>
+      }
+      @@if (context.page === "companies") {
+      <ul class='list--inline'>
+        @@loop('../components/_listing-links.html', [
+          { "link": "index.html", "text": "Inicio" },
+          { "link": "features.html", "text": "Características" }
+        ])
+      </ul>
+      }
+    </div>
+
+    <div class="wrapper--buttons--inline">
+      @@loop("../components/_buttons.html", [
+        {"text": "Descargar iOS", "withIcon": "ios", "link": "http://www.google.es"},
+        {"text": "Descargar Google Play", "withIcon": "google", "link": "http://www.google.es"}
+      ])
+    </div>
+  </nav>
+
+</div>

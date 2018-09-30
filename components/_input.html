@@ -1,0 +1,22 @@
+<div class="form__item form__item--@@type">
+
+  @@if(context.type === 'input') {
+    <input type="text" id="@@id" name="@@id"/>
+    @@if(context.label) {
+    <span class="label">@@label</span>
+    }
+    @@if(context.error) {
+    <p class="error">@@error</p>
+    }
+  }
+
+  @@if(context.type === "checkbox") {
+    <input type="checkbox" id="@@id" required/>
+    @@if(context.label) {
+    <span class="label">@@label</span>
+    }
+    @@if(context.error) {
+    <p class="error">@@error</p>
+    }
+  }
+</div>

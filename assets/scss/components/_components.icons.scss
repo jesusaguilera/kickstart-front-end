@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+.wrapper--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.wrapper--icon--medium {
+    width: $mega-size;
+    height: $mega-size;
+  }
+
+  &.wrapper--icon--small {
+    width: $size-l;
+    height: $size-l;
+  }
+}

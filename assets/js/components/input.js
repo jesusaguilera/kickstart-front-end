@@ -1,15 +1,10 @@
 const inputs = () => {
-  $('input').on('blur', (event)=>{
-    var $input = $(event.currentTarget);
-    var inputValue = $input.val();
-    var $inputParent = $input.closest('.form__item');
-
-    if(inputValue === '') {
-      $inputParent.removeClass('filled');
-    }else {
-      $inputParent.addClass('filled');
-    }
-  });
+    let inputs = document.getElementsByTagName('input');
+    [].forEach.call(inputs, (input) => {
+        let $inputParent = input.closest('.form__item');
+        input.addEventListener('blur', (event) => {
+            event.target.value === '' ? $inputParent.classList.remove('filled') : $inputParent.classList.add('filled');
+        })
+    });
 }
-
 export default inputs;

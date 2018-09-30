@@ -31,6 +31,7 @@
  * UTILITIES 
  * ************************************************************/
 @import 'utilities/utilities.hide';
+@import 'utilities/utilities.animations';
 
 
 
@@ -51,11 +52,15 @@
  * COMPONENTS 
  ************************************************************/
 @import 'components/components.headings';
-@import 'components/components.links';
 @import 'components/components.texts';
+@import 'components/components.links';
 @import 'components/components.buttons';
 @import 'components/components.images';
+@import 'components/components.icons';
 @import 'components/components.lists';
+@import 'components/components.dropdown';
+@import 'components/components.modal';
+@import 'components/components.inputs';
 
 
 
@@ -65,13 +70,11 @@
 /************************************************************
  * OBJECTS 
  ************************************************************/
-@import 'objects/objects.body';
 @import 'objects/objects.header';
 @import 'objects/objects.footer';
 @import 'objects/objects.wrapper';
 @import 'objects/objects.grid';
-@import 'objects/objects.dropdown';
-@import 'objects/objects.modal';
+@import 'objects/objects.form';
 
 
 
@@ -82,3 +85,6 @@
  * PAGES 
  ************************************************************/
 @import 'pages/pages.home';
+@import 'pages/pages.features';
+@import 'pages/pages.companies';
+@import 'pages/pages.conditions';

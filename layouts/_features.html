@@ -1,0 +1,43 @@
+<main class="wrapper"> 
+  <h1 class="title">¿Qué puedes hacer?</h1>
+  <div class="wrapper--grid">
+    @@loop('../partials/_features-grid-block.html', [
+      {
+        "title": "Usa #temas", 
+        "description": "Crea un tema, así nadie se perderá entre muchas conversaciones a la vez.", 
+        "icon": "theme",
+        "descriptionBackFace": "Te habrá pasado: Entrar de nuevo en tu app de mensajería y encontrarte con una gran cantidad de mensajes en tus grupos y ser incapaz de entender el cruce conversaciones ¿quién responde a que?"
+      },
+      {
+        "title": "Añade reacciones", 
+        "description": "¿Quieres decir que algo te gusta, dar las gracias o mostrar tu desacuerdo? Hazlo con un solo tap.", 
+        "icon": "like",
+        "descriptionBackFace": "Te habrá pasado: Que una persona del grupo comparte su opinión y se generan infinitos mensajes que dicen 'gracias', 'de acuerdo'… con distintas palabras y al final no sabes a que se refieren. Y cuantas veces habrás pensado en lo cómodo que es hacer un 'click' en lugar de tener que escribir."
+      },
+      {
+        "title": "¡Por fin privacidad!", 
+        "description": "¿Por qué tengo que dar mi número de teléfono o mi dirección de email para participar en una conversación en grupo?", 
+        "icon": "lock",
+        "descriptionBackFace": "Te habrá pasado: Pensar que cuando alguien te invita a un grupo con personas que no conoces, todos tienen a partir de entonces tu número de teléfono o email y lo pueden usar como quieran. Para usar We. no te pedimos ningún dato personal, como teléfono o email."
+      },
+      {
+        "title": "Anonimato... ¡O no!", 
+        "description": "Tu decides en que grupos dejas que te reconozcan y en cuales no.", 
+        "icon": "eye",
+        "descriptionBackFace": "Te habrá pasado: No es lo mismo hablar en un grupo de amigos donde quieres que todos sepan que eres tu o en un grupo donde mejor mantener el anonimato ¿no? Con We. podrás decidir en que grupos usas tu nombre y en cuales un nombre ficticio."
+      },
+      {
+        "title": "Controla las notificaciones", 
+        "description": "Decide cuando y de quién quieres recibir notificaciones.", 
+        "icon": "notification",
+        "descriptionBackFace": "Te habrá pasado: No querer darte de baja ni silenciar un grupo porque hay cosas que te interesan pero también estar cansado del 'pesado del grupo'."
+      },
+      {
+        "title": "Sal de un grupo libremente", 
+        "description": "Decide cuando quieres salir de un grupo sin que se entere todo el mundo.", 
+        "icon": "smile",
+        "descriptionBackFace": "Te habrá pasado: Querer salirte de un grupo pero sin querer que todos los componentes del grupo sepan que has decidido salir."
+      }
+    ])
+  </div>
+</main>

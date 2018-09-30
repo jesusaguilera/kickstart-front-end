@@ -2,22 +2,15 @@
    #GRID
    ========================================================================== */
 
-.col-wrapper {
+.wrapper--grid {
+  width: 100%;
   display: grid;
-  grid-gap: rem-calc(24);
+  grid-auto-rows: minmax(rem-calc(320), 1fr);
 
   @media #{$md-and-up} {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: [start] repeat(2, 1fr) [end];
   }
-
   @media #{$lg-and-up} {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .col {
-    background-color: tomato;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: [start] 1fr 1fr 1fr [end];
   }
 }

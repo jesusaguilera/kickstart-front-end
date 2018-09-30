@@ -57,7 +57,7 @@ var js_files           = 'assets/js/**/*.js',
     images_build_files = 'build/images/**/*',
     fonts_files        = 'assets/fonts/**/*',
     fonts_build_files  = 'build/fonts/**/*',
-    html_files         = [ './*.html', './partials/*.html', './layouts/*.html' ];
+    html_files         = ['./*.html', './partials/*.html', './layouts/*.html', './components/*.html'];
 
 
 

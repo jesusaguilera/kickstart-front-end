@@ -1,0 +1,14 @@
+<header class="header"> 
+  @@if (context.page === 'home') {
+    @@include('./_header-small.html')
+  }
+  @@if (context.page === 'features') {
+    @@include('./_header-generic.html', {"page": "features"})
+  }
+  @@if (context.page === 'companies') {
+    @@include('./_header-generic.html', {"page": "companies"})
+  }
+  @@if (context.page === 'conditions') {
+    @@include('./_header-generic.html', {"page": "conditions"})
+  }
+</header>

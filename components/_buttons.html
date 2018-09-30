@@ -1,0 +1,13 @@
+<a href="@@link" class="btn with-icon">
+  @@text
+    @@if(context.withIcon === 'ios') {
+      <div class="wrapper--icon">
+        @@include("./svg/_ic-apple-store.html")
+      </div>
+    }
+    @@if(context.withIcon === 'google') {
+      <div class="wrapper--icon">
+        @@include("./svg/_ic-google-play.html")
+      </div>
+    }
+</a>

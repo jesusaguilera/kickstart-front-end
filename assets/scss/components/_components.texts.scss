@@ -1,6 +1,10 @@
 /* ==========================================================================
    #TEXTS
    ========================================================================== */
+a ,
+p {
+  line-height: rem-calc(22);
+}
 
 // Highlighted
 .highlighted {
@@ -10,5 +14,12 @@
 
 // Mute
 .mute {
-  color: $grey-light;
+  color: $grey-bluish;
+}
+
+
+// Error
+.error {
+  color: tomato;
+  font-size: $font-size-micro;
 }

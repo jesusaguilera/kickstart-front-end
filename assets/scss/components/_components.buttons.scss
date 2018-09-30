@@ -2,6 +2,76 @@
    #BUTTONS
    ========================================================================== */
 
+
 // Default
-.button-default {
+.btn {
+  transform: perspective(10px) translateZ(0);
+  transition: background-color 300ms linear;
+  background-color: $secondary-color;
+  border-radius: $size-l;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-family: $font-family-medium;
+  font-size: $size;
+  line-height: $size;
+  min-width: rem-calc(120);
+  min-height: $size-xxl;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-right: $font-size-h3;
+  padding-left: $font-size-h3;
+
+  &.disabled {
+    background-color: $grey-light;
+    pointer-events: none;
+    color: $texts;
+  }
+
+  &:active ,
+  &:hover {
+    animation: hover-animation 750ms linear;
+
+    .wrapper--icon {
+      svg {
+        transform: perspective(10px) translateZ(0);
+        animation: hover-rotation-animation 350ms linear;
+      }
+    }
+    }
+
+  .wrapper--icon {
+    border-left: rem-calc(1) solid white;
+    padding-left: $font-size-micro;
+    margin-left: $font-size-micro;
+    transform: rotateX(360);
+  }
+}
+
+.wrapper--buttons {
+  .btn {
+    margin-bottom: $size-s;
+  }
+}
+
+
+.wrapper--buttons--inline {
+  @media #{$md-and-up} {
+    display: flex;
+  }
+
+  .btn {
+    margin-bottom: $size-s;
+    @media #{$sm-and-up} {
+      margin-left: $size;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
 }

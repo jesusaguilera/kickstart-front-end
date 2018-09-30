@@ -4,20 +4,25 @@
 
 ul {
   list-style: none;
-
 }
 
 
 // List inline
-.list-inline {
+.list--inline {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  @media #{$sm-and-up} {
+    flex-direction: row;
+  }
 
   li {
-    margin-left: $size-l;
+    margin-left: $size;
     &:first-child {
       margin-left: 0;
+    }
+    @media #{$sm-and-up} {
+      margin-left: $size-l;
     }
   }
 }

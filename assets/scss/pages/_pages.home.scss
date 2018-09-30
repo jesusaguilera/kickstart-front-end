@@ -3,5 +3,38 @@
    ========================================================================== */
 
 .home {
+  @media #{$lg-and-up} {
+    grid-template-rows: rem-calc(70) 1fr rem-calc(138);
+  }
 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$md-and-down} {
+      padding-top: 0;
+    }
+
+    .home__description {
+      text-align: center;
+      max-width: rem-calc(395);
+      margin-bottom: $size;
+    }
+
+    .home__link {
+      margin-bottom: $size-l;
+    }
+
+    .home__image {
+      border-bottom: rem-calc(1) solid $border-color;
+      width: rem-calc(346);
+      height: rem-calc(378);
+      display: flex;
+      margin-top: rem-calc(30);
+      @media #{$lg-and-up} {
+        position: fixed;
+        bottom: 0;
+      }
+    }
+  }
 }

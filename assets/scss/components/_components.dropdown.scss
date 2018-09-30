@@ -25,7 +25,7 @@
     &.item-bordered {
       .dropdown-content {
         .dropdown-content-item {
-          border-bottom: rem-calc(1) solid $grey-light;
+          border-bottom: rem-calc(1) solid $border-color;
           &:last-child {
             border-bottom: 0;
           }
@@ -55,7 +55,7 @@
 
         &:before {
           background-color: white;
-          border: rem-calc(1) solid $grey-light;
+          border: rem-calc(1) solid $border-color;
           content: '';
           display: block;
           width: $font-size-micro;
@@ -106,7 +106,7 @@
 
     .dropdown-button {
       background-color: white;
-      border: 1px solid $grey-light;
+      border: 1px solid $border-color;
       border-radius: rem-calc(4);
       cursor: pointer;
       font-size: $font-size-h6;
@@ -243,7 +243,7 @@
         &.active {
           background-color: white;
           box-shadow: 0 rem-calc(2) $font-size-micro rgba(0, 0, 0, .12);
-          border-color: $grey-light;
+          border-color: $border-color;
           height: auto;
           top: rem-calc(40);
           opacity: 1;
@@ -252,7 +252,7 @@
 
       .dropdown-content-header {
         background-color: $grey-light;
-        border-bottom: 1px solid $grey-light;
+        border-bottom: 1px solid $border-color;
         display: flex;
         align-items: center;
         height: $mega-size;

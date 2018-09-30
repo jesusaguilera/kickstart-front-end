@@ -1,4 +1,4 @@
-# FrontEnd Kickstart
+# We landing
 
 KickStart for optimising your front-end development and building quickly static web pages through [**gulpjs**](http://gulpjs.com/).
 

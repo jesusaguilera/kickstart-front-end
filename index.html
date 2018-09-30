@@ -1,80 +1,13 @@
 <!DOCTYPE HTML>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 
   @@include('./partials/head.html')
 
   <body class="home">
 
-    @@include('./partials/header.html', {"page": "index"})
-
-    <main class="wrapper-main">
-
-      <div class="wrapper-dropdown">
-        <div class="dropdown">
-          <button type="button" class="dropdown-button">Selecciona una cantidad</button>
-          <ul class="dropdown-content">
-            <li class='dropdown-content-item hide-lg-and-up'><p class='title medium dropdown-content-item-link'>Selecciona una cantidad</p></li>
-            <li class="dropdown-content-item"><a class="dropdown-content-item-link">0</a></li>   
-            <li class="dropdown-content-item"><a class="dropdown-content-item-link">1</a></li>   
-            <li class="dropdown-content-item"><a class="dropdown-content-item-link">2</a></li>   
-          </ul>
-        </div>
-      </div>
-
-
-      <button class="modal-trigger" data-modal="modal-buy">Open modal</button>
-
-      <div class="wrapper-modal modal-buy">
-        <div class="modal-container modal-buy-container">
-          <button type="button" class="modal-close"></button>
-          <div class="modal-header">Modal header</div>
-          <div class="modal-content">Modal content</div>
-          <div class="modal-footer">Modal footer</div>
-        </div>
-      </div>
-
-
-      <div class="col-wrapper twenty-percent">
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-        <div class="col">
-          column
-        </div>
-      </div>
-    </main>
-
-    @@include('./partials/footer.html')
+    @@include('./partials/_header.html', {"page": "home"})
+    @@include('./layouts/_index.html', {"showBadge": false})
+    @@include("./partials/_footer.html", {"page": "home"})
 
     <script defer='defer' type="text/javascript" src="js/all-libs.js"></script>
     <script defer='defer' type="text/javascript" src="js/main.js"></script>

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #CONDITONS
+   ========================================================================== */
+
+.conditions {
+
+  .wrapper {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .title {
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+    text-align: center;
+    padding-bottom: $size-l;
+    margin-bottom: $size-xl;
+
+    @media #{$md-and-up}{
+      padding-bottom: $kilo-size;
+      margin-bottom: $mega-size;
+    }
+    @media #{$lg-and-up}{
+      padding-bottom: rem-calc(64);
+      margin-bottom: $mega-size;
+    }
+  }
+
+  .description {
+    padding-left: $font-size-h3; 
+    padding-right: $font-size-h3; 
+    @media #{$md-and-up} {
+      padding-left: $size-xxl; 
+      padding-right: $size-xxl; 
+    }
+    @media #{$lg-and-up} {
+      max-width: rem-calc(715);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
+}

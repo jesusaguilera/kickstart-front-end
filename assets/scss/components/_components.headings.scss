@@ -8,10 +8,22 @@ h3 ,
 h4 ,
 h5 ,
 h6 {
+  font-family: $font-family-black;
   color: $primary-color;
 }
 
-h1 { font-size: $font-size-h1; }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
+h1 { 
+  font-size: $font-size-h1; 
+  line-height: rem-calc(45);
+}
+h2 { 
+  font-size: $font-size-h2; 
+  line-height: $font-size-h1;
+}
+h3 { 
+  font-size: $font-size-h3; 
+  line-height: $size-xl;
+}
+h4 { 
+  font-size: $font-size-h4; 
+}

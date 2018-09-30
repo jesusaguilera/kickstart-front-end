@@ -1,0 +1,29 @@
+<main class="wrapper"> 
+  <div class="logo home__logo">
+      @@include("../components/svg/_logo.html")
+  </div>
+  <h1 class="title">Hablar en grupo es ahora más fácil</h1>
+
+  @@if(context.showBadge != true) {
+    <p class="home__description">Una app gratuita creada para facilitarte las conversaciones en grupo: amigos, padres del colegio, familia… Disponible en octubre 2018.</p>
+    @@loop("../components/_buttons.html", [
+      {"text": "Saber más", "link": "features.html"}
+    ])
+  }
+
+  @@if(context.showBadge === true) {
+    <p class="home__description">Una app gratuita creada para facilitarte las conversaciones en grupo: amigos, padres del colegio, familia…</p>
+    <a href="#" class="highlighted underlined home__link">Saber más</a>
+    <div class="wrapper--buttons--inline">
+      @@loop("../components/_buttons.html", [
+        {"text": "Descargar iOS", "link": "https://www.apple.com/es/ios/app-store/", "withIcon": "ios"},
+        {"text": "Descargar Google Play", "link": "https://play.google.com/store", "withIcon": "google"}
+      ])
+    </div>
+  }
+
+  <div class="home__image show-sm-and-down">
+    <img src="../assets/images/mobile.png" class="image-responsive"/>
+  </div>
+
+</main>
