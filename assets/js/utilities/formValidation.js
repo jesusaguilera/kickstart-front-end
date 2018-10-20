@@ -16,22 +16,22 @@ const formValidation = () => {
     }else {
         console.log('No companies screen');
     }
-}
+};
 
 
 const fieldValidation = (field) => {
 
     if(field === 'username') {
         if(username.value.trim() != '') {
-            username.closest('.form__item--input').classList.remove('wrong') 
+            username.closest('.form__item--input').classList.remove('wrong');
             fieldValidation();
         }else {
-            username.closest('.form__item--input').classList.add('wrong') 
+            username.closest('.form__item--input').classList.add('wrong');
             submit.classList.add("disabled");
         }
     }else if(field === 'email') {
         if(regEx.test(email.value) && email.value.trim() != '') {
-            email.closest('.form__item--input').classList.remove('wrong') 
+            email.closest('.form__item--input').classList.remove('wrong');
             fieldValidation();
         }else {
             email.closest('.form__item--input').classList.add('wrong'); 
@@ -39,7 +39,7 @@ const fieldValidation = (field) => {
         }
     }else if(field === 'checkbox') {
         if(checkbox.checked) {
-            checkbox.closest('.form__item--checkbox').classList.remove('wrong') 
+            checkbox.closest('.form__item--checkbox').classList.remove('wrong');
             fieldValidation();
         }else {
             checkbox.closest('.form__item--checkbox').classList.add('wrong'); 
@@ -53,5 +53,5 @@ const fieldValidation = (field) => {
             console.log('error');
         }
     }
-}
+};
 export default formValidation;

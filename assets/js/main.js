@@ -5,7 +5,6 @@ import cards from './components/cards';
 // Utilities
 import formValidation from './utilities/formValidation';
 
-
 document.addEventListener("DOMContentLoaded", () => {
     // Components
     inputs();
@@ -15,8 +14,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Form validation
     formValidation();
 });
-
-
-
-
-
