@@ -3,7 +3,7 @@
  ************************************************************/
 
 import  gulp         from 'gulp';
-import  connect      from 'gulp-connect';
+import  browserSync  from 'browser-sync';
 import  sass         from 'gulp-sass';
 import  autoprefixer from'gulp-autoprefixer';
 import  babel        from 'babelify';
@@ -57,7 +57,7 @@ var js_files           = 'assets/js/**/*.js',
     images_build_files = 'build/images/**/*',
     fonts_files        = 'assets/fonts/**/*',
     fonts_build_files  = 'build/fonts/**/*',
-    html_files         = ['./*.html', './partials/*.html', './layouts/*.html', './components/*.html'];
+    html_files         = [ './*.html', './partials/*.html', './layouts/*.html' ];
 
 
 
@@ -67,14 +67,16 @@ var js_files           = 'assets/js/**/*.js',
  * TASKS
  ************************************************************/
 
+const server = browserSync.create()
+
 // Webserver 
-gulp.task('connect', function() {
-  connect.server( {
-    root       : 'build',
-    port       : 3000,
-    livereload : true
-  });
-});
+// gulp.task('connect', function() {
+//   connect.server( {
+//     root       : 'build',
+//     port       : 3000,
+//     livereload : true
+//   });
+// });
 
 
 // Scripts
@@ -138,7 +140,12 @@ gulp.task('fileinclude', function() {
 
 
 // Default
-gulp.task('default', ['connect', 'fileinclude', 'folders', 'styles', 'scripts'], function() {
+gulp.task('default', ['fileinclude', 'folders', 'styles', 'scripts'], function() {
+ server.init({
+    server: {
+      baseDir: './build'
+    }
+  })
   gulp.watch(js_files, ['scripts']);
   gulp.watch(scss_files, ['styles']);
   gulp.watch(html_files, ['fileinclude']);

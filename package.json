@@ -42,6 +42,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "browser-sync": "^2.26.3",
     "gulp-autoprefixer": "^6.0.0"
   }
 }
