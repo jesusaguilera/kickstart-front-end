@@ -7,16 +7,7 @@ body {
   font-family: $font-family-default;
   font-size: $font-size-h6;
   color: $texts;
+  height: 100vh;
   overflow-x: hidden;
 
-  @media #{$md-and-up} {
-    height: 100vh;
-    display: grid;
-    justify-content: normal;
-    grid-template-rows: auto 1fr rem-calc(138);
-  }
-
-  @media #{$lg-and-up} {
-    grid-template-rows: rem-calc(140) 1fr rem-calc(138);
-  }
 }
