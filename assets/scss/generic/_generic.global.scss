@@ -10,4 +10,12 @@ body {
   height: 100vh;
   overflow-x: hidden;
 
+  &.modal {
+      .header-main ,
+      .page-footer ,
+      .wrapper-main > *:not(.wrapper-modal) {
+          filter: blur(2px);
+      }
+  }
+
 }
