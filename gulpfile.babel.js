@@ -67,7 +67,7 @@ var js_files           = 'assets/js/**/*.js',
  * TASKS
  ************************************************************/
 
-const server = browserSync.create()
+const server = browserSync.create();
 
 // Webserver 
 // gulp.task('connect', function() {
