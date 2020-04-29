@@ -3,46 +3,65 @@
    ========================================================================== */
 
 // Hide
-.hide {
-    display: none !important;
-}
+.u-hide {
 
-// Lg
-.hide-lg-and-up {
-  @media #{$lg-and-up} {
-    background-color: red;
     display: none !important;
-  }
-}
-.hide-lg-and-down {
-  @media #{$lg-and-down} {
-    display: none !important;
-  }
-}
 
+    &\@sm {
 
-// Md
-.hide-md-and-up {
-  @media #{$md-and-up} {
-    display: none !important;
-  }
-}
-.hide-md-and-down {
-  @media #{$md-and-down} {
-    display: none !important;
-  }
-}
+      @media #{$sm-and-up} {
+        display: none !important;
+      }
 
-// Sm
-.hide-sm-and-up {
-  @media #{$sm-and-up} {
-    display: none !important;
-  }
-}
-.hide-sm-and-down {
-  @media #{$sm-and-down} {
-    display: none !important;
-  }
+    }
+
+    &\@sm-and-down {
+
+      @media #{$sm-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@md {
+
+      @media #{$md-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@md-and-down {
+
+      @media #{$md-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@lg {
+
+      @media #{$lg-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@lg-and-down {
+
+      @media #{$lg-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@xl {
+
+      @media #{$xl-and-up} {
+        display: none !important;
+      }
+
+    }
 }
 // @Hide
 

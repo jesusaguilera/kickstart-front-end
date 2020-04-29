@@ -1,15 +1,18 @@
 // Objects
 import inputs from './components/input';
-import modals from './components/modal';
 import dropdown from './components/dropdown';
+// import modals from './components/modal';
 
 
-$(document).on('ready',() =>{
+window.onload = () => {
 
   // Components
- dropdown();
-  modals();
   inputs();
-  
-});
+  dropdown();
+  // modals();
+  //@Components
+}
+
+
+
 

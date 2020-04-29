@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #BODY
+   ========================================================================== */
+
+body {
+  background-color: black;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  color: $grey-light;
+  font-family: $font-family-regular;
+  font-size: $zeta-size;
+  height: 100vh;
+  overflow-x: hidden;
+
+  &.has-blur {
+      .c-header ,
+      .c-footer ,
+      .o-wrapper > *:not(.wrapper-modal) {
+          filter: blur(2px);
+      }
+  }
+
+}

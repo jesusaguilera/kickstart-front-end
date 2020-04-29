@@ -1,14 +1,12 @@
 /* ==========================================================================
-   #TEXTS
+   #LIST BARE
    ========================================================================== */
 
-// Highlighted
-.highlighted {
-  color: $secondary-color;
+.o-list-bare {
+  list-style: none;
+  margin-left: 0;
 }
 
-
-// Mute
-.mute {
-  color: $grey-light;
-}
+  .o-list-bare__item {
+    margin-left: 0;
+  }

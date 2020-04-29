@@ -81,13 +81,15 @@ const server = browserSync.create();
 
 // Scripts
 gulp.task('scripts', function() {
-  gulp.src([
-    "assets/js/libs/jquery.min.js",
-    // "assets/js/libs/materialize.min.js",
-  ])
-  .pipe(uglify())
-  .pipe(concat('all-libs.js'))
-  .pipe(gulp.dest( js_build_dir));
+
+  /*
+   * gulp.src([
+   *    "assets/js/libs/jquery.min.js",
+   * ])
+   * .pipe(uglify())
+   * .pipe(concat('all-libs.js'))
+   * .pipe(gulp.dest( js_build_dir));
+   */
 
   browserify("assets/js/main.js")
   .transform(babel)

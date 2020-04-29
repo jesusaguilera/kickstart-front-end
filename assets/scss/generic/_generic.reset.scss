@@ -46,6 +46,27 @@ a {
   text-decoration: none;
 }
 
+/**
+ * Remove list decoration 
+ */
+
+ol ,
+ul {
+    list-style: none;
+}
+
+/**
+ * Ordered list with styles
+ */
+ol {
+    li {
+        &:before {
+            counter-increment: main-counter;
+            content: counter(main-counter);
+            padding-right: rem-calc(8);
+        }
+    }
+}
 
 
 /**

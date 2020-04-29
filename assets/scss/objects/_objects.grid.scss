@@ -2,7 +2,8 @@
    #GRID
    ========================================================================== */
 
-.col-wrapper {
+.o-grid {
+
   display: grid;
   grid-gap: rem-calc(24);
 
@@ -14,10 +15,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .col {
+  &__col {
+
     background-color: tomato;
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
+
 }

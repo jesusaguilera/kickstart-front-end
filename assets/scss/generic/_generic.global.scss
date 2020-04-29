@@ -2,20 +2,22 @@
    #GLOBAL
    ========================================================================== */
 
-body {
-  background-color: white;
-  font-family: $font-family-default;
-  font-size: $font-size-h6;
-  color: $texts;
-  height: 100vh;
-  overflow-x: hidden;
+*,
+*::after,
+*::before {
 
-  &.modal {
-      .header-main ,
-      .page-footer ,
-      .wrapper-main > *:not(.wrapper-modal) {
-          filter: blur(2px);
-      }
-  }
+    padding: 0;
+    margin: 0;
+    outline: 0px solid;
+    box-sizing: border-box; 
+
+    &:hover,
+    &:active,
+    &:focus, 
+    &:visited{
+
+        outline: 0px solid;
+
+    }
 
 }

@@ -4,34 +4,82 @@
 
 const dropdown = () => {
 
-  // Listing with links
-  $('.dropdown-button').on('click', (button)=> {
-    var isActive = $(button.target).hasClass('active'),
-        $parent = $(button.target).parent(),
-        $dropdownContent = $($parent).find('.dropdown-content'),
-        $closeButton = $('.dropdown-content-header .close', $parent);
+  // Show dropdown
+  showDropdown();
+  // @Show dropdown
 
-    $closeButton.on('click', ()=>{
-      $(button.target).removeClass('active');    
-      $($dropdownContent).removeClass('active');
+  // Change button text
+  changeButtonText();
+  // @Change button text
+
+}
+export default dropdown;
+
+
+const showDropdown = () => {
+
+  let dropdownButtons = document.querySelectorAll('.js-toogle-dropdown');
+
+  [].forEach.call(dropdownButtons, (button) => {
+
+    button.addEventListener('click', e => {
+
+      e.stopPropagation();
+
+      let button = e.target;
+      let dropdownParent = button.closest('.c-dropdown');
+
+      dropdownParent.classList.toggle('is-active');
+
+      closeDropdown()
+
     })
 
-    if(isActive === true) {
-      $(button.target).removeClass('active');    
-      $($dropdownContent).removeClass('active');
-    }else {
-      $(button.target).addClass('active');
-      $($dropdownContent).addClass('active');
-
-      $('.dropdown-content-item-link', $parent).on('click', (link)=>{
-        var linkText = $(link.target).text();
-        $(button.target).text(linkText);
-        $(button.target).removeClass('active');
-        $($dropdownContent).removeClass('active');
-      });
-    }
   });
-  // @Listing with links
+
 }
 
-export default dropdown;
+const changeButtonText = () => {
+
+  let dropdownLinks = document.querySelectorAll('.js-dropdown__link');
+
+  [].forEach.call(dropdownLinks, (link) => {
+
+    link.addEventListener('click', e => {
+
+      e.stopPropagation();
+
+      let link = e.target;
+      let linkText = link.textContent;
+      let dropdown = link.closest('.c-dropdown');
+      let buttonParent = dropdown.querySelector('.c-dropdown__button');
+      buttonParent.innerHTML = linkText;
+
+    })
+
+  });
+
+}
+
+const closeDropdown = () => {
+
+  let body = document.body;
+
+  body.addEventListener('click', e => {
+
+    let dropDownsOpen = document.querySelectorAll('.c-dropdown.is-active')
+
+    if(dropDownsOpen.length > 0){
+
+      [].forEach.call(dropDownsOpen, dropdown => {
+
+        dropdown.classList.remove('is-active');
+
+      })
+
+    }
+
+  })
+
+}
+
