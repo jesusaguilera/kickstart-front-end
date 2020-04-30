@@ -5,5 +5,8 @@
 .o-wrapper {
   max-width: $container-width;
   min-height: calc(100vh - (130px + 72px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }

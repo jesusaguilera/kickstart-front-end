@@ -49,6 +49,7 @@
     justify-content: space-between;
     overflow: hidden;
     opacity: 0;
+    top: 100%;
     transition: all 350ms ease-in-out;
 
     @media #{$lg-and-up} {
@@ -59,6 +60,7 @@
       min-height: 35rem;
       max-height: 75vh;
       transform: scale(.7);
+      top: initial;
 
     }
 
@@ -66,9 +68,11 @@
    #{$b}.is-visible & {
 
      opacity: 1;
+     top: 0;
 
      @media #{$lg-and-up} {
        transform: scale(1);
+       top: initial;
      }
 
    }
