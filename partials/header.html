@@ -1,9 +1,31 @@
 <header class="c-header"> 
+
   @@if (context.page === 'index') {
-  <h1>Index</h1>
+
+  <h1>Header</h1>
+
+  <!-- Dropdown -->
+  <div class="c-dropdown">
+    <div class="c-dropdown__container">
+      <button type="button" class="c-dropdown__button js-toogle-dropdown">Selecciona una cantidad</button>
+      <ul class="c-dropdown__content c-dropdown__content--right">
+        <li class='u-hide@lg'>
+          <p class='c-dropdown__link'>Selecciona una cantidad</p>
+        </li>
+        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">0</a></li>   
+        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">1</a></li>   
+        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">2</a></li>   
+      </ul>
+    </div>
+  </div>
+  <!-- @Dropdown -->
+
   }
+
   @@if (context.page != 'index') {
+
   <p>No Index</p>
+
   }
 
 </header>

@@ -75,12 +75,12 @@ $font-size-small   : $font-size-milli;
 
 
 // 5. #MEDIAQUERIES
-$xxs : 32rem;  // iphone4 / iphone5s
-$xs  : 37.5rem;  // iphone6-7-8
-$sm  : 66rem;  // tablet 7"
-$md  : 76.8rem;  // iPad
-$lg  : 102.4rem; // iPad landscape
-$xl  : 144rem; // desktops 
+$xxs : 320px;  // iphone4 / iphone5s
+$xs  : 375px;  // iphone6-7-8
+$sm  : 660px;  // tablet 7"
+$md  : 768px;  // iPad
+$lg  : 1024px; // iPad landscape
+$xl  : 1440px; // desktops 
 
 $xxs-and-up : "only screen and (min-width : #{$xxs})" !default;
 $xs-and-up  : "only screen and (min-width : #{$xs})" !default;

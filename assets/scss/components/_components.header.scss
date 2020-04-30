@@ -3,6 +3,11 @@
    ========================================================================== */
 
 .c-header {
+
   height: 13rem;
+  display: flex;
+  aling-items: center;
+  justify-content: space-between;
   padding: $size-l;
+
 }
