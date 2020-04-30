@@ -3,6 +3,9 @@
    ========================================================================== */
 
 .o-container {
-  max-width: $container-width;
   margin: 0 auto;
+
+  @media #{$lg-and-up} {
+    width: $container-width;
+  }
 }

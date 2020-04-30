@@ -4,10 +4,12 @@
 
 body {
   background-color: black;
-  background-image: url('../images/bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  /*
+   * background-image: url('../images/bg.jpg');
+   * background-size: cover;
+   * background-repeat: no-repeat;
+   * background-position: bottom center;
+   */
   color: $grey-light;
   font-family: $font-family-regular;
   font-size: 1.6rem;

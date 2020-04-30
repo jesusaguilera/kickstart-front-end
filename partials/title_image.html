@@ -1,0 +1,25 @@
+@@if (context.isImage === 'true') {
+<section class="c-title-image js-srollmagic-slide"> 
+
+  <div class="o-container">
+
+    <p class="c-title-image__title">Lorem ipsum</p>
+
+    <img src="images/bg.jpg" alt="background_one" class="c-title-image__image">
+
+  </div>
+
+</section>
+}
+
+@@if (context.isImage !== 'true') {
+<section class="c-title-image"> 
+
+  <div class="o-container">
+
+    <p class="c-title-image__title">Lorem ipsum</p>
+
+  </div>
+
+</section>
+}

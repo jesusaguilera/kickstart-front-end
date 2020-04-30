@@ -8,4 +8,10 @@
     font-family: 'avenir';
   }
 
+  &--h1 {
+
+    @extend %h1;
+
+  }
+
 }

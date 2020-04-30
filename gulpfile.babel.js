@@ -57,7 +57,7 @@ var js_files           = 'assets/js/**/*.js',
     images_build_files = 'build/images/**/*',
     fonts_files        = 'assets/fonts/**/*',
     fonts_build_files  = 'build/fonts/**/*',
-    html_files         = [ './*.html', './partials/*.html', './layouts/*.html' ];
+    html_files         = [ './*.html', './partials/**/*.html', './layouts/**/*.html' ];
 
 
 
@@ -82,14 +82,13 @@ const server = browserSync.create();
 // Scripts
 gulp.task('scripts', function() {
 
-  /*
-   * gulp.src([
-   *    "assets/js/libs/jquery.min.js",
-   * ])
-   * .pipe(uglify())
-   * .pipe(concat('all-libs.js'))
-   * .pipe(gulp.dest( js_build_dir));
-   */
+  gulp.src([
+     "assets/js/libs/scrollmagic/ScrollMagic.min",
+     "assets/js/libs/scrollmagic/plugins/debug.addIndicators.min",
+  ])
+  .pipe(uglify())
+  .pipe(concat('all-libs.js'))
+  .pipe(gulp.dest( js_build_dir));
 
   browserify("assets/js/main.js")
   .transform(babel)
