@@ -151,5 +151,5 @@ gulp.task('default', ['fileinclude', 'folders', 'styles', 'scripts'], function()
   gulp.watch(js_files, ['scripts']);
   gulp.watch(scss_files, ['styles']);
   gulp.watch(html_files, ['fileinclude']);
-  gulp.watch([js_files, images_files, html_files],  ['folders']);
+  gulp.watch([js_files, images_files, html_files, fonts_files],  ['folders']);
 });
