@@ -63,7 +63,7 @@ ol {
         &:before {
             counter-increment: main-counter;
             content: counter(main-counter);
-            padding-right: rem-calc(8);
+            padding-right: .8rem;
         }
     }
 }

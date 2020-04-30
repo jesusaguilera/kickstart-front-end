@@ -14,7 +14,7 @@
   &__container {
 
     position: relative;
-    margin-left: rem-calc(4);
+    margin-left: .4rem;
 
   }
   // @Container
@@ -23,31 +23,31 @@
   &__button {
 
     background-color: white;
-    border: 1px solid $grey-light;
-    border-radius: rem-calc(4);
+    border: .1rem solid $grey-light;
+    border-radius: .4rem;
     cursor: pointer;
-    line-height: rem-calc(16);
+    line-height: 1.6rem;
     text-align: left;
     white-space: nowrap;
-    height: rem-calc(32);
+    height: 3.2rem;
     display: inline-flex;
     align-items: center;
     position: relative;
-    padding-top: rem-calc(2);
-    padding-right: rem-calc(8);
-    padding-left: rem-calc(8);
+    padding-top: .2rem;
+    padding-right: .8rem;
+    padding-left: .8rem;
 
     @media #{$md-and-up} {
 
-      height: rem-calc(40);
-      padding-left: rem-calc(24) ;
-      padding-right: rem-calc(24) ;
+      height: 4rem;
+      padding-left: 2.4rem ;
+      padding-right: 2.4rem;
 
     }
 
     @media #{$lg-and-up} {
 
-      padding-top: rem-calc(3);
+      padding-top: .3rem;
 
     }
   }
@@ -82,14 +82,14 @@
       transition: all 300ms ease-out;
       border: 1px solid transparent;
       background-color: transparent;
-      border-radius: rem-calc(4);
-      min-width: rem-calc(200);
+      border-radius: .4rem;
+      min-width: 20rem;
       height: 0;
       position: absolute;
-      top: rem-calc(40);
+      top: 4rem;
       bottom: initial;
       left: 0;
-      margin: rem-calc(8) 0 rem-calc(24); 
+      margin: .8rem 0 2.4rem; 
       overflow: hidden;
       opacity: 0;
       padding: 0;
@@ -97,10 +97,10 @@
       #{$b}.is-active & {
 
         background-color: white;
-        box-shadow: 0 rem-calc(2) $font-size-micro rgba(0, 0, 0, .12);
+        box-shadow: 0 .2rem 1.2rem rgba(0, 0, 0, .12);
         border-color: $grey-light;
         height: auto;
-        top: rem-calc(40);
+        top: 4rem;
         opacity: 1;
 
       }
@@ -118,7 +118,7 @@
     cursor: pointer;
     font-size: $zeta-size;
     display: block;
-    padding: $zeta-size rem-calc(24);
+    padding: 1.4rem 2.4rem;
 
 
     &:hover {

@@ -30,8 +30,8 @@
       top: 0;
       @media #{$lg-and-up} {
         height: 100%;
-        padding-top: rem-calc(42);
-        padding-bottom: rem-calc(42);
+        padding-top: 4.2rem;
+        padding-bottom: 4.2rem;
       }
     }
 
@@ -39,9 +39,9 @@
   .modal-container {
     background-color: white;
     border: 1px solid $grey-light;
-    border-radius: rem-calc(4);
-    max-width: rem-calc(768);
-    min-height: rem-calc(350);
+    border-radius: .4rem;
+    max-width: 76.8rem;
+    min-height: 35rem;
     position: relative;
 
     display: flex;
@@ -53,15 +53,15 @@
       background-image: asset-url('icons/close.svg');
       background-position: center;
       background-repeat: no-repeat;
-      background-size: rem-calc(15) $zeta-size;
-      width: rem-calc(48);
-      height: rem-calc(48);
+      background-size: 1.4rem $zeta-size;
+      width: 4.8rem;
+      height: 4.8rem;
       position: absolute;
-      top: rem-calc(8);
+      top: .8rem;
       right: 0;
 
       @media #{$lg-and-up} {
-        right: rem-calc(24);
+        right: 2.4rem;
       }
     }
     // @Close
@@ -70,20 +70,20 @@
     .modal-header ,
     .modal-footer {
       background-color: white;
-      height: rem-calc(72);
+      height: 7.2rem;
       display: flex;
       align-items: center;
-      padding: 0 rem-calc(16);
+      padding: 0 1.6rem;
 
       @media #{$lg-and-up} {
-        padding: 0 rem-calc(24);
+        padding: 0 2.4rem;
       }
     }
     // @Modal header & footer
 
     // Modal header
     .modal-header {
-      border-bottom: rem-calc(1) solid $grey-light;
+      border-bottom: .1rem solid $grey-light;
 
       .title {
         font-size: $font-size-h5;
@@ -91,7 +91,7 @@
         margin: 0;
 
         @media #{$md-and-up} {
-          font-size: rem-calc(20);
+          font-size: 2rem;
         }
       }
     }
@@ -99,7 +99,7 @@
 
     // Modal footer
     .modal-footer {
-      border-top: rem-calc(1) solid $grey-light;
+      border-top: .1rem solid $grey-light;
       justify-content: center;
       align-items: center;
     }

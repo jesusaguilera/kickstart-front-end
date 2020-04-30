@@ -4,19 +4,26 @@
 
 // Table of Contents:
 //
-//  1. #COLORS
-//  2. #FONTS
-//  3. #TEXTS
-//  4. #MEDIAQUERIES
-//  5. #Z-INDEX
-//  6. #SIZES
+//  1. #SET REM 1 TO 10PX
+//  2. #COLORS
+//  3. #FONTS
+//  4. #TEXTS
+//  5. #MEDIAQUERIES
+//  6. #Z-INDEX
+//  7. #SIZES
 
 
 
 
 
-// 1. #COLORS
-// P
+// 1. #SET REM 1 TO 10PX
+:root { font-size: 10px }
+
+
+
+
+
+// 2. #COLORS
 :root {
   --primary-color:      #0C2C5D;
   --secondary-color:    #1661FF;
@@ -36,7 +43,7 @@ $error           : var(--error);
 
 
 
-// 2. #FONTS
+// 3. #FONTS
 $font-family-regular  : 'averta';
 $font-family-semibold : 'averta-semibold';
 $font-family-bold     : 'averta-bold';
@@ -45,20 +52,20 @@ $font-family-bold     : 'averta-bold';
 
 
 
-// 3. #TEXTS
-$giga-size         : rem-calc(96); 
-$mega-size         : rem-calc(72); 
-$kilo-size         : rem-calc(48); 
+// 4. #TEXTS
+$giga-size         : 9.6rem; 
+$mega-size         : 7.2rem;
+$kilo-size         : 4.8rem;
 
-$alpha-size        : rem-calc(32); //.alpha
-$beta-size         : rem-calc(24); //.beta
-$gamma-size        : rem-calc(20); //.gamma
-$delta-size        : rem-calc(18); //.delta
-$epsilon-size      : rem-calc(16); //.epsilon
-$zeta-size         : rem-calc(14); //.zeta
+$alpha-size        : 3.2rem;
+$beta-size         : 2.4rem;
+$gamma-size        : 2rem;
+$delta-size        : 1.8rem;
+$epsilon-size      : 1.6rem;
+$zeta-size         : 1.4rem;
 
-$font-size-milli   : rem-calc(13); 
-$font-size-micro   : rem-calc(12);
+$font-size-milli   : 1.3rem;
+$font-size-micro   : 1.2rem;
 
 $font-size-large   : $delta-size;
 $font-size-small   : $font-size-milli;
@@ -67,13 +74,13 @@ $font-size-small   : $font-size-milli;
 
 
 
-// 4. #MEDIAQUERIES
-$xxs : rem-calc(320);  // iphone4 / iphone5s
-$xs  : rem-calc(375);  // iphone6-7-8
-$sm  : rem-calc(660);  // tablet 7"
-$md  : rem-calc(768);  // iPad
-$lg  : rem-calc(1024); // iPad landscape
-$xl  : rem-calc(1440); // desktops 
+// 5. #MEDIAQUERIES
+$xxs : 32rem;  // iphone4 / iphone5s
+$xs  : 37.5rem;  // iphone6-7-8
+$sm  : 66rem;  // tablet 7"
+$md  : 76.8rem;  // iPad
+$lg  : 102.4rem; // iPad landscape
+$xl  : 144rem; // desktops 
 
 $xxs-and-up : "only screen and (min-width : #{$xxs})" !default;
 $xs-and-up  : "only screen and (min-width : #{$xs})" !default;
@@ -97,7 +104,7 @@ $lg-only     : "only screen and (min-width : #{$lg}) and (max-width : #{$xl})" !
 
 
 
-// 5. #Z-INDEX
+// 6. #Z-INDEX
 $zindex-back           : -10 !default;
 $zindex-dropdown       : 1000 !default;
 $zindex-sticky         : 1020 !default;
@@ -111,21 +118,21 @@ $zindex-tooltip        : 1070 !default;
 
 
 
-// 6. #SIZES
-$size-xxs     : rem-calc(4) !default;
-$size-xs      : rem-calc(8) !default;
-$size-s       : rem-calc(12) !default;
-$size-default : rem-calc(16) !default;
-$size-m       : rem-calc(18) !default;
-$size-l       : rem-calc(24) !default;
-$size-xl      : rem-calc(32) !default;
-$size-xxl     : rem-calc(48) !default;
-$size-kilo    : rem-calc(56) !default;
-$size-mega    : rem-calc(64) !default;
-$size-giga    : rem-calc(72) !default;
+// 7. #SIZES
+$size-xxs     : .4rem !default;
+$size-xs      : .8rem !default;
+$size-s       : 1.2rem !default;
+$size-default : 1.6rem !default;
+$size-m       : 1.8rem !default;
+$size-l       : 2.4rem !default;
+$size-xl      : 3.2rem !default;
+$size-xxl     : 4.8rem !default;
+$size-kilo    : 5.6rem !default;
+$size-mega    : 6.4rem !default;
+$size-giga    : 7.2rem !default;
 
 
-$container-width : rem-calc(1280) !default;
+$container-width : 128rem !default;
 $border-radius-global : $size-xxs;
 
 $padding-xxs     : $size-xxs;
