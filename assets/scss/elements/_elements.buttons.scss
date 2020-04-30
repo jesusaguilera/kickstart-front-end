@@ -1,0 +1,13 @@
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+
+html [type="button"] ,
+button {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}

@@ -17,10 +17,11 @@
 
   &__col {
 
-    background-color: tomato;
+    border: 1px dashed $grey-dark;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: .8rem;
 
   }
 

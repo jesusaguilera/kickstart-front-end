@@ -1,113 +1,157 @@
 /* ==========================================================================
-   #MODAL
-   ========================================================================== */
+#MODAL
+========================================================================== */
 
-.wrapper-modal {
-    transition: top 300ms ease-out;
-    background-color: rgba(0, 0, 0, .6);
-    width: 100%;
-    display: flex;
-    height: 100%;
-    opacity: 0;
-    align-items: flex-start;
-    justify-content: center;
-    position: fixed;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow-y: auto;
+.c-modal {
+
+  background-color: rgba(0, 0, 0, .6);
+  color: $grey-dark;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: none;
+  transition: all 300ms ease-out;
+  z-index: $zindex-back;
+
+  $b : &;
+
+  &.is-visible {
+
+    opacity: 1;
     z-index: $zindex-modal;
 
     @media #{$lg-and-up} {
-      transition: all 0ms ease-out;
-      top: 0;
-      height: 0;
+
+      height: 100%;
+      padding-top: 4.2rem;
+      padding-bottom: 4.2rem;
+
     }
 
-    &.active {
-      opacity: 1;
-      top: 0;
-      @media #{$lg-and-up} {
-        height: 100%;
-        padding-top: 4.2rem;
-        padding-bottom: 4.2rem;
-      }
-    }
+  }
 
   // Modal container
-  .modal-container {
-    background-color: white;
-    border: 1px solid $grey-light;
-    border-radius: .4rem;
-    max-width: 76.8rem;
-    min-height: 35rem;
-    position: relative;
+  &__container {
 
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 350ms ease-in-out;
 
-    // Close
-    .modal-close {
-      background-image: asset-url('icons/close.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 1.4rem $zeta-size;
-      width: 4.8rem;
-      height: 4.8rem;
-      position: absolute;
-      top: .8rem;
-      right: 0;
+    @media #{$lg-and-up} {
 
-      @media #{$lg-and-up} {
-        right: 2.4rem;
-      }
+      border-radius: 1.8rem;
+      min-width: 30rem;
+      max-width: 76.8rem;
+      min-height: 35rem;
+      max-height: 75vh;
+      transform: scale(.7);
+
     }
-    // @Close
 
-    // Modal header & footer
-    .modal-header ,
-    .modal-footer {
-      background-color: white;
-      height: 7.2rem;
-      display: flex;
-      align-items: center;
-      padding: 0 1.6rem;
 
-      @media #{$lg-and-up} {
-        padding: 0 2.4rem;
-      }
-    }
-    // @Modal header & footer
+   #{$b}.is-visible & {
 
-    // Modal header
-    .modal-header {
-      border-bottom: .1rem solid $grey-light;
+     opacity: 1;
 
-      .title {
-        font-size: $font-size-h5;
-        line-height: $font-size-h5;
-        margin: 0;
+     @media #{$lg-and-up} {
+       transform: scale(1);
+     }
 
-        @media #{$md-and-up} {
-          font-size: 2rem;
-        }
-      }
-    }
-    // @Modal header
+   }
 
-    // Modal footer
-    .modal-footer {
-      border-top: .1rem solid $grey-light;
-      justify-content: center;
-      align-items: center;
-    }
-    // @Modal footer
-    
-    .modal-content {
-      flex: 1;
-    }
   }
   // @Modal container
+
+
+  // Modal header & footer sharing
+  &__header ,
+  &__footer {
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+
+    @media #{$lg-and-up} {
+      padding: 2.4rem;
+    }
+
+  }
+  // @Modal header & footer sharing
+
+
+
+  // Modal header
+  &__header {
+
+    border-bottom: .1rem solid $grey-light;
+    display: flex;
+    alig-items: center;
+
+    &-title {
+
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      margin: 0;
+
+      @media #{$md-and-up} {
+        font-size: 2rem;
+      }
+
+    }
+
+  }
+  // @Modal header
+
+
+  // Modal footer
+  &__footer {
+
+    border-top: .1rem solid $grey-light;
+    justify-content: center;
+    align-items: center;
+
+  }
+  // @Modal footer
+
+  // @Modal content
+  &__content {
+
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+    padding: 1.6rem;
+
+    @media #{$lg-and-up} {
+      padding: 2.4rem;
+    }
+
+  }
+  // @Modal content
+
+  // Close
+  &__close {
+
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+  }
+  // @Close
+
 }

@@ -11,15 +11,20 @@ body {
   color: $grey-light;
   font-family: $font-family-regular;
   font-size: 1.6rem;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 
-  &.has-blur {
-      .c-header ,
-      .c-footer ,
-      .o-wrapper > *:not(.wrapper-modal) {
+  &.has-modal {
+
+    overflow: hidden;
+
+      .c-header  > *:not(.c-modal) ,
+      .c-footer  > *:not(.c-modal) ,
+      .o-wrapper > *:not(.c-modal) {
           filter: blur(2px);
       }
+
   }
 
 }
