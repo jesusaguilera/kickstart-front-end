@@ -34,13 +34,16 @@ var partials_dir  = 'partials';
 var images_dir   = 'assets/images',
   scss_dir     = 'assets/scss',
   fonts_dir    = 'assets/fonts',
-  js_dir       = 'assets/js';
+  js_dir       = 'assets/js',
+  js_libs_dir = 'assets/js/libs';
 
 // Build
 var js_build_dir      = 'build/js',
+  js_libs_build_dir  = 'build/js/libs',
   css_build_dir     = 'build/css',
   fonts_build_dir   = 'build/fonts',
   images_build_dir  = 'build/images';
+
 
 
 
@@ -118,6 +121,10 @@ gulp.task('folders', function() {
   // Fonts folder
   del(fonts_build_dir, function() {
     ncp(fonts_dir, fonts_build_dir);
+  });
+  // JS libs
+  del(js_libs_build_dir, function() {
+    ncp(js_libs_dir, js_libs_build_dir);
   });
 });
 

@@ -4,10 +4,13 @@
 
 .o-wrapper {
 
-  min-height: calc(100vh - (72px + 72px));
+  background-color: transparent;
+  min-height: calc(100vh - 7.2rem);
   display: flex;
   justify-content: center;
+  padding-top: 7.2rem;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
+  margin-top: 400px;
 
 }

@@ -1,0 +1,71 @@
+/* ==========================================================================
+   #WIDTH
+   ========================================================================== */
+
+// Width
+.u-width {
+
+
+  &--1\/2 {
+
+    &\@xs {
+
+      @media #{$xs-and-up} {
+        width: calculate-width(2);
+      }
+
+    }
+
+    &\@md {
+
+      @media #{$md-and-up} {
+        width: calculate-width(2);
+      }
+
+    }
+
+    &\@lg {
+
+      @media #{$lg-and-up} {
+        width: calculate-width(2);
+      }
+
+    }
+
+  }
+
+  &--1\/3 {
+
+    &\@xs {
+
+      @media #{$xs-and-up} {
+        width: calculate-width(3);
+      }
+
+    }
+
+    &\@md {
+
+      @media #{$md-and-up} {
+        width: calculate-width(3);
+      }
+
+    }
+
+    &\@lg {
+
+      @media #{$lg-and-up} {
+        width: calculate-width(3);
+      }
+
+    }
+
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+}
+// @Width
+

@@ -1,6 +1,7 @@
 /* ==========================================================================
-   #DROPDOWN
+   #SWUP
    ========================================================================== */
+import scrollMagic from './scrollMagic';
 
 const swup = () => {
 
@@ -9,8 +10,12 @@ const swup = () => {
     animationSelector: '[class*="o-page-transition-"]',
     // linkSelector: 'a[href^="' +  window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
     containers: [".js-main"],
+    // plugins: [new SwupScriptsPlugin()],
   };
+
   let swup = new Swup(options);
+  swup.on('contentReplaced', scrollMagic);
+  // swup.on('willReplaceContent', ()=>{}   );
 
   // clean 
   // swup.on('willReplaceContent', ()=> console.log("willReplaceContent"));

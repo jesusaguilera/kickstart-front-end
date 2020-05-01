@@ -4,11 +4,10 @@ import inputs from './components/input';
 import dropdown from './components/dropdown';
 import modals from './components/modal';
 import nav from './components/nav';
+import scrollMagic from './components/scrollMagic';
 
 // Utilities
 import formValidation from './utilities/formValidation';
-
-// import Swup from 'swup';
 
 window.onload = () => {
 
@@ -18,8 +17,10 @@ window.onload = () => {
   inputs();
   dropdown();
   modals();
+  scrollMagic();
   //@Components
   
+
   // Utilities
   // formValidation();
   // @Utilities

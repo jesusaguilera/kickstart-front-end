@@ -11,8 +11,17 @@
     top: 0;
 
     .is-animating & {
+
       opacity: 0;
-      top: 2rem;
+      top: 4rem;
+
+    }
+
+    .is-leaving & {
+
+      opacity: 0;
+      top: -4rem;
+
     }
 
   }
