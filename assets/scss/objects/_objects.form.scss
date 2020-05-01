@@ -4,11 +4,13 @@
 
 .o-form {
 
+  min-width: 30rem;
+
   $b : &;
 
   &-item {
 
-    background-color: white;
+    background-color: rgba(white, .4);
     height: 5.6rem;
     position: relative;
     padding-top: 1.8rem;
@@ -26,8 +28,16 @@
     left: 0;
 
     &--top {
+
       top: 0;
       font-size: 1.2rem;
+
+    }
+
+    &--static {
+
+      position: static;
+
     }
   }
 
@@ -41,6 +51,7 @@
     color: $grey-dark;
     font-size: 1.4rem;
     font-family: $font-family-regular;
+    width: 100%;
 
     &:focus ~ .o-form__label{
 

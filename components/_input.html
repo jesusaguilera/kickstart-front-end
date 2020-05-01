@@ -23,7 +23,7 @@
   @@if(context.type === 'checkbox') {
     <input type="checkbox" class="o-form__checkbox js-form__checkbox" name="@@name" required/>
     @@if(context.label) {
-    <span class="o-form__label" for="@@name">@@label</span>
+    <span class="o-form__label o-form__label--static" for="@@name">@@label</span>
     }
     @@if(context.error) {
     <p class="o-form__error">@@error</p>
