@@ -6,13 +6,13 @@
 
   <head>
 
-<meta charset="UTF-8">
-<meta name="description" content="Frontend Kickstart">
-<meta name="keywords" content="webstie, web, desarrollo, development, community, comunidad, experience, experiencia.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Kickstart</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Frontend Kickstart">
+  <meta name="keywords" content="webstie, web, desarrollo, development, community, comunidad, experience, experiencia.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Kickstart</title>
 
-<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -50,46 +50,76 @@
 
     <main class="o-wrapper">
 
+      <form action="" method="get" accept-charset="utf-8" class="c-form">
+  @@loop("../components/_input.html", [
+  {
+  "type": "input", 
+  "label": "Nombre", 
+  "error": "Debe escribir un nombre", 
+  "class": "c-form__input js-username"
+  "name": "username"
+  },
+  {
+  "type": "input", 
+  "label": "Email", 
+  "error": "Debe escribir un email correcto", 
+  "class": "c-form__input js-email"
+  "name": "email"
+  },
+  {
+  "type": "checkbox", 
+  "label": "Acepto la <a href='#' class='underlined'>Política de Privacidad</a>.", 
+  "error": "Debe aceptar la política de privacidad" ,
+  "class": "c-form__checkbox js-checkbox"
+  "name": "checkbox"
+  }
+  ])
+  <input type="submit" value="Enviar" class="c-button c-form__submit js-form__submit">
+</form>
+
+
 
       <!-- Grid -->
-      <div class="o-grid twenty-percent">
-        <div class="o-grid__col">
-          column
+      <!--
+        <div class="o&#45;grid">
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
+          <div class="o&#45;grid__col">
+            column
+          </div>
         </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-        <div class="o-grid__col">
-          column
-        </div>
-      </div>
+      -->
       <!-- @Grid -->
 
     </main>

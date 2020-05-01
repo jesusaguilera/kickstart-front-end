@@ -1,0 +1,22 @@
+<div class="c-form-item c-form-item__@@type">
+
+  @@if(context.type === 'input') {
+    <input type="text" class="c-form__input" name="@@name"/>
+    @@if(context.label) {
+    <span class="c-form__label" for="@@name">@@label</span>
+    }
+    @@if(context.error) {
+    <p class="error">@@error</p>
+    }
+  }
+
+  @@if(context.type === "checkbox") {
+    <input type="checkbox" class="c-form__checkbox" name="@@name" required/>
+    @@if(context.label) {
+    <span class="c-form__label" for="@@name">@@label</span>
+    }
+    @@if(context.error) {
+    <p class="error">@@error</p>
+    }
+  }
+</div>
