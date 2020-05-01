@@ -50,7 +50,7 @@ var js_build_dir      = 'build/js',
  * FILES
  ************************************************************/
 
-var js_files           = 'assets/js/**/*.js',
+var js_files         = 'assets/js/**/*.js',
   js_build_files     = 'build/js/**/*',
   scss_files         = 'assets/scss/**/*.scss',
   images_files       = 'assets/images/**/*',
@@ -82,21 +82,13 @@ const server = browserSync.create();
 // Scripts
 gulp.task('scripts', function() {
 
-  /*
-   * gulp.src([
-   *    "assets/js/libs/jquery.min.js",
-   * ])
-   * .pipe(uglify())
-   * .pipe(concat('all-libs.js'))
-   * .pipe(gulp.dest( js_build_dir));
-   */
-
   browserify("assets/js/main.js")
     .transform(babel)
     .bundle()
     .pipe(source('main.js'))
     .pipe(streamify(uglify()))
     .pipe(gulp.dest( js_build_dir));
+
 });
 
 

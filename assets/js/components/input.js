@@ -4,8 +4,8 @@ const inputs = () => {
 
   [].forEach.call(inputs, (input) => {
 
-    let inputParent = input.closest('.o-form-item');
-    let label = inputParent.querySelector('.o-form__label');
+    let inputParent = input.closest('.js-form-item');
+    let label = inputParent.querySelector('.js-form__label');
 
     input.addEventListener('blur', (event) => {
 

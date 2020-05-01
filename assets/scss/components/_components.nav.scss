@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #NAVIGATON
+   ========================================================================== */
+
+.c-nav {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  $b: &;
+
+  &__link {
+
+    transition: all 300ms ease-in-out;
+    color: $grey-light;
+    margin-left: 1.4rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.is-active {
+      color: $primary-color;
+    }
+
+  }
+
+}
+

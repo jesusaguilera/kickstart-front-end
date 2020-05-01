@@ -4,10 +4,11 @@
 
 .c-header {
 
-  height: 13rem;
+  height: 7.2rem;
   display: flex;
-  aling-items: center;
+  align-items: center;
   justify-content: space-between;
-  padding: $size-l;
+  padding-right: $size-l;
+  padding-left: $size-l;
 
 }

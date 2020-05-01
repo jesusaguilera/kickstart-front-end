@@ -6,64 +6,70 @@
 
   @@include('./partials/_head.html')
 
-  <body>
+  <body >
 
     @@include('./components/_header.html', {"page": "index"})
 
-    <main class="o-wrapper">
-
-      @@include('./objects/_form.html', {"page": "index"})
+    <main class="o-wrapper o-page-transition--fade js-main">
 
 
-      <!-- Grid -->
-      <!--
-        <div class="o&#45;grid">
-          <div class="o&#45;grid__col">
-            column
+      <div class="o-container">
+
+        <h2>Index</h2>
+
+        <!-- @@include('./objects/_form.html', {"page": "index"}) -->
+
+        <!-- Grid -->
+        <!--
+          <div class="o&#45;grid">
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
           </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-          <div class="o&#45;grid__col">
-            column
-          </div>
-        </div>
-      -->
-      <!-- @Grid -->
+        -->
+        <!-- @Grid -->
+
+      </div>
 
     </main>
 
     @@include('./components/_footer.html')
+    @@include('./partials/_scripts.html')
 
-    <!-- <script defer='defer' type="text/javascript" src="js/all&#45;libs.js"></script> -->
-    <script defer='defer' type="text/javascript" src="js/main.js"></script>
+
   </body>
 
 </html>

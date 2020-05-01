@@ -1,31 +1,34 @@
 <header class="c-header"> 
 
-  @@if (context.page === 'index') {
+  <h4>Logo</h4>
+  <nav class="c-nav js-nav">
 
-  <h1>Header</h1>
+    @@if(context.page === 'index') {
+    <a href="/index.html" class="c-nav__link js-nav__link is-active">index</a>
+    <a href="/about.html" class="c-nav__link js-nav__link">about</a>
+    }
+    @@if(context.page === 'about') {
+    <a href="/index.html" class="c-nav__link js-nav__link">index</a>
+    <a href="/about.html" class="c-nav__link js-nav__link is-active">about</a>
+    }
+  </nav>
 
   <!-- Dropdown -->
-  <div class="c-dropdown">
-    <div class="c-dropdown__container">
-      <button type="button" class="c-dropdown__button js-toogle-dropdown">Selecciona una cantidad</button>
-      <ul class="c-dropdown__content c-dropdown__content--right">
-        <li class='u-hide@lg'>
-          <p class='c-dropdown__link'>Selecciona una cantidad</p>
-        </li>
-        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">0</a></li>   
-        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">1</a></li>   
-        <li><a class="c-dropdown__link js-dropdown__link js-toogle-dropdown">2</a></li>   
-      </ul>
+  <!--
+    <div class="c&#45;dropdown">
+      <div class="c&#45;dropdown__container">
+        <button type="button" class="c&#45;dropdown__button js&#45;toogle&#45;dropdown">Ejemplo de dropdown</button>
+        <ul class="c&#45;dropdown__content c&#45;dropdown__content&#45;&#45;right">
+          <li class='u&#45;hide@lg'>
+            <p class='c&#45;dropdown__link'>Ejemplo de dropdown</p>
+          </li>
+          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">0</a></li>   
+          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">1</a></li>   
+          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">2</a></li>   
+        </ul>
+      </div>
     </div>
-  </div>
+  -->
   <!-- @Dropdown -->
-
-  }
-
-  @@if (context.page != 'index') {
-
-  <p>No Index</p>
-
-  }
 
 </header>
