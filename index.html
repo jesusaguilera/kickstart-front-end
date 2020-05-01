@@ -4,15 +4,15 @@
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
-  @@include('./partials/head.html')
+  @@include('./partials/_head.html')
 
   <body>
 
-    @@include('./components/header.html', {"page": "index"})
+    @@include('./components/_header.html', {"page": "index"})
 
     <main class="o-wrapper">
 
-      @@include('./objects/form.html', {"page": "index"})
+      @@include('./objects/_form.html', {"page": "index"})
 
 
       <!-- Grid -->
@@ -60,7 +60,7 @@
 
     </main>
 
-    @@include('./components/footer.html')
+    @@include('./components/_footer.html')
 
     <!-- <script defer='defer' type="text/javascript" src="js/all&#45;libs.js"></script> -->
     <script defer='defer' type="text/javascript" src="js/main.js"></script>
