@@ -50,31 +50,60 @@
 
     <main class="o-wrapper">
 
-      <form action="" method="get" accept-charset="utf-8" class="c-form">
-  @@loop("../components/_input.html", [
-  {
-  "type": "input", 
-  "label": "Nombre", 
-  "error": "Debe escribir un nombre", 
-  "class": "c-form__input js-username"
-  "name": "username"
-  },
-  {
-  "type": "input", 
-  "label": "Email", 
-  "error": "Debe escribir un email correcto", 
-  "class": "c-form__input js-email"
-  "name": "email"
-  },
-  {
-  "type": "checkbox", 
-  "label": "Acepto la <a href='#' class='underlined'>Política de Privacidad</a>.", 
-  "error": "Debe aceptar la política de privacidad" ,
-  "class": "c-form__checkbox js-checkbox"
-  "name": "checkbox"
-  }
-  ])
-  <input type="submit" value="Enviar" class="c-button c-form__submit js-form__submit">
+      <form action="" method="get" accept-charset="utf-8" class="o-form">
+  <div class="o-form-item o-form-item__input js-form-item">
+
+  
+    <input type="text" class="o-form__input js-form__input" name="username" required/>
+    
+    <span class="o-form__label" for="username">Nombre</span>
+    
+    
+    <p class="o-form__error">Debe escribir un nombre</p>
+    
+  
+
+  
+
+  
+
+</div>
+<div class="o-form-item o-form-item__email js-form-item">
+
+  
+
+  
+    <input type="text" class="o-form__input js-form__input js-form__email" name="email" required/>
+    
+    <span class="o-form__label" for="email">Email</span>
+    
+    
+    <p class="o-form__error">Debe escribir un email correcto</p>
+    
+  
+
+  
+
+</div>
+<div class="o-form-item o-form-item__checkbox js-form-item">
+
+  
+
+  
+
+  
+    <input type="checkbox" class="o-form__checkbox js-form__checkbox" name="checkbox" required/>
+    
+    <span class="o-form__label" for="checkbox">Acepto la <a href='#' class='underlined'>Política de Privacidad</a>.</span>
+    
+    
+    <p class="o-form__error">Debe aceptar la política de privacidad</p>
+    
+  
+
+</div>
+
+  <input type="submit" value="Enviar" class="c-button c-form__submit c-form__submit--disabled js-form__submit">
 </form>
 
 

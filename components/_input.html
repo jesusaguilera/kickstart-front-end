@@ -1,22 +1,33 @@
-<div class="c-form-item c-form-item__@@type">
+<div class="o-form-item o-form-item__@@type js-form-item">
 
   @@if(context.type === 'input') {
-    <input type="text" class="c-form__input" name="@@name"/>
+    <input type="text" class="o-form__input js-form__input" name="@@name" required/>
     @@if(context.label) {
-    <span class="c-form__label" for="@@name">@@label</span>
+    <span class="o-form__label" for="@@name">@@label</span>
     }
     @@if(context.error) {
-    <p class="error">@@error</p>
+    <p class="o-form__error">@@error</p>
     }
   }
 
-  @@if(context.type === "checkbox") {
-    <input type="checkbox" class="c-form__checkbox" name="@@name" required/>
+  @@if(context.type === 'email') {
+    <input type="text" class="o-form__input js-form__input js-form__email" name="@@name" required/>
     @@if(context.label) {
-    <span class="c-form__label" for="@@name">@@label</span>
+    <span class="o-form__label" for="@@name">@@label</span>
     }
     @@if(context.error) {
-    <p class="error">@@error</p>
+    <p class="o-form__error">@@error</p>
     }
   }
+
+  @@if(context.type === 'checkbox') {
+    <input type="checkbox" class="o-form__checkbox js-form__checkbox" name="@@name" required/>
+    @@if(context.label) {
+    <span class="o-form__label" for="@@name">@@label</span>
+    }
+    @@if(context.error) {
+    <p class="o-form__error">@@error</p>
+    }
+  }
+
 </div>

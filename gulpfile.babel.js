@@ -32,15 +32,15 @@ var partials_dir  = 'partials';
 
 // Assets
 var images_dir   = 'assets/images',
-    scss_dir     = 'assets/scss',
-    fonts_dir    = 'assets/fonts',
-    js_dir       = 'assets/js';
+  scss_dir     = 'assets/scss',
+  fonts_dir    = 'assets/fonts',
+  js_dir       = 'assets/js';
 
 // Build
 var js_build_dir      = 'build/js',
-    css_build_dir     = 'build/css',
-    fonts_build_dir   = 'build/fonts',
-    images_build_dir  = 'build/images';
+  css_build_dir     = 'build/css',
+  fonts_build_dir   = 'build/fonts',
+  images_build_dir  = 'build/images';
 
 
 
@@ -51,13 +51,13 @@ var js_build_dir      = 'build/js',
  ************************************************************/
 
 var js_files           = 'assets/js/**/*.js',
-    js_build_files     = 'build/js/**/*',
-    scss_files         = 'assets/scss/**/*.scss',
-    images_files       = 'assets/images/**/*',
-    images_build_files = 'build/images/**/*',
-    fonts_files        = 'assets/fonts/**/*',
-    fonts_build_files  = 'build/fonts/**/*',
-    html_files         = [ './*.html', './partials/*.html', './layouts/*.html' ];
+  js_build_files     = 'build/js/**/*',
+  scss_files         = 'assets/scss/**/*.scss',
+  images_files       = 'assets/images/**/*',
+  images_build_files = 'build/images/**/*',
+  fonts_files        = 'assets/fonts/**/*',
+  fonts_build_files  = 'build/fonts/**/*',
+  html_files         = [ './**/*.html', './layouts/**/*.html', './partials/**/*.html', './components/**/*.html' ];
 
 
 
@@ -92,19 +92,19 @@ gulp.task('scripts', function() {
    */
 
   browserify("assets/js/main.js")
-  .transform(babel)
-  .bundle()
-  .pipe(source('main.js'))
-  .pipe(streamify(uglify()))
-  .pipe(gulp.dest( js_build_dir));
+    .transform(babel)
+    .bundle()
+    .pipe(source('main.js'))
+    .pipe(streamify(uglify()))
+    .pipe(gulp.dest( js_build_dir));
 });
 
 
 // Sass
 gulp.task ('styles', function() {
   gulp
-  .src('assets/scss/main.scss')
-  .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .src('assets/scss/main.scss')
+    .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: [
         'last 2 version', 
@@ -113,7 +113,7 @@ gulp.task ('styles', function() {
       cascade: false,
       grid: true
     }))
-  .pipe(gulp.dest( css_build_dir));
+    .pipe(gulp.dest( css_build_dir));
 });
 
 
@@ -133,17 +133,17 @@ gulp.task('folders', function() {
 // File include
 gulp.task('fileinclude', function() {
   gulp.src(['./*.html'])
-  .pipe( file_include ({
-    prefix: '@@',
-    basepath: '@file',
-  }))
-  .pipe(gulp.dest('build'));
+    .pipe( file_include ({
+      prefix: '@@',
+      basepath: '@file',
+    }))
+    .pipe(gulp.dest('build'));
 });
 
 
 // Default
 gulp.task('default', ['fileinclude', 'folders', 'styles', 'scripts'], function() {
- server.init({
+  server.init({
     server: {
       baseDir: './build'
     }
