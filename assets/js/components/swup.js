@@ -9,7 +9,7 @@ const swup = () => {
   const options = {
     animationSelector: '[class*="o-page-transition-"]',
     // linkSelector: 'a[href^="' +  window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
-    containers: [".js-main"],
+    containers: [".js-container"],
     // plugins: [new SwupScriptsPlugin()],
   };
 

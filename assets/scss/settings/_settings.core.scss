@@ -27,17 +27,26 @@
 :root {
   --primary-color:      #0C2C5D;
   --secondary-color:    #1661FF;
-  --grey-dark:          #4D4D4D;
+
+  --grey-dark:          #222f3e;
   --grey-medium:        #919191;
   --grey-light:         #F3F3F3;
-  --error:              #DC0019;
+  --error:              #EB4D4B;
+
+  --white:              #FFFFFF;
+  --black:              #000000;
 } 
+
 $primary-color   : var(--primary-color);
 $secondary-color : var(--secondary-color);
 $grey-dark       : var(--grey-dark);
 $grey-medium     : var(--grey-medium);
 $grey-light      : var(--grey-light);
 $error           : var(--error);
+$white           : var(--white);
+$black           : var(--black);
+
+$text-color      : $grey-dark;
 
 
 
@@ -64,8 +73,8 @@ $delta-size        : 1.8rem;
 $epsilon-size      : 1.6rem;
 $zeta-size         : 1.4rem;
 
-$font-size-milli   : 1.3rem;
-$font-size-micro   : 1.2rem;
+$font-size-milli   : 1.2rem;
+$font-size-micro   : .8rem;
 
 $font-size-large   : $delta-size;
 $font-size-small   : $font-size-milli;
@@ -117,7 +126,6 @@ $zindex-tooltip        : 1070 !default;
 
 
 
-
 // 7. #SIZES
 $size-xxs     : .4rem !default;
 $size-xs      : .8rem !default;
@@ -133,7 +141,7 @@ $size-giga    : 7.2rem !default;
 
 
 $container-width : 128rem !default;
-$border-radius-global : $size-xxs;
+$border-radius-global : $size-xs;
 
 $padding-xxs     : $size-xxs;
 $padding-xs      : $size-xs;

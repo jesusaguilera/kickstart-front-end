@@ -4,13 +4,31 @@
 
 .o-wrapper {
 
+  transition: all 750ms ease-in-out;
   background-color: transparent;
-  min-height: calc(100vh - 7.2rem);
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  min-height: 45rem;
   display: flex;
   justify-content: center;
   padding-top: 7.2rem;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
-  margin-top: 400px;
+
+  &--centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--full-height {
+    min-height: 100vh;
+  }
+
+  .t-dark & {
+    background-image: url('../images/bg-dark.jpg');
+  }
 
 }

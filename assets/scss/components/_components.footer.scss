@@ -5,29 +5,24 @@
 .c-footer {
 
   width: 100%;
+  background-color: $grey-light;
   height: $size-giga;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 $size-l;
+  transition: all 300ms ease-in-out;
 
   $b: &;
 
   &__text {
 
-    color: $grey-light;
+    color: $text-color;
     font-size: 1.4rem;
-
-    #{$b}--alc & {
-
-      text-align: center;
-
-    }
+    transition: all 300ms ease-in-out;
 
     #{$b}--alr & {
-
       text-align: right;
-
     }
 
   }

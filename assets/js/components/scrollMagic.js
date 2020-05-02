@@ -17,13 +17,11 @@ const scrollMagic = () => {
       // duration: 100,
       // offset: 200,
     })
-      // .addIndicators()
+      .addIndicators()
       .setClassToggle(wrapper, 'is-visible')
       .addTo(controller);
 
   });
-
-  console.log("h");
 
 }
 

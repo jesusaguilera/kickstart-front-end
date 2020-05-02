@@ -8,6 +8,7 @@ import scrollMagic from './components/scrollMagic';
 
 // Utilities
 import formValidation from './utilities/formValidation';
+import changeTheme from './utilities/changeTheme';
 
 window.onload = () => {
 
@@ -23,6 +24,7 @@ window.onload = () => {
 
   // Utilities
   // formValidation();
+  changeTheme();
   // @Utilities
   
 }
