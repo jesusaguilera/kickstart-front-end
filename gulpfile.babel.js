@@ -81,6 +81,12 @@ const server = browserSync.create();
 //   });
 // });
 
+gulp.task('jslibs', function() {
+  return gulp.src('assets/js/libs/**/*.js')
+    .pipe(concat('all-libs.js'))
+    .pipe(gulp.dest('./build/js'));
+});
+
 
 // Scripts
 gulp.task('scripts', function() {
@@ -123,9 +129,11 @@ gulp.task('folders', function() {
     ncp(fonts_dir, fonts_build_dir);
   });
   // JS libs
-  del(js_libs_build_dir, function() {
-    ncp(js_libs_dir, js_libs_build_dir);
-  });
+  /*
+   * del(js_libs_build_dir, function() {
+   *   ncp(js_libs_dir, js_libs_build_dir);
+   * });
+   */
 });
 
 
@@ -141,13 +149,13 @@ gulp.task('fileinclude', function() {
 
 
 // Default
-gulp.task('default', ['fileinclude', 'folders', 'styles', 'scripts'], function() {
+gulp.task('default', ['fileinclude', 'folders', 'styles', 'scripts', 'jslibs'], function() {
   server.init({
     server: {
       baseDir: './build'
     }
   })
-  gulp.watch(js_files, ['scripts']);
+  gulp.watch(js_files, ['scripts', 'jslibs']);
   gulp.watch(scss_files, ['styles']);
   gulp.watch(html_files, ['fileinclude']);
   gulp.watch([js_files, images_files, html_files, fonts_files],  ['folders']);
