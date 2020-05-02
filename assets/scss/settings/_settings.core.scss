@@ -25,28 +25,24 @@
 
 // 2. #COLORS
 :root {
+
   --primary-color:      #0C2C5D;
   --secondary-color:    #1661FF;
 
   --grey-dark:          #222f3e;
+  --grey-dark-rgb:      34,47,62;
+
   --grey-medium:        #919191;
   --grey-light:         #F3F3F3;
   --error:              #EB4D4B;
 
   --white:              #FFFFFF;
   --black:              #000000;
+
+  --text-color:         var(--grey-dark);
+
 } 
 
-$primary-color   : var(--primary-color);
-$secondary-color : var(--secondary-color);
-$grey-dark       : var(--grey-dark);
-$grey-medium     : var(--grey-medium);
-$grey-light      : var(--grey-light);
-$error           : var(--error);
-$white           : var(--white);
-$black           : var(--black);
-
-$text-color      : $grey-dark;
 
 
 

@@ -7,7 +7,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance:         none;
-  background-color: white;
+  background-color: var(--grey-light);
   border: 0;
   cursor: pointer;
 }

@@ -3,8 +3,8 @@
    ========================================================================== */
 
 body {
-  background-color: $black;
-  color: $text-color;
+  background-color: var(--black);
+  color: var(--grey-dark);
   font-family: $font-family-regular;
   font-size: 1.6rem;
   height: 100%;
@@ -18,12 +18,15 @@ body {
     --secondary-color:    #0C2C5D;
 
     --grey-dark:          #F3F3F3;
+    --grey-dark-rgb:      243,243,243;
     --grey-medium:        #919191;
     --grey-light:         #222f3e;
     --error:              #EB4D4B;
 
     --white:              #FFFFFF;
     --black:              #000000;
+
+    --text-color:         var(--grey-dark);
 
     background-image: none;
   }

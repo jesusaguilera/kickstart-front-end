@@ -4,8 +4,8 @@
 
 .c-modal {
 
-  background-color: rgba(0, 0, 0, .6);
-  color: $grey-dark;
+  background-color: rgba(var(--grey-dark-rgb), .6);
+  color: var(--text-color);
   width: 100%;
   height: 100%;
   display: flex;
@@ -37,10 +37,11 @@
 
   }
 
+
   // Modal container
   &__container {
 
-    background-color: white;
+    background-color: var(--grey-light);
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -85,7 +86,7 @@
   &__header ,
   &__footer {
 
-    background-color: white;
+    background-color: var(--grey-light);
     display: flex;
     align-items: center;
     padding: 1.6rem;
@@ -102,7 +103,7 @@
   // Modal header
   &__header {
 
-    border-bottom: .1rem solid $grey-light;
+    border-bottom: .1rem solid var(--grey-light);
     display: flex;
     alig-items: center;
 
@@ -125,7 +126,7 @@
   // Modal footer
   &__footer {
 
-    border-top: .1rem solid $grey-light;
+    border-top: .1rem solid var(--grey-light);
     justify-content: center;
     align-items: center;
 
@@ -150,6 +151,7 @@
   // Close
   &__close {
 
+    color: var(--text-color);
     font-size: 1.2rem;
     position: absolute;
     top: 1.6rem;
