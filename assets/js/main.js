@@ -23,7 +23,6 @@ window.onload = () => {
   lazyload();
   //@Components
   
-
   // Utilities
   // formValidation();
   changeTheme();
