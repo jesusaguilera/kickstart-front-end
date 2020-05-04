@@ -12,6 +12,7 @@ Thumbs.db
 package-lock.json
 node_modules/
 .sass-cache/* 
+temp
 tags # Vim Ctags
 .tern-project
 .tern-port
