@@ -10,7 +10,7 @@ const lazyload = () => {
     // class_loading: 'js-lazyload--loading',
     // class_loaded: 'js-lazyload--loaded',
     // show_while_loading: false,
-    // callback_loaded: () => alert(1),
+    callback_loaded: () => alert(1),
     // load_delay: 3000 //adjust according to use case
   });
   
