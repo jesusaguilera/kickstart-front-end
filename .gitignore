@@ -13,7 +13,10 @@ package-lock.json
 node_modules/
 .sass-cache/* 
 temp
-tags # Vim Ctags
+build
+
+
+# Vim Ctags
 .tern-project
 .tern-port
 .jshintrc

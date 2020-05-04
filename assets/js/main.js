@@ -5,7 +5,7 @@ import dropdown from './components/dropdown';
 import modals from './components/modal';
 import nav from './components/nav';
 import scrollMagic from './components/scrollMagic';
-import lazyload from './components/lazyload';
+// import lazyload from './components/lazyload';
 
 // Utilities
 import formValidation from './utilities/formValidation';
@@ -20,7 +20,7 @@ window.onload = () => {
   dropdown();
   modals();
   scrollMagic();
-  lazyload();
+  // lazyload();
   //@Components
   
   // Utilities
