@@ -5,9 +5,9 @@
 const scrollMagic = () => {
 
   let controller = new ScrollMagic.Controller();
-  let allWrapper = document.querySelectorAll('.o-container');
+  let allWrappers = document.querySelectorAll('.js-scrollmagic');
 
-  [].forEach.call(allWrapper, wrapper => {
+  [].forEach.call(allWrappers, wrapper => {
 
     // create a scene with custom options and assign a handler to it.
     let scene = new ScrollMagic.Scene({
@@ -20,7 +20,6 @@ const scrollMagic = () => {
       // .addIndicators()
       .setClassToggle(wrapper, 'is-visible')
       .addTo(controller);
-
   });
 
 }
