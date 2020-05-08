@@ -59,7 +59,7 @@ var js_temp_dir      = 'temp/js',
 
 var js_files         = 'assets/js/**/*.js',
   scss_files         = 'assets/scss/**/*.scss',
-  images_files       = 'assets/images/**/*.{jpg, gif, png, svg}',
+  images_files       = 'assets/images/**/*',
   fonts_files        = 'assets/fonts/**/*.{ttf, woff, eot, svg}',
   html_files         = [ './**/*.html', './layouts/**/*.html', './partials/**/*.html', './components/**/*.html' ];
 
@@ -244,7 +244,7 @@ gulp.task('removeTemp', function() {
 // Default
 gulp.task('default', ['fonts', 'htmls', 'images', 'styles', 'scripts', 'jslibs'], function() {
 
-  gulp.watch(html_files, ['htmls']);
+  gulp.watch(html_files, ['htmls', 'images']);
   gulp.watch(fonts_files,  ['fonts']);
   gulp.watch(images_files, ['images']);
   gulp.watch(scss_files, ['styles']);
