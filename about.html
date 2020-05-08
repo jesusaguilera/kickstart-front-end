@@ -10,19 +10,73 @@
 
     @@include('./components/_header.html', {"page": "about"})
 
-    <main class="o-wrapper o-wrapper--full-height o-wrapper--centered-content">
+    <main class="o-wrapper o-wrapper--full-height o-wrapper--centered-content o-wrapper--bg-bird o-page-transition--fade js-swup">
 
 
-      <div class="o-container o-page-transition--fade js-container">
+      <div class="o-container">
 
         @@include('./components/_section-title-subtitle.html', {"page": "about"})
+
+        <!-- @@include('./components/_form.html', {"page": "about"}) -->
+
+        <!-- Grid -->
+        <!--
+          <div class="o&#45;grid">
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+            <div class="o&#45;grid__col">
+              column
+            </div>
+          </div>
+        -->
+        <!-- @Grid -->
 
       </div>
 
     </main>
 
+    <!--
+      <img data&#45;src="images/lazy/01.jpg" class="js&#45;lazyload"/>
+      <img data&#45;src="images/lazy/02.jpg" class="js&#45;lazyload"/>
+      <img data&#45;src="images/lazy/03.jpg" class="js&#45;lazyload"/>
+      <img data&#45;src="images/lazy/04.jpg" class="js&#45;lazyload"/>
+    -->
+
+
     @@include('./components/_footer.html')
     @@include('./partials/_scripts.html')
+
 
   </body>
 

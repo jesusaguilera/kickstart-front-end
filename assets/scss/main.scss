@@ -1,4 +1,13 @@
 /************************************************************
+ * SETTINGS
+ ************************************************************/
+@import 'settings/settings.core';
+
+
+
+
+
+/************************************************************
  * TOOLS
  ************************************************************/
 @import 'tools/tools.font-face';
@@ -15,15 +24,6 @@
  ************************************************************/
 @import 'fonts/fonts.averta';
 // @import 'https://afeld.github.io/emoji-css/emoji.css';
-
-
-
-
-
-/************************************************************
- * SETTINGS
- ************************************************************/
-@import 'settings/settings.core';
 
 
 
@@ -72,6 +72,7 @@
 @import 'objects/objects.list-bare';
 @import 'objects/objects.list-inline';
 @import 'objects/objects.form';
+@import 'objects/objects.table';
 
 
 
@@ -86,7 +87,7 @@
 @import 'components/components.footer';
 @import 'components/components.dropdown';
 @import 'components/components.modal';
-@import 'components/components.button';
+@import 'components/components.buttons';
 @import 'components/components.section-title-subtitle';
 
 
@@ -120,8 +121,4 @@
  * EXTERNALS
  * ************************************************************/
 @import 'externals/externals';
-
-
-
-
 
