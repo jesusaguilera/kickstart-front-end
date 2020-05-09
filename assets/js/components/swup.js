@@ -1,7 +1,9 @@
 /* ==========================================================================
    #SWUP
    ========================================================================== */
+
 import scrollMagic from './scrollMagic';
+import select from './select';
 
 const swup = () => {
 
@@ -14,7 +16,7 @@ const swup = () => {
   };
 
   let swup = new Swup(options);
-  swup.on('contentReplaced', scrollMagic);
+  swup.on('contentReplaced', reload );
   // swup.on('willReplaceContent', ()=>{}   );
 
   // clean 
@@ -23,6 +25,11 @@ const swup = () => {
   // this event runs for every page view after initial load
   // swup.on('contentReplaced', ()=> console.log("contentReplaced"));
 
+}
+
+const reload = () => {
+  scrollMagic();
+  select();
 }
 
 export default swup;

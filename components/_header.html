@@ -1,35 +1,37 @@
 <header class="c-header"> 
 
   <h4>Logo</h4>
-  <nav class="c-nav js-nav">
+  <nav class="c-nav">
 
     @@if(context.page === 'index') {
-    <a href="/index.html" class="c-nav__link js-nav__link is-active">index</a>
-    <a href="/about.html" class="c-nav__link js-nav__link">about</a>
-    }
-    @@if(context.page === 'about') {
-    <a href="/index.html" class="c-nav__link js-nav__link">index</a>
-    <a href="/about.html" class="c-nav__link js-nav__link is-active">about</a>
-    }
-    <a href="#" class="c-nav__link js-change-theme" data-theme="t-dark">Dark theme</a>
-  </nav>
 
-  <!-- Dropdown -->
-  <!--
-    <div class="c&#45;dropdown">
-      <div class="c&#45;dropdown__container">
-        <button type="button" class="c&#45;dropdown__button js&#45;toogle&#45;dropdown">Ejemplo de dropdown</button>
-        <ul class="c&#45;dropdown__content c&#45;dropdown__content&#45;&#45;right">
-          <li class='u&#45;hide@lg'>
-            <p class='c&#45;dropdown__link'>Ejemplo de dropdown</p>
-          </li>
-          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">0</a></li>   
-          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">1</a></li>   
-          <li><a class="c&#45;dropdown__link js&#45;dropdown__link js&#45;toogle&#45;dropdown">2</a></li>   
+    <!-- Dropdown -->
+    <div class="c-dropdown">
+      <div class="c-dropdown__container">
+        <button type="button" class="c-dropdown__button js-toogle-dropdown">Menu</button>
+        <ul class="c-dropdown__content c-dropdown__content--right">
+          <li><a href="/index.html" class="c-dropdown__link js-dropdown__link js-toogle-dropdown c-nav__link is-active">Index</a></li>   
+          <li><a href="/about.html" class="c-dropdown__link js-dropdown__link js-toogle-dropdown c-nav__link">About</a></li>   
         </ul>
       </div>
     </div>
-  -->
-  <!-- @Dropdown -->
+    <!-- @Dropdown -->
+
+    }
+    @@if(context.page === 'about') {
+    <!-- Dropdown -->
+    <div class="c-dropdown">
+      <div class="c-dropdown__container">
+        <button type="button" class="c-dropdown__button js-toogle-dropdown">Menu</button>
+        <ul class="c-dropdown__content c-dropdown__content--right">
+          <li><a href="/index.html" class="c-dropdown__link js-dropdown__link js-toogle-dropdown c-nav__link">Index</a></li>   
+          <li><a href="/about.html" class="c-dropdown__link js-dropdown__link js-toogle-dropdown c-nav__link is-active">About</a></li>   
+        </ul>
+      </div>
+    </div>
+    <!-- @Dropdown -->
+    }
+    <a href="#" class="c-nav__link js-change-theme" data-theme="t-dark">Dark theme</a>
+  </nav>
 
 </header>

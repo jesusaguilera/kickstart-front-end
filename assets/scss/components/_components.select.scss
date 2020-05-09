@@ -1,8 +1,8 @@
 /* ==========================================================================
-#DROPDOWN
+#SELECT
 ========================================================================== */
 
-.c-dropdown {
+.c-select {
 
   display: flex;
   flex-direction: row;
@@ -42,7 +42,7 @@
 
     @media #{$md-and-up} {
 
-      height: 4rem;
+      height: 3.2rem;
       padding-left: 2.4rem ;
       padding-right: 2.4rem;
 

@@ -8,10 +8,6 @@ const dropdown = () => {
   showDropdown();
   // @Show dropdown
 
-  // Change button text
-  changeButtonText();
-  // @Change button text
-
 }
 export default dropdown;
 
@@ -20,66 +16,31 @@ const showDropdown = () => {
 
   let dropdownButtons = document.querySelectorAll('.js-toogle-dropdown');
 
-  [].forEach.call(dropdownButtons, (button) => {
+  [].forEach.call(dropdownButtons, button => {
 
     button.addEventListener('click', e => {
-
-      e.stopPropagation();
 
       let button = e.target;
       let dropdownParent = button.closest('.c-dropdown');
 
-      dropdownParent.classList.toggle('is-active');
+      dropdownParent.classList.add('is-active');
 
-      closeDropdown()
 
-    })
+      let dropdownLinks = document.querySelectorAll('.c-dropdown__link');
 
-  });
+      [].forEach.call(dropdownLinks, dropdownLink => {
 
-}
+        dropdownLink.addEventListener('click', e => {
 
-const changeButtonText = () => {
+          dropdownParent.classList.remove('is-active');
 
-  let dropdownLinks = document.querySelectorAll('.js-dropdown__link');
-
-  [].forEach.call(dropdownLinks, (link) => {
-
-    link.addEventListener('click', e => {
-
-      e.stopPropagation();
-
-      let link = e.target;
-      let linkText = link.textContent;
-      let dropdown = link.closest('.c-dropdown');
-      let buttonParent = dropdown.querySelector('.c-dropdown__button');
-      buttonParent.innerHTML = linkText;
-
-    })
-
-  });
-
-}
-
-const closeDropdown = () => {
-
-  let body = document.body;
-
-  body.addEventListener('click', e => {
-
-    let dropDownsOpen = document.querySelectorAll('.c-dropdown.is-active')
-
-    if(dropDownsOpen.length > 0){
-
-      [].forEach.call(dropDownsOpen, dropdown => {
-
-        dropdown.classList.remove('is-active');
+        })
 
       })
 
-    }
+    })
 
-  })
+  });
 
 }
 

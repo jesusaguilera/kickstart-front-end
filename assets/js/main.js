@@ -1,6 +1,7 @@
 // Components
 import swup from './components/swup';
 import inputs from './components/input';
+import select from './components/select';
 import dropdown from './components/dropdown';
 import modals from './components/modal';
 import nav from './components/nav';
@@ -17,6 +18,7 @@ window.onload = () => {
   swup();
   nav();
   inputs();
+  select();
   dropdown();
   modals();
   scrollMagic();

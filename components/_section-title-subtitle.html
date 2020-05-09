@@ -6,8 +6,26 @@
 }
 @@if(context.page === 'about') {
 <section class="c-section-title-subtitle">
+
   <h2 class="c-section-title-subtitle__title">About</h2>
   <p class="c-section-title-subtitle__subtitle">Lorem ipsum</p>
+
+  <!-- Select -->
+  <div class="c-select">
+    <div class="c-select__container">
+      <button type="button" class="c-select__button js-toogle-select">Seleccione una opción</button>
+      <ul class="c-select__content c-select__content--right">
+        <li class='u-hide@lg'>
+          <p class='c-select__link'>Seleccione una opción</p>
+        </li>
+        <li><a class="c-select__link js-select__link js-toogle-select">0</a></li>   
+        <li><a class="c-select__link js-select__link js-toogle-select">1</a></li>   
+        <li><a class="c-select__link js-select__link js-toogle-select">2</a></li>   
+      </ul>
+    </div>
+  </div>
+  <!-- @Select -->
+
 </section>
 }
 

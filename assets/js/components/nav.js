@@ -4,11 +4,9 @@
 
 const nav = () => {
 
-  let nav = document.querySelector('.js-nav');
   let navLinks = document.querySelectorAll('.js-nav__link');
 
   [].forEach.call(navLinks, link => {
-
 
     link.addEventListener('click', e => {
       let navLinkActive = document.querySelector('.js-nav__link.is-active');
