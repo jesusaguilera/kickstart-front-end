@@ -89,6 +89,8 @@
 @import 'components/components.dropdown';
 @import 'components/components.modal';
 @import 'components/components.buttons';
+@import 'components/components.carousel';
+@import 'components/components.accordion';
 @import 'components/components.section-title-subtitle';
 
 
@@ -112,15 +114,3 @@
  * ************************************************************/
 @import 'scopes/scopes.debug';
 @import 'scopes/scopes.wysiwyg';
-@import 'scopes/scopes.slick';
-
-
-
-
-
-
-/************************************************************
- * EXTERNALS
- * ************************************************************/
-@import 'externals/externals.admin';
-

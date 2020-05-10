@@ -9,11 +9,11 @@ const inputs = () => {
 
     input.addEventListener('blur', (event) => {
 
-      event.target.value === '' 
+      event.target.value !== '' 
         ? 
-        label.classList.remove('o-form__label--top') 
+        label.classList.add('o-form__label--top') 
         : 
-        label.classList.add('o-form__label--top')
+        label.classList.remove('o-form__label--top')
 
     })
 

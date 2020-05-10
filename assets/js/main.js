@@ -6,6 +6,7 @@ import dropdown from './components/dropdown';
 import modals from './components/modal';
 import nav from './components/nav';
 import scrollMagic from './components/scrollMagic';
+import carousel from './components/carousel';
 // import lazyload from './components/lazyload';
 
 // Utilities
@@ -22,11 +23,12 @@ window.onload = () => {
   dropdown();
   modals();
   scrollMagic();
+  // carousel();
   // lazyload();
   //@Components
   
   // Utilities
-  // formValidation();
+  formValidation();
   changeTheme();
   // @Utilities
   

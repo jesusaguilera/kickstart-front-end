@@ -2,8 +2,13 @@
    #SWUP
    ========================================================================== */
 
+// Components
 import scrollMagic from './scrollMagic';
 import select from './select';
+import input from './input';
+
+// Utilities
+import formValidation from '../utilities/formValidation';
 
 const swup = () => {
 
@@ -30,6 +35,8 @@ const swup = () => {
 const reload = () => {
   scrollMagic();
   select();
+  input();
+  formValidation();
 }
 
 export default swup;
