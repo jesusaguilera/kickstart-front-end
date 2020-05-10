@@ -4,14 +4,13 @@
 
 .o-form {
 
-  background-color: var(--white);
   min-width: 30rem;
 
   $b : &;
 
   &-item {
 
-    background-color: rgba(var(--white-rgb), .4);
+    background-color: rgba(var(--white-rgb), .7);
     height: 5.6rem;
     position: relative;
     padding-top: 1.8rem;

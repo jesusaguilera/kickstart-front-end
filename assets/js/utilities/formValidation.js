@@ -1,17 +1,25 @@
-let inputContainers = document.querySelector('.js-form-item');
-let input = document.querySelector('.js-form__input');
-let email = document.querySelector('.js-form__email');
-let checkbox = document.querySelector('.js-form__checkbox');
-let submit = document.querySelector('.js-form__submit');
-let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
 const formValidation = () => {
 
-  input.addEventListener('change', () => fieldValidation('input', input, email, regExEmail, checkbox, submit));
-  email.addEventListener('change', () => fieldValidation('email', input, email, regExEmail, checkbox, submit));
-  checkbox.addEventListener('change', () => fieldValidation('checkbox', input, email, regExEmail, checkbox, submit));
+  let form = document.querySelector('.o-form');
+
+  if(form) {
+
+    let inputContainers = document.querySelector('.js-form-item');
+    let input = document.querySelector('.js-form__input');
+    let email = document.querySelector('.js-form__email');
+    let checkbox = document.querySelector('.js-form__checkbox');
+    let submit = document.querySelector('.js-form__submit');
+    let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+
+    input.addEventListener('change', () => fieldValidation('input', input, email, regExEmail, checkbox, submit));
+    email.addEventListener('change', () => fieldValidation('email', input, email, regExEmail, checkbox, submit));
+    checkbox.addEventListener('change', () => fieldValidation('checkbox', input, email, regExEmail, checkbox, submit));
+
+  }
 
 };
+
 export default formValidation;
 
 const fieldValidation = (field, input, email, regExEmail, checkbox, submit) => {
