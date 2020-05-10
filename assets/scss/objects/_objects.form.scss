@@ -78,6 +78,8 @@
 
   &__submit {
 
+    transition: all 300ms ease-in-out;
+
     &--disabled {
       opacity: .7;
     }
