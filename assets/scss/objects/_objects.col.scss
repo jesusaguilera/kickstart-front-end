@@ -9,6 +9,7 @@
   width: 100%;
   height: 20rem;
   display: inline-flex;
+  transition: all 300ms ease-in-out;
 
   &-container {
     display: flex;
