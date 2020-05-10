@@ -23,7 +23,7 @@ window.onload = () => {
   dropdown();
   modals();
   scrollMagic();
-  // carousel();
+  carousel();
   // lazyload();
   //@Components
   

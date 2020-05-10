@@ -11,7 +11,6 @@ const changeTheme = () => {
         let trigger = e.target;
         let theme = trigger.getAttribute('data-theme');
         let body = document.body;
-        let regEx = /^t-/i;
 
         body.matches('.t-dark') 
           ?

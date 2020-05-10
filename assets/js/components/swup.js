@@ -6,6 +6,7 @@
 import scrollMagic from './scrollMagic';
 import select from './select';
 import input from './input';
+import carousel from './carousel';
 
 // Utilities
 import formValidation from '../utilities/formValidation';
@@ -37,6 +38,7 @@ const reload = () => {
   select();
   input();
   formValidation();
+  carousel();
 }
 
 export default swup;
