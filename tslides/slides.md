@@ -30,11 +30,13 @@ Nomenclatura aceptada:
 
 Nomenclatura rechazada por convención:
 
-  * header_nav 
-  * header__nav__item
-  * header__nav--red__item
-  * header__nav--full-width__item--blue
-
+  * .foo // No namespace
+  * .c-datePicker // Camel case
+  * .o-media_img // Single underscore
+  * .c-page-head-- // Trailing punctuation
+  * c-header__nav__item
+  * c-header__nav--red__item
+  * c-header__nav--full-width__item--blue
 ---
 
 # ITCSS ( Inverted Triangle CSS )
