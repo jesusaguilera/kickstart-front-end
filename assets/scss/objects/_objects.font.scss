@@ -4,10 +4,13 @@
 
 .o-font {
 
-  // Fake it doesn't exist
-  &--avenir { 
-    font-family: 'avenir';
+  &-h1 {
   }
-  // @Fake it doesn't exist
+
+  &-p {
+  }
+
+  &-caption {
+  }
 
 }
